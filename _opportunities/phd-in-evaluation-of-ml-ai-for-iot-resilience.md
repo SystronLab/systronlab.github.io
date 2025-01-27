@@ -2,7 +2,7 @@
 layout: opportunity
 title: "Funded PhD in Evaluation of ML/AI in IoT Edge Network Resilience"
 date: 2024-06-17 12:00:00 +0000
-closing: 2024-12-31 12:00:00 +0000
+closing: 2025-06-31 12:00:00 +0000
 subtitle: "Evaluation of ML/AI techniques to increase the resilience of IoT Edge networks under cyberattacks"
 ---
 
