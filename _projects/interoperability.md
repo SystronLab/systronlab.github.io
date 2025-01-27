@@ -3,8 +3,9 @@ layout: projects
 title: "Advancing RAN Interoperability"
 date: 2024-10-10 12:00:00 +0000
 authors:
-  - Dr. Poonam Yadav
-  - Dr. Yifan Liu
+  - Poonam Yadav
+  - Yifan Liu
+  - Rana Muhammad Sohaib
   - Mohit Bidikar
 image: "/img/projects/interoperability.png"
 desc: Advancing RAN interoperability by bridging the gap between commercial and open-source E2 nodes and RAN Intelligent Controllers (RICs).
@@ -19,17 +20,16 @@ This project aims to enhance Radio Access Network (RAN) interoperability by brid
 #### 1. Commercial E2 Node (VIAVI Tester) with Open-Source RIC (OSC)
 
 **GitHub**: [uoy-research/oran-sc-ric-uoy](https://github.com/uoy-research/oran-sc-ric-uoy)<br>  
-**Status**:
-Fetching KPMs: <span style="color: #609732;">Completed</span>
+**Status**: <span style="color: #609732;">Completed</span>
 
-The source code of the OSC RIC was modified to address interoperability issues encountered during its integration with the VIAVI tester. The modified OSC RIC was successfully integrated, and currently our xApp is able to fetch KPMs from the VIAVI tester. Next, we will be working on implementing ran control functions.
+The source code of the OSC RIC was modified to address interoperability issues encountered during its integration with the VIAVI tester. The modified OSC RIC was successfully integrated, and currently our xApp is able to fetch KPMs from the VIAVI tester.
 
 <video controls preload="auto" style="width: 100%; height: auto;">
   <source src="/vid/viavi-kpm.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
----
+Currently, testing actuations using the xApp is not feasible due to the underdeveloped state of the RIC's E2 interface. Actuations will be tested in the future as the RICs enhance their functionality for E2SM-RC and E2SM-CCC.
 
 #### 2. Open-Source E2 Node (srsRAN) with Open-Source RICs (OSC, FlexRIC)
 
@@ -47,17 +47,25 @@ srsRAN is a 4G and 5G software radio suite that includes a core network, gNB, an
 
 Step-by-step instructions for setting up the project with various configurations (Dockerized 5G core, non-Dockerized 5G core, single UE, multiple UEs, single gNB, multiple gNBs, FlexRIC, OSC RIC) can be found in the GitHub repository.
 
-##### 2.2 Over-the-Air (OTA) Setup
+##### 2.2 srsRAN Over-the-Air (OTA) Setup with USRP x310
 
 **GitHub**: [uoy-research/srsRAN-USRPs-OTA](https://github.com/uoy-research/srsRAN-USRPs-OTA)<br>  
-**Status**: <span style="color: #A95938;">Ongoing</span>
+**Status**: <span style="color: #609732;">Completed</span>
 
 <img src="/img/ota.png" alt="Over-the-Air (OTA) Setup" >
 <p><em>Image credit: <a href="https://www.srsran.com/" target="_blank">srsRAN project</a></em></p>
 
-The srsRAN project provides a 5G CU/DU solution but does not include a UE application. However, srsRAN 4G offers a prototype 5G UE (srsUE) for testing. The GitHub repository demonstrates how to create a fully open-source end-to-end 5G network using srsUE, the srsRAN project's gNB, and the Open5GS 5G core network, with a focus on establishing an Over-the-Air (OTA) setup using USRPs.
+The srsRAN project provides a 5G CU/DU solution but does not include a UE application. However, srsRAN 4G offers a prototype (srsUE) for testing.
 
-This setup can be used in labs without a radio license. No antennas are needed; the two USRPs communicate through SMA cables linked with 30dB attenuators.
+<iframe width="560" height="315"
+          src="https://www.youtube.com/embed/JqCKbfGFBr8"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+</iframe>
+
+We have successfully created a fully open-source, end-to-end 5G network leveraging srsUE, the gNB from the srsRAN project, and the Open5GS 5G core network. This setup is specifically designed to enable an Over-the-Air (OTA) configuration using USRP x310s
 
 ##### 2.3 USRPs with Commercial Off-The-Shelf (COTS) UEs
 
