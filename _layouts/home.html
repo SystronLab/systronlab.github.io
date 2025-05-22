@@ -68,6 +68,7 @@ layout: default
         <div class="row">
         {% assign people = site.people | sort: "priority" | reverse %}
         {% for person in people %}
+        {% if person.former %}{% continue %}{% endif %}
           <div class="col-sm-3 col-4 mx-auto text-center person">
               {% if person.photo %}
               <img class="img-thumbnail border border-0 rounded-circle"

@@ -7,7 +7,7 @@ background: '/img/systron-team.jpg'
 
 {% assign people = site.people | sort: "priority" | reverse %}
 {% for person in people %}
-
+{% if person.former %}{% continue %}{% endif %}
 <article class="post-preview">
   <div class="row">
       <div class="col-md-3">
@@ -29,7 +29,21 @@ background: '/img/systron-team.jpg'
         {% endif %}
       </div>
   </div>
-
 </article>
 <hr>
 {% endfor %}
+
+<article class="post-preview">
+  <h2 class="post-title">Former Members</h2>
+  <ul class="list-group">
+  {% for person in people %}
+   {% if person.former %}
+    {% if person.site %}
+    <li class="list-group-item"><a href="{{ person.site }}" target="_blank">{{ person.name }} ({{ person.role }})</a></li>
+    {% else %}
+    <li class="list-group-item">{{ person.name }} ({{ person.role }})</li>
+    {% endif %}
+   {% endif %}
+  {% endfor %}
+  </ul>
+</article>
