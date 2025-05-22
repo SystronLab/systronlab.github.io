@@ -55,8 +55,6 @@ The GitHub repository includes comprehensive guides for various deployment scena
 <img src="/img/ota.png" alt="Over-the-Air (OTA) Setup" >
 <p><em>Image credit: <a href="https://www.srsran.com/" target="_blank">srsRAN project</a></em></p>
 
-With the foundation set in ZMQ-based virtual testing, we progressed to over-the-air deployments using USRP x310 hardware. This enabled a realistic 5G setup using srsUE, srsRAN gNB, and the Open5GS core network, resulting in a fully open-source end-to-end OTA 5G network.
-
 <iframe width="560" height="315"
           src="https://www.youtube.com/embed/JqCKbfGFBr8"
           title="YouTube video player"
@@ -64,8 +62,9 @@ With the foundation set in ZMQ-based virtual testing, we progressed to over-the-
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen>
 </iframe>
+With the foundation set in ZMQ-based virtual testing, we progressed to over-the-air deployments using USRP x310 hardware. This enabled a realistic 5G setup using srsUE, srsRAN gNB, and the Open5GS core network, resulting in a fully open-source end-to-end OTA 5G network.
 
-##### 2.3 USRPs with Commercial Off-The-Shelf (COTS) UEs
+##### 2.3 srsRAN split 8 Setup with USRP x310 and COTS UEs
 
 **GitHub**: [SystronLab/srsRAN-USRPs-COTS](https://github.com/SystronLab/srsRAN-USRPs-COTS)<br>  
 **Status**: <span style="color: #609732;">Completed</span>
@@ -82,7 +81,7 @@ The next step in our journey is to decouple the core from the local setup by mig
 
 This transition is essential to assess the feasibility of deploying disaggregated RAN components in cloud-native environments, a key enabler for scalable and flexible 5G networks.
 
-##### 2.5 Split 7.2 Architecture with Benetel RU
+##### 2.5 srsRAN split 7.2 Setup with Benetel RU and COTS UEs
 
 **Status**: <span style="color: #e67e22;">Planned</span>
 
