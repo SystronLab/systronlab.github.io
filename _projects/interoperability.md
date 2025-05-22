@@ -37,7 +37,7 @@ This segment explores the integration of the open-source E2 node srsRAN with ope
 
 ##### 2.1 srsRAN with ZMQ
 
-**GitHub**: [uoy-research/srsRAN-ZMQ](https://github.com/uoy-research/srsRAN-ZMQ)<br>  
+**GitHub**: [SystronLab/srsRAN-ZMQ](https://github.com/SystronLab/srsRAN-ZMQ)<br>  
 **Status**: <span style="color: #609732;">Completed</span>
 
 srsRAN is a 4G and 5G software radio suite that includes a core network, gNB, and user equipment (UE) implementation. While gNB and UE typically use physical radios for over-the-air transmissions, srsRAN also features a virtual radio that uses the ZeroMQ networking library to transfer radio samples between applications. This software-based approach is advantageous for development, testing, debugging, and CI/CD, as it eliminates the need for hardware.
@@ -49,7 +49,7 @@ Step-by-step instructions for setting up the project with various configurations
 
 ##### 2.2 srsRAN Over-the-Air (OTA) Setup with USRP x310
 
-**GitHub**: [uoy-research/srsRAN-USRPs-OTA](https://github.com/uoy-research/srsRAN-USRPs-OTA)<br>  
+**GitHub**: [SystronLab/srsRAN-USRPs-OTA](https://github.com/SystronLab/srsRAN-USRPs-OTA)<br>  
 **Status**: <span style="color: #609732;">Completed</span>
 
 <img src="/img/ota.png" alt="Over-the-Air (OTA) Setup" >
@@ -69,12 +69,12 @@ We have successfully created a fully open-source, end-to-end 5G network leveragi
 
 ##### 2.3 USRPs with Commercial Off-The-Shelf (COTS) UEs
 
-**GitHub**: [uoy-research/srsRAN-USRPs-COTS](https://github.com/uoy-research/srsRAN-USRPs-COTS)<br>  
-**Status**: <span style="color: #A95938;">Ongoing</span>
+**GitHub**: [SystronLab/srsRAN-USRPs-COTS](https://github.com/SystronLab/srsRAN-USRPs-COTS)<br>  
+**Status**: <span style="color: #609732;">Completed</span>
 
 <img src="/img/usrp.png" alt="USRPs with COTS" >
 
-In this setup, we are utilizing srsRAN as our 5G core, along with two Ettus Research X310 USRPs equipped with an OctoClock-G. The configuration follows an 8-split architecture, featuring eight log-periodic antennas connected to two 2x2 MIMO base stations. Additionally, we have two commercial off-the-shelf (COTS) user equipment (UE) devices: one designed for enhanced mobile broadband (eMBB) and the other for ultra-reliable low-latency communications (URLLC).
+This setup is a fully functional 5G standalone (SA) network using srsRAN integrated with USRP X310 and commercial off-the-shelf (COTS) UEs. The testbed includes the deployment of Open5GS core services and srsRAN gNB on a local workstation, enabling end-to-end connectivity and internet access for COTS UEs using programmable SIMs (sysmoISIM)
 
 ---
 
