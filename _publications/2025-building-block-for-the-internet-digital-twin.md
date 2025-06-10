@@ -1,7 +1,7 @@
 ---
 layout: publication
 title: "Building Block for the Internet Digital Twin: Scalable and Automated Internetwork Emulator"
-date: 2025-06-10 12:00:00 +0000
+date: 2025-06-10 01:00:00 +0000
 authors:
 - Joshua Levett
 - Vassilios Vassilakis
