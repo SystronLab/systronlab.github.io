@@ -7,7 +7,8 @@ authors:
 - Iraklis Paraskakis
 - Simeon Veloudis
 - Poonam Yadav
-desc:  A Framework for Empowering Data Generators.
+desc:  A framework for empowering data generators.
+image: '/img/projects/big-data.jpg'
 ---
 
 In the contemporary digital society, a critical problem can be highlighted: individuals lack granular control over their personal data. Despite current legislation like the General Data Protection Regulation (GDPR), the Data Governance Act, the Data Act, and the AI Act, these frameworks frequently fall short of empowering data generators - those who create data - to control how this data that refers to them is used. 

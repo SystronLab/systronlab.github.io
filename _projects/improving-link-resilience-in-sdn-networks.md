@@ -1,36 +1,28 @@
 ---
 layout: projects
-title: "Improving Link Resilience in SDN Networks"
+title: "Dynamic Graph Neural Networks for Real-Time Failure Recovery"
 date: 2024-04-29 12:00:00 +0000
 authors:
 - Rehab Alawadh
 - Hamed Ahmadi
 - Poonam Yadav
-image: '/img/projects/improving-link-resilience-in-sdn-networks.png'
+image: '/img/projects/gnns-in-networking.jpg'
 desc: Improving fast failure-recovery models in software-defined networks.
 ---
 
-Deploying new optimized routing policies on routers in the event of link failure is difficult due to strong coupling between the data and control planes and the absence of topology information about the network. Because of the distributed architecture of traditional Internet protocol networks, policies and routing rules are spread in a decentralized way, resulting in looping and congestion problems. Software-defined networking (SDN) enables centralized network programmability. As a result, data plane devices just focus on packet forwarding, leaving the control plane’s complexities to be managed by the controller. Thus, the controller installs the policies and rules centrally. Considering the controller’s knowledge of the global network architecture, central control enhances the flexibility of link failure identification and restoration. Therefore, this project focuses on the importance of harden networks resilience to link failure by introducing a hybrid intelligent fast failure recovery framework using SDN architecture.
+This research introduces the **Dynamic Graph Neural Network for Real-Time Failure Recovery** (DGNN-RTFR) framework, a novel approach to network failure recovery specifically designed for Software-Defined Networking (SDN) environments supporting Industrial Internet of Things (IIoT) applications. Traditional failure recovery mechanisms suffer from slow convergence times, limited multi-failure handling capabilities, and inadequate optimization for industrial requirements, making them unsuitable for mission-critical industrial environments.
+
+![Graph Neural Networks in Networking](/img/projects/gnns-in-networking.jpg)
 
 ## Objectives
 
-Development of Pre-Failure Detection Mechanisms: Leverage GNN to analyze the simulated network's topology and predict potential failures. This process incorporates Exploratory Data Analysis (EDA) to assess the impact of variables like throughput, latency, and packet loss, enhancing early vulnerability identification through continuous monitoring and dynamic network health analysis. Implementation of Post-Failure Management Protocols: Integrate failure detection and recovery protocols such as Border Gateway Protocol (BGP) routing protocol, Link Layer Discovery Protocol (LLDP) and Bidirectional Forwarding Detection, integrated with GNN within the simulated environment. This will test the system’s ability to manage failures efficiently, minimizing disruption.
-
-## System architecture with pre-failure detection
-
-The System Architecture is designed to provide a resilient and robust network infrastructure capable of anticipating potential failures through advanced detection techniques.
-
-1. Topology discovery is utilized to gather and update diverse networking information from switches and routers in real-time.
-2. transmission requests are forwarded to the efficient routing generator for optimal paths calculation and decision-making.
-3. Graph Neural Networks (GNN) are used by the system to improve the prediction of potential connection failures at the stage preceding any failure.
-4. The decision creator then transmits the new configurations to the network switches and routers using a flow table.
-
-By continuously monitoring and analyzing the network graph, the GNN can predict possible connection failures, enabling proactive actions to reduce risks.
-
-## System architecture with post-failure management
-
-In response to link failures, a new optimal path is selected from a precomputed list of paths to reduce the load on the SDN controller and enhance the speed of calculations to minimize latency. Flows are intelligently classified based on their frequency of use. Backup paths are then stored accordingly, either in the controller's hash table or the switch's flow table, depending on this classification. This approach aims to optimize overall network management, enhancing efficiency and resilience in the network system.
+1. Develop a unified spatio-temporal graph learning model that simultaneously captures network topology and temporal evolution.
+2. Design and implement an advanced multi-failure recovery algorithm capable of handling multiple concurrent failures.
+3. Create a robust prediction mechanism that maintain accuracy under noisy and incomplete telemetry conditions.
+4. Formulate IIoT-specific optimization criteria that ensure compliance with industrial constraints.
+5. Deliver a computationally efficient solution suitable for deployment in fog computing environments with strict processing constraints.
 
 ## Publications
 
-- [(Preprint) HIFFR: Hybrid Intelligent Fast Failure Recovery Framework for Enhanced Resilience in Software Defined Networks](https://eprints.whiterose.ac.uk/212995/)
+- [(Paper) HIFFR: Hybrid Intelligent Fast Failure Recovery Framework for Enhanced Resilience in Software Defined Networks](/publications/2024-hybrid-intelligent-fast-failure-recovery-framework)
+- [(Paper) DYNAPARC: AI-Driven Predictive Path Failure Management for Industrial IoT-Fog Networks](/publications/2025-dynaparc-ai-driven-predictive-path-failure-management)
