@@ -42,8 +42,8 @@ We host a fully operational 5G Standalone (SA) network testbed powered by the sr
 
 The testbed has been successfully validated using commercial off-the-shelf (COTS) user equipment, specifically a Pixel 8 Pro, achieving full internet connectivity over the 5G SA link.
 
-<div style="max-width: 100%; overflow: hidden;">
-  <img src="/img/pixel.jpeg" alt="Pixel" style="width: 100%; height: auto;" />
+<div style="max-width: 100%; overflow: hidden; text-align: center;">
+  <img src="/img/pixel.jpeg" alt="Pixel" style="width: 50%; height: auto;" />
 </div>
 
 Building on this architecture, we extended the testbed to integrate a Quectel RMU500-EK 5G modem connected to a Jetson Nano–based mini robot.
@@ -54,8 +54,8 @@ Building on this architecture, we extended the testbed to integrate a Quectel RM
 
 The robot is remotely operated over the 5G SA network, showcasing real-time, network-driven robotic control over the 5G testbed.
 
-<div style="max-width: 100%; overflow: hidden;">
-  <img src="/img/minirobot.png" alt="Minirobot" style="width: 100%; height: auto;" />
+<div style="max-width: 100%; overflow: hidden; text-align: center;">
+  <img src="/img/minirobot.png" alt="Minirobot" style="width: 50%; height: auto;" />
 </div>
 
-The modular and programmable nature of this testbed is enabling researchers and developers to design and evaluate experiments aligned with both current and emerging 5G/6G use cases.
+The modular and programmable nature of this testbed is enabling researchers to design and evaluate experiments aligned with both current and emerging 5G/6G use cases.
