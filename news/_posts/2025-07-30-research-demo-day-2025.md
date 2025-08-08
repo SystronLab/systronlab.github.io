@@ -2,7 +2,7 @@
 layout: post
 title: "SYSTRON Lab: Research and Demo Day 2025"
 date: 2025-07-30 12:00:00 +0000
-subtitle: "Join us on Monday 7th September for our Research and Demo Day"
+subtitle: "Join us on Monday 8th September for our Research and Demo Day"
 background: '/img/posts/workshop-on-6g-comms-1.jpg'
 ---
 
@@ -10,7 +10,7 @@ background: '/img/posts/workshop-on-6g-comms-1.jpg'
 
 ## Key information
 
-* **Date**: Monday 7th September 2025
+* **Date**: Monday 8th September 2025
 * **Time**: 9:30am to 6pm
 * **Location**: CSE/082X, Ian Wand Building, Campus East, University of York *(Provisional)*
 
