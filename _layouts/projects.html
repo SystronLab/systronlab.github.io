@@ -2,40 +2,21 @@
 layout: default
 ---
 
-<header class="masthead">
+{% if page.image %}
+<header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
+  {% else %}
+  <header class="masthead">
+    {% endif %}
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-10 mx-auto">
                 <div class="post-heading smaller-heading">
-                    <div class="row">
-                        <div class="col-md-9">
-                            <h1>{{ page.title }}</h1>
-                            <p>{{ page.authors | array_to_sentence_string }}</p>
-                            {% if page.repo %}
-                            <a
-                                class="btn btn-primary"
-                                href="{{ page.repo }}"
-                                target="_blank"
-                                >View Repository<span
-                                    class="d-none d-md-inline"
-                                ></span>
-                                &rarr;</a
-                            >
-                            <br />
-                            <br />
-                            {% endif %}
-                            <span class="meta">
-                                Published on {{ page.date | date: '%d %B %Y' }}
-                            </span>
-                        </div>
-                        <div class="col-md-3">
-                            <img
-                                class="img-thumbnail"
-                                src="{{ page.image | prepend: site.baseurl | replace: '//', '/' }}"
-                            />
-                        </div>
-                    </div>
+                    <h1>{{ page.title }}</h1>
+                    <p>{{ page.authors | array_to_sentence_string }}</p>
+                    {% if page.repo %}
+                    <a class="btn btn-primary" href="{{ page.repo }}" target="_blank">View Repository <span class="d-none d-md-inline"></span>&rarr;</a><br />
+                    {% endif %}
                 </div>
             </div>
         </div>
