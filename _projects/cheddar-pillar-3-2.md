@@ -1,6 +1,6 @@
 ---
 layout: projects
-title: "CHEDDAR Project Pillar 3.2"
+title: "Formal Verification of Security Protocols"
 date: 2024-10-07 12:00:00 +0000
 authors:
 - Kangfeng Ye
