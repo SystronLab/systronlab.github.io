@@ -1,7 +1,7 @@
 ---
 layout: projects
 title: "Securing the Internet of Things"
-date: 2024-01-01 12:00:00 +0000
+date: 2025-01-01 12:00:00 +0000
 authors:
 - Anthony Moulds
 - Peter Gillingham
