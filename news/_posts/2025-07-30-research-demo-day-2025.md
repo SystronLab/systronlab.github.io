@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "SYSTRON Lab: Research and Demo Day 2025"
+title: "SYSTRON Lab: Upcoming Research and Demo Day 2025"
 date: 2025-07-30 12:00:00 +0000
 subtitle: "Join us on Monday 8th September for our Research and Demo Day"
 background: '/img/posts/workshop-on-6g-comms-1.jpg'
@@ -23,7 +23,7 @@ We hope to welcome you to our Research and Demo Day, sharing our research on 6G 
 If you are interested in attending, please complete the form linked below, and we will be in touch to share arrangements in the next couple of weeks.
 
 <div class="clearfix">
-    <a class="btn btn-primary float-left" href="https://forms.gle/uLV5mm8Qcwe8yKAR7" target="_blank">Register Interest &rarr;</a>
+    <a class="btn btn-primary float-left" aria-disabled="true" href="#" target="_blank" disabled>Register Interest &rarr;</a>
 </div>
 
 <br />
