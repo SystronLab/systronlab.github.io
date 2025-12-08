@@ -7,4 +7,4 @@ site: "https://github.com/mohit4444" # OPTIONAL: A link to the person's personal
 
 <!-- PUT THE PERSON'S DESCRIPTION OR RESEARCH OVERVIEW HERE -->
 
-Supporting the integration of RAN Intelligent Controllers (RICs) and xApps as well as building a testbed with srsRAN and USRPs
+Building 5G and 6G research testbeds with a focus on Open RAN and cloud native telecom systems.
