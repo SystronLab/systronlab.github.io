@@ -1,123 +1,122 @@
 // Styling for the navbar
 #mainNav {
-    position: absolute;
-    border-bottom: 1px solid $gray-200;
-    background-color: white;
-    font-family: $headings-font-family;
+  position: absolute;
+  border-bottom: 1px solid $gray-200;
+  background-color: white;
+  font-family: $headings-font-family;
 
-    .navbar-brand {
-        font-weight: 800;
-        color: $systron-a;
-    }
+  .navbar-brand {
+    font-weight: 800;
+    color: $systron-a;
+  }
 
-    .navbar-toggler {
+  .navbar-toggler {
+    font-size: 16px;
+    font-weight: 800;
+    padding: 13px;
+    text-transform: uppercase;
+    color: $gray-800;
+    border: none;
+  }
+
+  .navbar-nav {
+    > li.nav-item {
+      > a {
         font-size: 16px;
         font-weight: 800;
-        padding: 13px;
+        letter-spacing: 1px;
         text-transform: uppercase;
-        color: $gray-800;
-        border: none;
+        color: $systron-a;
+
+        &:focus,
+        &:hover {
+          color: fade-out($systron-d, 0.2);
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: 992px) {
+    border-bottom: 1px solid transparent;
+
+    .navbar-brand {
+      padding-top: 3px;
+      color: $systron-a;
+
+      &:focus,
+      &:hover {
+        color: fade-out($systron-d, 0.2);
+      }
     }
 
     .navbar-nav {
-        >li.nav-item {
-            >a {
-                font-size: 16px;
-                font-weight: 800;
-                letter-spacing: 1px;
-                text-transform: uppercase;
-                color: $systron-a;
+      > li.nav-item {
+        > a {
+          padding: 10px 20px;
+          color: $systron-a;
 
-                &:focus,
-                &:hover {
-                    color: fade-out($systron-d, .2);
-                }
-            }
+          &:focus,
+          &:hover {
+            color: fade-out($systron-d, 0.2);
+          }
         }
+      }
     }
+  }
 
-    @media only screen and (min-width: 992px) {
-        border-bottom: 1px solid transparent;
-        background: rgba(255, 255, 255, 0.7);
+  @media only screen and (min-width: 992px) {
+    -webkit-transition: background-color 0.2s;
+    -moz-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+    /* Force Hardware Acceleration in WebKit */
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 
-        .navbar-brand {
-            padding: 10px 20px;
+    &.is-fixed {
+      /* when the user scrolls down, we hide the header right above the viewport */
+      position: fixed;
+      top: -67px;
+      -webkit-transition: -webkit-transform 0.2s;
+      -moz-transition: -moz-transform 0.2s;
+      transition: transform 0.2s;
+      border-bottom: 1px solid darken($white, 0.05);
+      background-color: fade-out($white, 0.1);
+
+      .navbar-brand {
+        color: $systron-a;
+
+        &:focus,
+        &:hover {
+          color: $systron-d;
+        }
+      }
+
+      .navbar-nav {
+        > li.nav-item {
+          > a {
             color: $systron-a;
 
             &:focus,
             &:hover {
-                color: fade-out($systron-d, .2);
+              color: $systron-d;
             }
+          }
         }
-
-        .navbar-nav {
-            >li.nav-item {
-                >a {
-                    padding: 10px 20px;
-                    color: $systron-a;
-
-                    &:focus,
-                    &:hover {
-                        color: fade-out($systron-d, .2);
-                    }
-                }
-            }
-        }
+      }
     }
 
-    @media only screen and (min-width: 992px) {
-        -webkit-transition: background-color 0.2s;
-        -moz-transition: background-color 0.2s;
-        transition: background-color 0.2s;
-        /* Force Hardware Acceleration in WebKit */
-        -webkit-transform: translate3d(0, 0, 0);
-        -moz-transform: translate3d(0, 0, 0);
-        -ms-transform: translate3d(0, 0, 0);
-        -o-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-
-        &.is-fixed {
-            /* when the user scrolls down, we hide the header right above the viewport */
-            position: fixed;
-            top: -67px;
-            -webkit-transition: -webkit-transform 0.2s;
-            -moz-transition: -moz-transform 0.2s;
-            transition: transform 0.2s;
-            border-bottom: 1px solid darken($white, .05);
-            background-color: fade-out($white, .1);
-
-            .navbar-brand {
-                color: $systron-a;
-
-                &:focus,
-                &:hover {
-                    color: $systron-d;
-                }
-            }
-
-            .navbar-nav {
-                >li.nav-item {
-                    >a {
-                        color: $systron-a;
-
-                        &:focus,
-                        &:hover {
-                            color: $systron-d;
-                        }
-                    }
-                }
-            }
-        }
-
-        &.is-visible {
-            /* if the user changes the scrolling direction, we show the header */
-            -webkit-transform: translate3d(0, 100%, 0);
-            -moz-transform: translate3d(0, 100%, 0);
-            -ms-transform: translate3d(0, 100%, 0);
-            -o-transform: translate3d(0, 100%, 0);
-            transform: translate3d(0, 100%, 0);
-        }
+    &.is-visible {
+      /* if the user changes the scrolling direction, we show the header */
+      -webkit-transform: translate3d(0, 100%, 0);
+      -moz-transform: translate3d(0, 100%, 0);
+      -ms-transform: translate3d(0, 100%, 0);
+      -o-transform: translate3d(0, 100%, 0);
+      transform: translate3d(0, 100%, 0);
     }
+  }
 }
