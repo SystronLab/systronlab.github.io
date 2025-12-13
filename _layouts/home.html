@@ -23,26 +23,6 @@ layout: default
     </div>
   </header>
 
-  {% unless site.opportunities.size == 0 %}
-  <div class="container-fluid opportunities-banner mx-auto">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <h2>Opportunities</h2>
-          {% for opportunity in site.opportunities %}
-            <article class="opportunity">
-              <a href="{{ opportunity.url | prepend: site.baseurl | replace: '//', '/' }}">
-                <h3 class="opportunity-title">{{ opportunity.title }}</h3>
-                <p class="opportunity-meta">Apply by {{ opportunity.closing | date: '%d %B %Y' }}</p>
-              </a>
-            </article>
-          {% endfor %}
-        </div>
-      </div>
-    </div>
-  </div>
-  {% endunless %}
-
   <div class="container" id="research">
     <h2>Our Research Themes</h2>
 
@@ -88,6 +68,26 @@ layout: default
         </div>
     </div>
   </div>
+
+    {% unless site.opportunities.size == 0 %}
+  <div class="container-fluid opportunities-banner mx-auto">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <h2>Join Our Team!</h2>
+          {% for opportunity in site.opportunities %}
+            <article class="opportunity">
+              <a href="{{ opportunity.url | prepend: site.baseurl | replace: '//', '/' }}">
+                <h3 class="opportunity-title">{{ opportunity.title }}</h3>
+                <p class="opportunity-meta">Apply by {{ opportunity.closing | date: '%d %B %Y' }}</p>
+              </a>
+            </article>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endunless %}
 
   <div class="container">
     <div class="row">
