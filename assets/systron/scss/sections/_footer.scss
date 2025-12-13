@@ -1,37 +1,53 @@
-// Styling for the footer
-footer {
+.site-footer {
   margin-top: 50px;
-  padding-top: 40px;
-  padding-bottom: 20px;
+  padding: 40px 0 20px;
   background: $systron-a3;
   color: $systron-c1;
   font-size: 18px;
-
-  .copyright {
-    font-size: 14px;
-    margin-bottom: 0;
-    text-align: center;
-  }
+  text-align: center;
 
   a {
-    color: $systron-d1;
+    color: $gray-300;
     text-decoration: underline;
 
-    &:focus,
-    &:hover {
-      color: $systron-d1;
+    &:hover,
+    &:focus {
+      opacity: 0.85;
+      text-decoration: none;
+      outline: none;
     }
   }
 
   .footer-logos {
-    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     gap: 2rem;
+    margin-bottom: 3.5rem;
+
+    img {
+      height: 4rem;
+      width: auto;
+      object-fit: contain;
+      opacity: 0.95;
+    }
   }
 
-  .footer-logos img {
-    height: 4rem;
-    width: auto;
-    object-fit: contain;
-    opacity: 0.95;
+  .footer-links {
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      margin: 0 0.75rem;
+      text-decoration: none;
+    }
+  }
+
+  .footer-copyright {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: $systron-c1;
   }
 }
