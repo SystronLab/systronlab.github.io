@@ -2,7 +2,6 @@
 layout: opportunity
 title: "Funded PhD in Adaptive Multi-Access Interoperable Communication Fabric for TinyEdge"
 date: 2025-11-20 12:00:00 +0000
-closing: 2025-06-31 12:00:00 +0000
 subtitle: "Adaptive Multi-Access Interoperable Communication Fabric for TinyEdge"
 ---
 

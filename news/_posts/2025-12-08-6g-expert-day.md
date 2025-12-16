@@ -15,4 +15,4 @@ CHEDDAR's work on distributed intelligence and trustworthy AI aligns with these 
 
 ![Demo](/img/posts/6g-expert-3.jpg)
 
-Thank you to Luca Campanalonga (Rohde & Schwarz) for the inviting Dr Poonam Yadav and Dr Roberto Metere to attend this engaging and interactive in-person event.
+Thank you to Luca Campanalonga (Rohde & Schwarz) for inviting Dr Poonam Yadav and Dr Roberto Metere to attend this engaging and interactive in-person event.
