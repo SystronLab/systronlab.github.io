@@ -56,7 +56,7 @@ The GitHub repository includes comprehensive guides for various deployment scena
 <p><em>Image credit: <a href="https://www.srsran.com/" target="_blank">srsRAN project</a></em></p>
 
 <iframe width="560" height="315"
-          src="https://www.youtube.com/embed/JqCKbfGFBr8"
+          src="https://www.youtube.com/embed/xW7LMHVnIJk"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -72,7 +72,7 @@ With the foundation set in ZMQ-based virtual testing, we progressed to over-the-
 <iframe
   width="560"
   height="315"
-  src="https://www.youtube.com/embed/YruoNuCG4zQ"
+  src="https://www.youtube.com/embed/aPBsFGrEsEk"
   title="YouTube video player"
   frameborder="0"
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
