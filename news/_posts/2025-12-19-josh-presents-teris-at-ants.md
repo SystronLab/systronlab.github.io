@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Josh presents TERIS at ANTS 2025"
-date: 2023-01-01 12:00:00 +0000
+date: 2025-12-19 12:00:00 +0000
 subtitle: "Sharing our work on emulated routing testbeds in Delhi, India"
 background: '/img/posts/ants-entrance.jpg'
 ---
