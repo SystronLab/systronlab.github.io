@@ -1,32 +1,124 @@
 ---
 layout: page
 title: Publications
-background: '/img/smart-cities.jpg'
+background: "/img/smart-cities.jpg"
 ---
 
-{% for publication in site.publications reversed %}
+<div class="projects-controls">
+  <div class="projects-controls-row">
+    <div class="projects-control">
+      <input
+        id="publicationsSearch"
+        class="projects-input"
+        type="text"
+        placeholder="Search by Title, Authors, Description, Venue, Date"
+      />
+    </div>
+  </div>
 
-<article class="post-preview">
-    <a href="{{ publication.url | prepend: site.baseurl | replace: '//', '/' }}">
-        <h2 class="post-title">{{ publication.title }}</h2>
+  <div class="projects-meta">
+    <span id="publicationsCount"></span>
+  </div>
+</div>
+
+<br />
+
+<div id="publicationsGrid">
+  {% for publication in site.publications reversed %}
+
+  <article
+    class="post-preview publication-item"
+    data-title="{{ publication.title | downcase | escape }}"
+    data-authors="{{ publication.authors | array_to_sentence_string | downcase | escape }}"
+    data-desc="{{ publication.excerpt | strip_html | downcase | escape }}"
+    data-venue="{% if publication.venue %}{{ publication.venue | downcase | escape }}{% endif %}"
+    data-date="{{ publication.date | date: '%d %B %Y' | downcase | escape }}"
+    data-year="{{ publication.date | date: '%Y' | escape }}"
+  >
+    <a
+      href="{{ publication.url | prepend: site.baseurl | replace: '//', '/' }}"
+    >
+      <h2 class="post-title">{{ publication.title }}</h2>
     </a>
+
     <p class="post-meta">
-        {{ publication.authors | array_to_sentence_string | truncatewords: 30 }}
+      {{ publication.authors | array_to_sentence_string | truncatewords: 30 }}
     </p>
+
     <p>{{ publication.excerpt | strip_html | truncatewords: 30 }}</p>
+
     <p class="post-meta">
-        {% if publication.venue %}
-        Published in {{ publication.venue }} &middot; Published on {{ publication.date | date: '%d %B %Y' }}
-        {% else %}
-        Published on {{ publication.date | date: '%d %B %Y' }}
-        {% endif %}
-        {% if publication.preprint %}
-        &middot; Preprint
-        {% endif %}
+      {% if publication.venue %} Published in {{ publication.venue }} &middot;
+      {% endif %} Published on {{ publication.date | date: '%d %B %Y' }} {% if
+      publication.preprint %} &middot; Preprint {% endif %}
     </p>
+  </article>
 
-</article>
+  <hr class="publication-sep" />
 
-<hr>
+  {% endfor %}
+</div>
 
-{% endfor %}
+<script>
+  (function () {
+    var grid = document.getElementById("publicationsGrid");
+    if (!grid) return;
+
+    var items = Array.prototype.slice.call(
+      grid.querySelectorAll(".publication-item"),
+    );
+    var seps = Array.prototype.slice.call(
+      grid.querySelectorAll(".publication-sep"),
+    );
+
+    var searchEl = document.getElementById("publicationsSearch");
+    var countEl = document.getElementById("publicationsCount");
+
+    function norm(s) {
+      return (s || "").toString().trim().toLowerCase();
+    }
+
+    function applyFilters() {
+      var q = norm(searchEl && searchEl.value);
+      var shown = 0;
+
+      items.forEach(function (el, idx) {
+        var title = norm(el.getAttribute("data-title"));
+        var authors = norm(el.getAttribute("data-authors"));
+        var desc = norm(el.getAttribute("data-desc"));
+        var venue = norm(el.getAttribute("data-venue"));
+        var dateStr = norm(el.getAttribute("data-date"));
+        var year = norm(el.getAttribute("data-year"));
+
+        var matchesSearch =
+          !q ||
+          title.indexOf(q) !== -1 ||
+          authors.indexOf(q) !== -1 ||
+          desc.indexOf(q) !== -1 ||
+          venue.indexOf(q) !== -1 ||
+          dateStr.indexOf(q) !== -1 ||
+          year.indexOf(q) !== -1;
+
+        if (matchesSearch) {
+          el.classList.remove("is-hidden");
+          if (seps[idx]) seps[idx].classList.remove("is-hidden");
+          shown += 1;
+        } else {
+          el.classList.add("is-hidden");
+          if (seps[idx]) seps[idx].classList.add("is-hidden");
+        }
+      });
+
+      if (countEl) {
+        countEl.textContent =
+          shown + " of " + items.length + " Publications Shown";
+      }
+    }
+
+    if (searchEl) {
+      searchEl.addEventListener("input", applyFilters);
+    }
+
+    applyFilters();
+  })();
+</script>

@@ -51,59 +51,6 @@ background: "/img/smart-cities.jpg"
   {% endfor %}
 </div>
 
-<style>
-  
-  .projects-controls-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    align-items: flex-end;
-  }
-
-  .projects-control {
-    flex: 1 1 260px;
-    min-width: 240px;
-  }
-
-  .projects-label {
-    display: block;
-    font-size: 14px;
-    margin: 0 0 6px;
-    color: rgba(0,0,0,0.7);
-  }
-
-  .projects-input {
-    width: 100%;
-    border: 1px solid black;
-    border-radius: 10px;
-    padding: 10px 12px;
-    font-size: 15px;
-    font-weight: bolder;
-    outline: none;
-    background: #fff;
-  }
-
-  .projects-input:focus {
-    border-color: rgba(0,0,0,0.3);
-    box-shadow: 0 0 0 3px rgba(0,0,0,0.06);
-  }
-
-  .projects-meta {
-    margin-top: 10px;
-    font-size: 14px;
-    font-weight: bold;
-    color: rgba(0,0,0,0.65);
-  }
-
-  .project-card {
-    height: 100%;
-  }
-
-  .project-item.is-hidden {
-    display: none !important;
-  }
-</style>
-
 <script>
   (function () {
     var grid = document.getElementById("projectsGrid");
