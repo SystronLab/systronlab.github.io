@@ -6,7 +6,7 @@ background: "/img/systron-team.jpg"
 
 {% assign people = site.people | sort: "priority" | reverse %} {% for person in
 people %} {% if person.former %}{% continue %}{% endif %}
-<article class="post-preview">
+<article class="people-preview">
   <div class="row">
     <div class="col-md-3">
       {% if person.photo %}
@@ -22,7 +22,7 @@ people %} {% if person.former %}{% continue %}{% endif %}
       {% endif %}
     </div>
     <div class="col-md-9">
-      <h2 class="post-title">
+      <h2 class="people-title">
         <span>{{ person.name }}</span
         ><span style="float: right">
           {% if person.site %}
@@ -36,7 +36,7 @@ people %} {% if person.former %}{% continue %}{% endif %}
           {% endif %}</span
         >
       </h2>
-      <h3 class="post-subtitle">{{ person.role }}</h3>
+      <h3 class="people-subtitle">{{ person.role }}</h3>
       <p>{{ person.content | strip_html }}</p>
     </div>
   </div>
@@ -45,26 +45,25 @@ people %} {% if person.former %}{% continue %}{% endif %}
 <br />
 {% endfor %}
 
-<article class="post-preview">
-  <h2 class="post-title centered-u-text">Former Members</h2>
+<article class="people-preview">
+  <h2 class="people-title centered-u-text">Former Members</h2>
   <ul class="list-group">
-    {% for person in people %} {% if person.former %} {% if person.site %}
+    {% for person in people %} {% if person.former %}
     <li class="list-group-item">
-      <span>{{ person.name }} ({{ person.role }})</span>
-      <span style="float: right">
-        {% if person.site %}
-        <a href="{{ person.site }}" target="_blank" rel="noopener noreferrer">
-          <i
-            style="color: #609732"
-            class="fas fa-external-link-alt"
-            aria-hidden="true"
-          ></i>
-        </a>
-        {% endif %}</span
-      >
+      <h4>
+        <span>{{ person.name }} ({{ person.role }})</span> {% if person.site %}
+        <span style="float: right">
+          <a href="{{ person.site }}" target="_blank" rel="noopener noreferrer">
+            <i
+              style="color: #609732"
+              class="fas fa-external-link-alt"
+              aria-hidden="true"
+            ></i>
+          </a>
+        </span>
+        {% endif %}
+      </h4>
     </li>
-    {% else %}
-    <li class="list-group-item">{{ person.name }} ({{ person.role }})</li>
-    {% endif %} {% endif %} {% endfor %}
+    {% endif %} {% endfor %}
   </ul>
 </article>

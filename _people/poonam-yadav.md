@@ -1,7 +1,8 @@
 ---
 name: "Dr Poonam Yadav"
 role: "SYSTRON Lead"
-photo: '/img/people/poonam.png'
+photo: "/img/people/poonam.png"
+site: https://www.cs.york.ac.uk/people/yadav
 priority: 10
 ---
 
