@@ -5,30 +5,146 @@ background: "/img/smart-cities.jpg"
 ---
 
 </div></div>
-<div class="row">
 
-{% for project in site.projects reversed %}
+<div class="projects-controls">
+  <div class="projects-controls-row">
+    <div class="projects-control">
+      <input id="projectsSearch" class="projects-input" type="text" placeholder="Search by Title, Authors, Description" />
+    </div>
+  </div>
 
-<div class="col-lg-4 col-md-6 mx-auto research-topic">
-    <div class="card">
-        <img src="{{ project.image | prepend: site.baseurl | replace: '//', '/' }}" class="card-img-top" alt="">
-        <div class="card-body">
+  <div class="projects-meta">
+    <span id="projectsCount"></span>
+  </div>
+</div>
+<br>
+<div class="row" id="projectsGrid">
+
+  {% for project in site.projects reversed %}
+
+  <div
+    class="col-lg-4 col-md-6 mx-auto research-topic project-item"
+    data-title="{{ project.title | downcase | escape }}"
+    data-authors="{{ project.authors | array_to_sentence_string | downcase | escape }}"
+    data-desc="{% if project.desc %}{{ project.desc | strip_html | downcase | escape }}{% else %}{{ project.excerpt | strip_html | downcase | escape }}{% endif %}"
+  >
+    <div class="card project-card">
+      <img src="{{ project.image | prepend: site.baseurl | replace: '//', '/' }}" class="card-img-top project-img" alt="">
+      <div class="card-body project-body">
         <h5 class="card-title">{{ project.title }}</h5>
 
         <h6 class="card-subtitle text-muted">
-            {{ project.authors | array_to_sentence_string | truncatewords: 30 }}
+          {{ project.authors | array_to_sentence_string | truncatewords: 30 }}
         </h6>
 
         {% if project.desc %}
-        <p class="card-text">{{ project.desc | strip_html }}</p>
+          <p class="card-text">{{ project.desc | strip_html }}</p>
         {% else %}
-        <p class="card-text">{{ project.excerpt | truncatewords: 30 | strip_html }}</p>
+          <p class="card-text">{{ project.excerpt | truncatewords: 30 | strip_html }}</p>
         {% endif %}
 
         <a href="{{ project.url | prepend: site.baseurl | replace: '//', '/' }}" class="btn btn-primary">Read more &rarr;</a>
-
-        </div>
+      </div>
     </div>
-</div><br />
+  </div><br />
 
-{% endfor %}
+  {% endfor %}
+</div>
+
+<style>
+  
+  .projects-controls-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: flex-end;
+  }
+
+  .projects-control {
+    flex: 1 1 260px;
+    min-width: 240px;
+  }
+
+  .projects-label {
+    display: block;
+    font-size: 14px;
+    margin: 0 0 6px;
+    color: rgba(0,0,0,0.7);
+  }
+
+  .projects-input {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px 12px;
+    font-size: 15px;
+    font-weight: bolder;
+    outline: none;
+    background: #fff;
+  }
+
+  .projects-input:focus {
+    border-color: rgba(0,0,0,0.3);
+    box-shadow: 0 0 0 3px rgba(0,0,0,0.06);
+  }
+
+  .projects-meta {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgba(0,0,0,0.65);
+  }
+
+  .project-card {
+    height: 100%;
+  }
+
+  .project-item.is-hidden {
+    display: none !important;
+  }
+</style>
+
+<script>
+  (function () {
+    var grid = document.getElementById("projectsGrid");
+    if (!grid) return;
+
+    var items = Array.prototype.slice.call(grid.querySelectorAll(".project-item"));
+    var searchEl = document.getElementById("projectsSearch");
+    var countEl = document.getElementById("projectsCount");
+
+    function norm(s) {
+      return (s || "").toString().trim().toLowerCase();
+    }
+
+    function applyFilters() {
+      var q = norm(searchEl && searchEl.value);
+      var shown = 0;
+
+      items.forEach(function (el) {
+        var title = norm(el.getAttribute("data-title"));
+        var authors = norm(el.getAttribute("data-authors"));
+        var desc = norm(el.getAttribute("data-desc"));
+
+        var matchesSearch = !q || (title.indexOf(q) !== -1 || authors.indexOf(q) !== -1 || desc.indexOf(q) !== -1);
+
+        if (matchesSearch) {
+          el.classList.remove("is-hidden");
+          shown += 1;
+        } else {
+          el.classList.add("is-hidden");
+        }
+      });
+
+      if (countEl) {
+        countEl.textContent = shown + " of " + items.length + " Projects Shown";
+      }
+    }
+
+    if (searchEl) {
+      searchEl.addEventListener("input", applyFilters);
+    }
+
+    applyFilters();
+  })();
+</script>
