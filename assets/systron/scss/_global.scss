@@ -22,6 +22,15 @@ h6 {
   font-weight: 800;
 }
 
+.centered-text {
+  text-align: center;
+}
+
+.centered-u-text {
+  text-align: center;
+  text-decoration: underline;
+}
+
 a {
   color: $gray-900;
 
@@ -196,4 +205,8 @@ img::-moz-selection {
       color: fade-out($systron-a, 0.2);
     }
   }
+}
+
+.btn {
+  border-radius: 0.25rem !important;
 }

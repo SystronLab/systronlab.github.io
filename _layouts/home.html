@@ -13,7 +13,7 @@ layout: default
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="page-heading home-heading">
-            <h1>{{ site.title }}</h1>
+            <h1 class="centered-text">{{ site.title }}</h1>
             {% if site.description %}
             <span class="subheading">{{ site.description }}</span>
             {% endif %}
@@ -24,7 +24,7 @@ layout: default
   </header>
 
   <div class="container" id="research">
-    <h2>Our Research Themes</h2>
+    <h2 class="centered-u-text">Our Research Themes</h2>
 
     <div class="row">
       {% for theme in site.research %}
@@ -32,7 +32,7 @@ layout: default
         <div class="card">
           <img src="{{ theme.background | prepend: site.baseurl | replace: '//', '/' }}" class="card-img-top" alt="">
           <div class="card-body">
-            <h5 class="card-title">{{ theme.title }}</h5>
+            <h5 class="card-title centered-text">{{ theme.title }}</h5>
             <p class="card-text">{{ theme.description }}</p>
           </div>
         </div>
@@ -44,7 +44,7 @@ layout: default
 
   <div class="container-fluid people-banner mx-auto">
     <div class="container">
-        <h2>Our Research Team</h2>
+        <h2 class="centered-u-text">Our Research Team</h2>
         <div class="row">
         {% assign people = site.people | sort: "priority" | reverse %}
         {% for person in people %}
@@ -74,7 +74,7 @@ layout: default
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <h2>Join Our Team!</h2>
+          <h2 class="centered-u-text">Join Our Team!</h2>
           {% for opportunity in site.opportunities %}
             <article class="opportunity">
               <a href="{{ opportunity.url | prepend: site.baseurl | replace: '//', '/' }}">
@@ -99,7 +99,7 @@ layout: default
 
         <!--{{ content }}-->
 
-        <h2>Latest News</h2>
+        <h2 class="centered-u-text">Latest News</h2>
 
         <!-- Home Post List -->
         {% for post in site.posts limit : 5 %}

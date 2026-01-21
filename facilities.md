@@ -7,7 +7,7 @@ background: "/img/uoy-cse-1.jpg"
 
 The SYSTRON Lab is based in the Ian Wand Building, Campus East, at the University of York. We also have a presence in the nearby Institute for Safe Autonomy (ISA) and in City College, Thessaloniki - the University of York's Europe Campus.
 
-## Locations
+## <center><u>Locations</u></center><br>
 
 ### The Ian Wand Building
 
@@ -19,9 +19,7 @@ Also located on Campus East, the ISA building is a new £15m purpose-built facil
 
 This also has a number of [test spaces](https://www.york.ac.uk/safe-autonomy/facilities/laboratories-and-test-spaces/).
 
-## Research Testbeds
-
-As part of our research, we have constructed a small number of testbeds.
+## <center><u>Research Testbeds</u></center><br>
 
 ### Thread Edge Testbed
 
@@ -32,7 +30,7 @@ As [presented earlier this year at the NDSS Symposium](/publications/2025-evalua
 </div>
 <br>
 
-### 5G Standalone (SA) Network Testbed
+### 5G Standalone Network Split 8 Testbed
 
 We host a fully operational 5G Standalone (SA) network testbed powered by the srsRAN stack. The setup follows a Split 8 architecture, with the complete gNB stack deployed locally. For the radio front end, we utilize a USRP X310 in conjunction with an OctoClock-G CDA-2990.
 
