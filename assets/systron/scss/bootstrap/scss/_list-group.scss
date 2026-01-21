@@ -12,7 +12,6 @@
   @include border-radius($list-group-border-radius);
 }
 
-
 // Interactive list items
 //
 // Use anchor or button elements instead of `li`s or `div`s to create interactive
@@ -37,7 +36,6 @@
   }
 }
 
-
 // Individual list items
 //
 // Use on `li`s or `div`s within the `.list-group` parent.
@@ -49,7 +47,7 @@
   color: $list-group-color;
   text-decoration: if($link-decoration == none, null, none);
   background-color: $list-group-bg;
-  border: $list-group-border-width solid $list-group-border-color;
+  border-bottom: $list-group-border-width solid $list-group-border-color;
 
   &:first-child {
     @include border-top-radius(inherit);
@@ -83,7 +81,6 @@
     }
   }
 }
-
 
 // Horizontal
 //
@@ -125,7 +122,6 @@
   }
 }
 
-
 // Flush list items
 //
 // Remove borders and border-radius to keep list group items edge-to-edge. Most
@@ -143,12 +139,15 @@
   }
 }
 
-
 // Contextual variants
 //
 // Add modifier classes to change text and background color on individual items.
 // Organizationally, this must come after the `:hover` states.
 
 @each $color, $value in $theme-colors {
-  @include list-group-item-variant($color, theme-color-level($color, -9), theme-color-level($color, 6));
+  @include list-group-item-variant(
+    $color,
+    theme-color-level($color, -9),
+    theme-color-level($color, 6)
+  );
 }

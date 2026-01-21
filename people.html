@@ -1,49 +1,70 @@
 ---
 layout: page
 title: People
-description: Meet the SYSTRON team
-background: '/img/systron-team.jpg'
+background: "/img/systron-team.jpg"
 ---
 
-{% assign people = site.people | sort: "priority" | reverse %}
-{% for person in people %}
-{% if person.former %}{% continue %}{% endif %}
+{% assign people = site.people | sort: "priority" | reverse %} {% for person in
+people %} {% if person.former %}{% continue %}{% endif %}
 <article class="post-preview">
   <div class="row">
-      <div class="col-md-3">
-        {% if person.photo %}
-        <img class="img-thumbnail img-fluid border border-0 rounded-circle" src="{{ person.photo | prepend: site.baseurl | replace: '//', '/' }}">
-        {% else %}
-        <img class="img-thumbnail img-fluid border border-0 rounded-circle"
-          src="/img/people/placeholder.png">
-        {% endif %}
-      </div>
-      <div class="col-md-9">
-        <h2 class="post-title">{{ person.name }}</h2>
-        <h3 class="post-subtitle">{{ person.role }}</h3>
-        <p>{{ person.content | strip_html }}</p>
-        {% if person.site %}
-        <div class="clearfix">
-          <a class="btn btn-primary float-right" href="{{ person.site }}" target="_blank">Visit Website &rarr;</a>
-        </div>
-        {% endif %}
-      </div>
+    <div class="col-md-3">
+      {% if person.photo %}
+      <img
+        class="img-thumbnail img-fluid border border-0 rounded-circle"
+        src="{{ person.photo | prepend: site.baseurl | replace: '//', '/' }}"
+      />
+      {% else %}
+      <img
+        class="img-thumbnail img-fluid border border-0 rounded-circle"
+        src="/img/people/placeholder.png"
+      />
+      {% endif %}
+    </div>
+    <div class="col-md-9">
+      <h2 class="post-title">
+        <span>{{ person.name }}</span
+        ><span style="float: right">
+          {% if person.site %}
+          <a href="{{ person.site }}" target="_blank" rel="noopener noreferrer">
+            <i
+              style="color: #609732"
+              class="fas fa-external-link-alt"
+              aria-hidden="true"
+            ></i>
+          </a>
+          {% endif %}</span
+        >
+      </h2>
+      <h3 class="post-subtitle">{{ person.role }}</h3>
+      <p>{{ person.content | strip_html }}</p>
+    </div>
   </div>
 </article>
-<hr>
+<hr />
+<br />
 {% endfor %}
 
 <article class="post-preview">
-  <h2 class="post-title">Former Members</h2>
+  <h2 class="post-title centered-u-text">Former Members</h2>
   <ul class="list-group">
-  {% for person in people %}
-   {% if person.former %}
-    {% if person.site %}
-    <li class="list-group-item"><a href="{{ person.site }}" target="_blank">{{ person.name }} ({{ person.role }})</a></li>
+    {% for person in people %} {% if person.former %} {% if person.site %}
+    <li class="list-group-item">
+      <span>{{ person.name }} ({{ person.role }})</span>
+      <span style="float: right">
+        {% if person.site %}
+        <a href="{{ person.site }}" target="_blank" rel="noopener noreferrer">
+          <i
+            style="color: #609732"
+            class="fas fa-external-link-alt"
+            aria-hidden="true"
+          ></i>
+        </a>
+        {% endif %}</span
+      >
+    </li>
     {% else %}
     <li class="list-group-item">{{ person.name }} ({{ person.role }})</li>
-    {% endif %}
-   {% endif %}
-  {% endfor %}
+    {% endif %} {% endif %} {% endfor %}
   </ul>
 </article>
