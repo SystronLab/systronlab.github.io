@@ -1,24 +1,30 @@
 <nav class="navbar navbar-expand-lg navbar-light  fixed-top" id="mainNav">
-  <div class="container">
-    <a class="navbar-brand" href="{{"/" | relative_url }}"><span class="sys">SYS</span><span class="tron">TRON</span></a>
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+   <div class="container">
+      <a class="navbar-brand" href="{{"/" | relative_url }}"><span class="sys">SYS</span><span class="tron">TRON</span></a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <i class="fa fa-bars"></i>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="{{"/projects" | relative_url }}">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{"/facilities" | relative_url }}">Facilities</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{"/publications" | relative_url }}">Publications</a>
-        </li>
-         <li class="nav-item">
-          <a class="nav-link" href="{{"/news" | relative_url }}">News</a>
-        </li>
-      </ul>
-    </div>
-  </div>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+         <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+               <a class="nav-link {% if page.url == '/' %}active{% endif %}" href="{{ '/' | relative_url }}">Home</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link {% if page.url contains '/projects' %}active{% endif %}" href="{{ '/projects' | relative_url }}">Projects</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link {% if page.url contains '/facilities' %}active{% endif %}" href="{{ '/facilities' | relative_url }}">Facilities</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link {% if page.url contains '/publications' %}active{% endif %}" href="{{ '/publications' | relative_url }}">Publications</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link {% if page.url contains '/news' %}active{% endif %}" href="{{ '/news' | relative_url }}">News</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link {% if page.url contains '/people' %}active{% endif %}" href="{{ '/people' | relative_url }}">About Us</a>
+            </li>
+         </ul>
+      </div>
+   </div>
 </nav>
