@@ -3,28 +3,34 @@ layout: default
 ---
 
 {% if page.image %}
-<header class="masthead" style="background-image: url('{{ page.image | prepend: site.baseurl | replace: '//', '/' }}')">
+<header
+  class="masthead"
+  style="background-image: url('{{ page.image | prepend: site.baseurl | replace: '//', '/' }}')"
+>
   {% else %}
   <header class="masthead">
     {% endif %}
     <div class="overlay"></div>
     <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-md-10 mx-auto">
-                <div class="post-heading smaller-heading">
-                    <h1>{{ page.title }}</h1>
-                    <p>{{ page.authors | array_to_sentence_string }}</p>
-                    {% if page.repo %}
-                    <a class="btn btn-primary" href="{{ page.repo }}" target="_blank">View Repository <span class="d-none d-md-inline"></span>&rarr;</a><br />
-                    {% endif %}
-                </div>
-            </div>
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading smaller-heading">
+            <h1>{{ page.title }}</h1>
+            <p>{{ page.authors | array_to_sentence_string }}</p>
+            {% if page.repo %}
+            <a class="btn btn-primary" href="{{ page.repo }}" target="_blank"
+              >View Repository <span class="d-none d-md-inline"></span>&rarr;</a
+            ><br />
+            {% endif %}
+          </div>
         </div>
+      </div>
     </div>
-</header>
+  </header>
 
-<div class="container">
+  <div class="container">
     <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto post-content">{{ content }}</div>
+      <div class="col-lg-8 col-md-10 mx-auto post-content">{{ content }}</div>
     </div>
-</div>
+  </div>
+</header>

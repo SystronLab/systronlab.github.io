@@ -4,78 +4,86 @@ layout: default
 
 <!-- Page Header -->
 {% if page.background %}
-<header class="masthead"
-    style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
-    {% else %}
-    <header class="masthead">
-        {% endif %}
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-md-10 mx-auto">
-                    <div class="post-heading smaller-heading">
-                        <h1>{{ page.title }}</h1>
-                        {% if page.subtitle %}
-                        <h2 class="subheading">{{ page.subtitle }}</h2>
-                        {% endif %}
-                        <p>{{ page.authors | array_to_sentence_string }}</p>
-                        <span class="meta">
-                            {% if page.venue %}
-                                Published in {{ page.venue }} &middot; Published on {{ page.date | date: '%d %B %Y' }}
-                            {% else %}
-                                Published on {{ page.date | date: '%d %B %Y' }}
-                            {% endif %}
-                            {% if page.preprint %}
-                                &middot; Preprint
-                            {% endif %}
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
+<header
+  class="masthead"
+  style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')"
+>
+  {% else %}
+  <header class="masthead">
+    {% endif %}
+    <div class="overlay"></div>
     <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-md-10 mx-auto post-content">
-
-                {{ content }}
-
-                {% if page.file %}
-                <div class="publication-download">
-                    <a class="btn btn-primary" href="{{ page.file | prepend: site.baseurl | replace: '//', '/' }}"
-                        data-toggle="tooltip" data-placement="top" title="{{ page.title }}" target="_blank">Download<span class="d-none d-md-inline">
-                            Paper</span> &rarr;</a>
-                </div>
-                {% endif %}
-                {% if page.file and page.link %}<br>{% endif %}
-                {% if page.link %}
-                <div class="publication-link">
-                    <a class="btn btn-primary" href="{{ page.link }}" target="_blank">Read<span class="d-none d-md-inline">
-                            with publisher</span> &rarr;</a>
-                </div>
-                {% endif %}
-
-                <hr>
-
-                <div class="clearfix">
-
-                    {% if page.previous.url %}
-                    <a class="btn btn-primary float-left"
-                        href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}"
-                        data-toggle="tooltip" data-placement="top" title="{{ page.previous.title }}">&larr;
-                        Previous<span class="d-none d-md-inline">
-                            Publication</span></a>
-                    {% endif %}
-                    {% if page.next.url %}
-                    <a class="btn btn-primary float-right"
-                        href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip"
-                        data-placement="top" title="{{ page.next.title }}">Next<span class="d-none d-md-inline">
-                            Publication</span> &rarr;</a>
-                    {% endif %}
-
-                </div>
-
-            </div>
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading smaller-heading">
+            <h1>{{ page.title }}</h1>
+            {% if page.subtitle %}
+            <h2 class="subheading">{{ page.subtitle }}</h2>
+            {% endif %}
+            <p>{{ page.authors | array_to_sentence_string }}</p>
+            <span class="meta">
+              {% if page.venue %} Published in {{ page.venue }} &middot;
+              Published on {{ page.date | date: '%d %B %Y' }} {% else %}
+              Published on {{ page.date | date: '%d %B %Y' }} {% endif %} {% if
+              page.preprint %} &middot; Preprint {% endif %}
+            </span>
+          </div>
         </div>
+      </div>
     </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto post-content">
+        {{ content }} {% if page.file %}
+        <div class="publication-download">
+          <a
+            class="btn btn-primary"
+            href="{{ page.file | prepend: site.baseurl | replace: '//', '/' }}"
+            data-toggle="tooltip"
+            data-placement="top"
+            title="{{ page.title }}"
+            target="_blank"
+            >Download<span class="d-none d-md-inline"> Paper</span> &rarr;</a
+          >
+        </div>
+        {% endif %} {% if page.file and page.link %}<br />{% endif %} {% if
+        page.link %}
+        <div class="publication-link">
+          <a class="btn btn-primary" href="{{ page.link }}" target="_blank"
+            >Read<span class="d-none d-md-inline"> with publisher</span>
+            &rarr;</a
+          >
+        </div>
+        {% endif %}
+
+        <hr />
+
+        <div class="clearfix">
+          {% if page.previous.url %}
+          <a
+            class="btn btn-primary float-left"
+            href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}"
+            data-toggle="tooltip"
+            data-placement="top"
+            title="{{ page.previous.title }}"
+            >&larr; Previous<span class="d-none d-md-inline">
+              Publication</span
+            ></a
+          >
+          {% endif %} {% if page.next.url %}
+          <a
+            class="btn btn-primary float-right"
+            href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}"
+            data-toggle="tooltip"
+            data-placement="top"
+            title="{{ page.next.title }}"
+            >Next<span class="d-none d-md-inline"> Publication</span> &rarr;</a
+          >
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

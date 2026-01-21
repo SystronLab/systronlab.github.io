@@ -1,8 +1,9 @@
 ---
 name: "Dr Rana Muhammad Sohaib"
 role: "Affiliate"
-photo: '/img/people/rana.png'
-site: 'https://velinkx.com/'
+photo: "/img/people/rana.png"
+site: "https://velinkx.com/"
+former: true
 ---
 
 Dr Rana Muhammad Sohaib is a former Research Associate within the SYSTRON Lab, and now is a co-founder of VeLinkX and an affiliate of our lab.

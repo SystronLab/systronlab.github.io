@@ -1,11 +1,10 @@
 ---
 layout: page
 title: News
-background: '/img/smart-cities.jpg'
+background: "/img/smart-cities.jpg"
 ---
 
-{% for post in site.posts %}
-{% if post.categories contains 'news' %}
+{% for post in site.posts %} {% if post.categories contains 'news' %}
 
 <article class="post-preview">
   <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
@@ -13,38 +12,39 @@ background: '/img/smart-cities.jpg'
     {% if post.subtitle %}
     <h3 class="post-subtitle">{{ post.subtitle }}</h3>
     {% else %}
-    <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
+    <h3 class="post-subtitle">
+      {{ post.excerpt | strip_html | truncatewords: 15 }}
+    </h3>
     {% endif %}
   </a>
-  <p class="post-meta">Published by
-    {% if post.author %}
-    {{ post.author }}
-    {% else %}
-    {{ site.author }}
-    {% endif %}
-    on {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}
+  <p class="post-meta">
+    Published by {% if post.author %} {{ post.author }} {% else %} {{
+    site.author }} {% endif %} on {{ post.date | date: '%B %d, %Y' }} &middot;
+    {% include read_time.html content=post.content %}
   </p>
 </article>
 
-<hr>
+<hr />
 
-{% endif %}
-{% endfor %}
+{% endif %} {% endfor %}
 
 <!-- Pager -->
 {% if paginator.total_pages > 1 %}
 
 <div class="clearfix">
-
   {% if paginator.previous_page %}
-  <a class="btn btn-primary float-left" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr;
-    Newer<span class="d-none d-md-inline"> Posts</span></a>
+  <a
+    class="btn btn-primary float-left"
+    href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"
+    >&larr; Newer<span class="d-none d-md-inline"> Posts</span></a
+  >
+  {% endif %} {% if paginator.next_page %}
+  <a
+    class="btn btn-primary float-right"
+    href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"
+    >Older<span class="d-none d-md-inline"> Posts</span> &rarr;</a
+  >
   {% endif %}
-
-  {% if paginator.next_page %}
-  <a class="btn btn-primary float-right" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older<span class="d-none d-md-inline"> Posts</span> &rarr;</a>
-  {% endif %}
-
 </div>
 
 {% endif %}
