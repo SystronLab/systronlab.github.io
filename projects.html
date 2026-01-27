@@ -4,12 +4,15 @@ title: Projects
 background: "/img/smart-cities.jpg"
 ---
 
-</div></div>
-
 <div class="projects-controls">
   <div class="projects-controls-row">
     <div class="projects-control">
-      <input id="projectsSearch" class="projects-input" type="text" placeholder="Search by Title, Authors, Description" />
+      <input
+        id="projectsSearch"
+        class="projects-input"
+        type="text"
+        placeholder="Search by Title, Authors, Description"
+      />
     </div>
   </div>
 
@@ -17,36 +20,49 @@ background: "/img/smart-cities.jpg"
     <span id="projectsCount"></span>
   </div>
 </div>
-<br>
-<div class="row" id="projectsGrid">
+<br />
 
+<div class="row" id="projectsGrid">
   {% for project in site.projects reversed %}
 
   <div
-    class="col-lg-4 col-md-6 mx-auto research-topic project-item"
+    class="col-12 research-topic project-item"
     data-title="{{ project.title | downcase | escape }}"
     data-authors="{{ project.authors | array_to_sentence_string | downcase | escape }}"
     data-desc="{% if project.desc %}{{ project.desc | strip_html | downcase | escape }}{% else %}{{ project.excerpt | strip_html | downcase | escape }}{% endif %}"
   >
     <div class="card project-card">
-      <img src="{{ project.image | prepend: site.baseurl | replace: '//', '/' }}" class="card-img-top project-img" alt="">
+      <div class="project-img-wrapper">
+        <img
+          src="{{ project.image | prepend: site.baseurl | replace: '//', '/' }}"
+          class="card-img-top project-img"
+          alt="{{ project.title }}"
+        />
+      </div>
       <div class="card-body project-body">
-        <h5 class="card-title">{{ project.title }}</h5>
+        <h3 class="card-title">{{ project.title }}</h3>
 
         <h6 class="card-subtitle text-muted">
           {{ project.authors | array_to_sentence_string | truncatewords: 30 }}
         </h6>
 
-        {% if project.desc %}
-          <p class="card-text">{{ project.desc | strip_html }}</p>
-        {% else %}
-          <p class="card-text">{{ project.excerpt | truncatewords: 30 | strip_html }}</p>
-        {% endif %}
+        <div class="card-text">
+          {% if project.desc %}
+          <p>{{ project.desc | strip_html }}</p>
+          {% else %}
+          <p>{{ project.excerpt | truncatewords: 30 | strip_html }}</p>
+          {% endif %}
+        </div>
 
-        <a href="{{ project.url | prepend: site.baseurl | replace: '//', '/' }}" class="btn btn-primary">Read more &rarr;</a>
+        <a
+          href="{{ project.url | prepend: site.baseurl | replace: '//', '/' }}"
+          class="btn btn-primary"
+          style="border-radius: 8px; padding: 10px 20px; font-weight: 600"
+          >Read more &rarr;</a
+        >
       </div>
     </div>
-  </div><br />
+  </div>
 
   {% endfor %}
 </div>
@@ -56,7 +72,9 @@ background: "/img/smart-cities.jpg"
     var grid = document.getElementById("projectsGrid");
     if (!grid) return;
 
-    var items = Array.prototype.slice.call(grid.querySelectorAll(".project-item"));
+    var items = Array.prototype.slice.call(
+      grid.querySelectorAll(".project-item"),
+    );
     var searchEl = document.getElementById("projectsSearch");
     var countEl = document.getElementById("projectsCount");
 
@@ -73,7 +91,11 @@ background: "/img/smart-cities.jpg"
         var authors = norm(el.getAttribute("data-authors"));
         var desc = norm(el.getAttribute("data-desc"));
 
-        var matchesSearch = !q || (title.indexOf(q) !== -1 || authors.indexOf(q) !== -1 || desc.indexOf(q) !== -1);
+        var matchesSearch =
+          !q ||
+          title.indexOf(q) !== -1 ||
+          authors.indexOf(q) !== -1 ||
+          desc.indexOf(q) !== -1;
 
         if (matchesSearch) {
           el.classList.remove("is-hidden");
