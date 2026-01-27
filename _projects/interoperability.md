@@ -3,10 +3,11 @@ layout: projects
 title: "Advancing RAN Interoperability"
 date: 2024-10-10 12:00:00 +0000
 authors:
-  - Poonam Yadav
-  - Yifan Liu
-  - Rana Muhammad Sohaib
   - Mohit Bidikar
+  - Dr Yifan Liu
+  - Dr Rana Muhammad Sohaib
+  - Dr Poonam Yadav
+
 image: "/img/projects/interoperability.png"
 desc: Advancing RAN interoperability by bridging the gap between commercial and open-source E2 nodes and RAN Intelligent Controllers (RICs).
 ---
@@ -19,8 +20,7 @@ This project aims to improve interoperability in the Radio Access Network (RAN) 
 
 #### 1. Commercial E2 Node (VIAVI Tester) with Open-Source RIC (OSC)
 
-**GitHub**: [uoy-research/oran-sc-ric-uoy](https://github.com/uoy-research/oran-sc-ric-uoy)<br>  
-**Status**: <span style="color: #609732;">Completed</span>
+**GitHub**: [uoy-research/oran-sc-ric-uoy](https://github.com/uoy-research/oran-sc-ric-uoy)<br>
 
 We began with the integration of a commercial E2 node (VIAVI tester) with an open-source RIC (OSC). This required significant modifications to the OSC RIC (Github repo attached above) to resolve compatibility issues. After successful adaptation, our xApp was able to fetch KPMs directly from the VIAVI node.
 
@@ -37,8 +37,7 @@ Building on the initial milestone, we transitioned to an entirely open-source se
 
 ##### 2.1 srsRAN with ZMQ
 
-**GitHub**: [SystronLab/srsRAN-ZMQ](https://github.com/SystronLab/srsRAN-ZMQ)<br>  
-**Status**: <span style="color: #609732;">Completed</span>
+**GitHub**: [SystronLab/srsRAN-ZMQ](https://github.com/SystronLab/srsRAN-ZMQ)<br>
 
 We first deployed srsRAN using its ZeroMQ-based virtual radio interface. This software-centric setup allowed us to simulate RF behavior without hardware, accelerating development and continuous integration testing. It provided an efficient base for integrating our xApps with both FlexRIC and OSC RICs.
 
@@ -49,8 +48,7 @@ The GitHub repository includes comprehensive guides for various deployment scena
 
 ##### 2.2 srsRAN Over-the-Air (OTA) Setup with USRP x310
 
-**GitHub**: [SystronLab/srsRAN-USRPs-OTA](https://github.com/SystronLab/srsRAN-USRPs-OTA)<br>  
-**Status**: <span style="color: #609732;">Completed</span>
+**GitHub**: [SystronLab/srsRAN-USRPs-OTA](https://github.com/SystronLab/srsRAN-USRPs-OTA)<br>
 
 <img src="/img/ota.png" alt="Over-the-Air (OTA) Setup" >
 <p><em>Image credit: <a href="https://www.srsran.com/" target="_blank">srsRAN project</a></em></p>
@@ -66,8 +64,7 @@ With the foundation set in ZMQ-based virtual testing, we progressed to over-the-
 
 ##### 2.3 srsRAN split 8 Setup with USRP x310 and COTS UEs / Quectel Modem
 
-**GitHub**: [SystronLab/srsRAN-USRPs-COTS](https://github.com/SystronLab/srsRAN-USRPs-COTS)<br>  
-**Status**: <span style="color: #609732;">Completed</span>
+**GitHub**: [SystronLab/srsRAN-USRPs-COTS](https://github.com/SystronLab/srsRAN-USRPs-COTS)<br>
 
 <iframe
   width="560"

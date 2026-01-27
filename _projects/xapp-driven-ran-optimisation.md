@@ -8,7 +8,7 @@ image: "/img/projects/xapp-driven-ran-optimisation.jpeg"
 desc: A custom xApp on the Near-RT RIC that allocates PRBs to the mission-critical UEs
 ---
 
-## Problem and Motivation
+## <u>Problem and Motivation</u>
 
 Modern industrial and healthcare environments are increasingly adopting mission-critical robotic systems such as robotic arms, AGVs, automated inspection units and surgical robots that exchange control commands and sensor data every few milliseconds. These critical systems require predictable throughput, ultra-low latency, and highly stable wireless links. Even brief jitter or delay can disrupt the control loop and lead to unsafe or unstable behaviour.
 
@@ -17,7 +17,7 @@ assigned to a high-priority slice may still experience jitter or throughput vari
 
 This reveals a gap for robotic systems that require strict, predictable performance. These time-sensitive systems need fine-grained, real-time control at the RAN level to maintain stable operation. To address this limitation, we built a custom xApp on the Near-RT RIC that allocates PRBs to the mission-critical UEs. This enables fine-grained, per-UE, real-time prioritisation of radio resources.
 
-## System Design
+## <u>System Design</u>
 
 <b>RAN:</b> srsRAN Split 8 + USRP x310 + OctoClock-G CDA-2990
 
@@ -34,8 +34,25 @@ This reveals a gap for robotic systems that require strict, predictable performa
 <b>UDP Interface:</b> Server on Robot + Client on Workstation
 
 <img src="/img/xappudp.png" alt="xApp system design" >
+<br>
+<br>
+## <u>Implementation</u>
+We built a fully functional 5G Standalone (SA) testbed using the srsRAN
+stack configured in Split 8 architecture, running entirely on a local server.
+This server also hosted a UDP client and was connected to a wireless
+controller, which generated motion commands serialized as JSON.
 
-## Implementation
+For the radio setup, we used a USRP x310 synchronized with an
+OctoClock-G CDA-2990. The core network was powered by Open5GS,
+providing full control and user plane functionality. As the UE, we used a
+Quectel RMU500-EK 5G modem with a programmable sysmoISIM,
+achieving successful registration and full internet connectivity over our
+private 5G network.
+
+The modem was then mounted on a Jetson Nano–based mini robot. A
+UDP server on the Jetson received JSON-encoded motion files over the
+5G link. These commands, sent by the UDP client on the server, were
+decoded and the robot executed the corresponding motion, demonstrating low-latency, real-time control over 5G using only open-source components and off-the-shelf hardware.
 
 <iframe
   width="560"
@@ -46,31 +63,42 @@ This reveals a gap for robotic systems that require strict, predictable performa
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
   allowfullscreen>
 </iframe>
+<br>
 
-## Results
+## <u>Results</u>
 
 Our xApp successfully delivered the PRB allocation commands to the gNB
 via the E2SM-RC interface, and the scheduler applied them immediately.
 This enabled real-time prioritisation of the critical robot over the non-
 critical UE.
+
 UE-1 (Critical robot)
-• Higher and more stable throughput
-• Noticeably smoother motion
-• Significant reduction in jitter and micro-freezes
+
+<ul>
+<li>Higher and more stable throughput</li>
+<li>Noticeably smoother motion</li>
+<li>Significant reduction in jitter and micro-freezes</li>
+</ul>
+
 UE-2 (Non-critical)
-• Controlled throughput reduction
-• Connection remained fully stable
+
+<ul>
+<li>Controlled throughput reduction</li>
+<li>Connection remained fully stable</li>
+</ul>
 These observations confirm that PRB reallocation was applied correctly
 and that RIC-driven co
 
-## Further Work
+## <u>Further Work</u>
 
-Multi-robot coordination:
-Scaling the setup to multiple critical UEs and evaluating how RAN control
-behaves when several UEs require priority at the same time.
-PRB control + network slicing:
-Combining fine-grained PRB allocation with slice-level QoS to achieve
-fully deterministic end-to-end behaviour.
-Intent-based operation:
+<b>Intent-based operation:</b><br>
 Automating PRB adjustments using high-level intents (e.g. “prioritise
 robot movements”) instead of manually triggering the xApp.
+
+<b>Multi-robot coordination:</b><br>
+Scaling the setup to multiple critical UEs and evaluating how RAN control
+behaves when several UEs require priority at the same time.
+
+<b>PRB control + network slicing:</b><br>
+Combining fine-grained PRB allocation with slice-level QoS to achieve
+fully deterministic end-to-end behaviour.
