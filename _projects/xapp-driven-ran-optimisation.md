@@ -54,15 +54,15 @@ UDP server on the Jetson received JSON-encoded motion files over the
 5G link. These commands, sent by the UDP client on the server, were
 decoded and the robot executed the corresponding motion, demonstrating low-latency, real-time control over 5G using only open-source components and off-the-shelf hardware.
 
+<div class="video-container">
 <iframe
-  width="560"
-  height="315"
   src="https://www.youtube.com/embed/aPBsFGrEsEk"
   title="YouTube video player"
   frameborder="0"
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
   allowfullscreen>
 </iframe>
+</div>
 <br>
 
 ## <u>Results</u>

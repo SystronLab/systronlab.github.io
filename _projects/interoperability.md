@@ -52,29 +52,30 @@ The GitHub repository includes comprehensive guides for various deployment scena
 
 <img src="/img/ota.png" alt="Over-the-Air (OTA) Setup" >
 <p><em>Image credit: <a href="https://www.srsran.com/" target="_blank">srsRAN project</a></em></p>
-
-<iframe width="560" height="315"
+<div class="video-container">
+<iframe
           src="https://www.youtube.com/embed/xW7LMHVnIJk"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen>
 </iframe>
+</div>
 With the foundation set in ZMQ-based virtual testing, we progressed to over-the-air deployments using USRP x310 hardware. This enabled a realistic 5G setup using srsUE, srsRAN gNB, and the Open5GS core network, resulting in a fully open-source end-to-end OTA 5G network.
 
 ##### 2.3 srsRAN split 8 Setup with USRP x310 and COTS UEs / Quectel Modem
 
 **GitHub**: [SystronLab/srsRAN-USRPs-COTS](https://github.com/SystronLab/srsRAN-USRPs-COTS)<br>
 
+<div class="video-container">
 <iframe
-  width="560"
-  height="315"
   src="https://www.youtube.com/embed/aPBsFGrEsEk"
   title="YouTube video player"
   frameborder="0"
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
   allowfullscreen>
 </iframe>
+</div>
 
 In this phase, we implemented a fully functional 5G standalone (SA) network using srsRAN integrated with USRP X310 and commercial off-the-shelf (COTS) UEs. This setup employs a Split 8 architecture, where the entire gNB stack is deployed locally. Coupled with Open5GS core services and programmable SIMs (sysmoISIM), the system enables full internet connectivity for COTS devices.
 
