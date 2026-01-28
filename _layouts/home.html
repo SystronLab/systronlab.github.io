@@ -13,9 +13,9 @@ layout: default
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="page-heading home-heading">
-            <h1 class="centered-text">{{ site.title }}</h1>
+            <h1 class="text-center">{{ site.title }}</h1>
             {% if site.description %}
-            <span class="centered-text subheading">{{ site.description }}</span>
+            <span class="text-center subheading">{{ site.description }}</span>
             {% endif %}
           </div>
         </div>
@@ -24,7 +24,7 @@ layout: default
   </header>
 
   <div class="container" id="research">
-    <h2 class="centered-u-text">Our Research Themes</h2>
+    <h2 class="text-center">Our Research Themes</h2>
 
     <div class="row">
       {% for theme in site.research %}
@@ -32,7 +32,7 @@ layout: default
         <div class="card">
           <img src="{{ theme.background | prepend: site.baseurl | replace: '//', '/' }}" class="card-img-top" alt="">
           <div class="card-body">
-            <h4 class="card-title centered-text">{{ theme.title }}</h4>
+            <h4 class="card-title text-center">{{ theme.title }}</h4>
             <p class="card-text">{{ theme.description }}</p>
           </div>
         </div>
@@ -44,7 +44,7 @@ layout: default
 
   <div class="container-fluid people-banner mx-auto">
     <div class="container">
-        <h2 class="centered-u-text">Our Research Team</h2>
+        <h2 class="text-center">Our Research Team</h2>
         <div class="row justify-content-center">
         {% assign people = site.people | sort: "priority" | reverse %}
         {% for person in people %}
@@ -74,7 +74,7 @@ layout: default
     <div class="container">
       <div class="row text-center">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <h2 class="centered-u-text">Join Our Team!</h2>
+          <h2 class="text-center">Join Our Team!</h2>
           {% for opportunity in site.opportunities %}
             <article class="opportunity">
               <a href="{{ opportunity.url | prepend: site.baseurl | replace: '//', '/' }}">
@@ -103,7 +103,7 @@ layout: default
 
         <!--{{ content }}-->
 
-        <h2 class="centered-u-text">Latest News</h2>
+        <h2 class="text-center">Latest News</h2>
 
         <!-- Home Post List -->
         {% for post in site.posts limit : 5 %}

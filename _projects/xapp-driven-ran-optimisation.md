@@ -8,7 +8,7 @@ image: "/img/projects/xapp-driven-ran-optimisation.jpeg"
 desc: A custom xApp on the Near-RT RIC that allocates PRBs to the mission-critical UEs
 ---
 
-## <u>Problem and Motivation</u>
+## Problem and Motivation
 
 Modern industrial and healthcare environments are increasingly adopting mission-critical robotic systems such as robotic arms, AGVs, automated inspection units and surgical robots that exchange control commands and sensor data every few milliseconds. These critical systems require predictable throughput, ultra-low latency, and highly stable wireless links. Even brief jitter or delay can disrupt the control loop and lead to unsafe or unstable behaviour.
 
@@ -17,7 +17,7 @@ assigned to a high-priority slice may still experience jitter or throughput vari
 
 This reveals a gap for robotic systems that require strict, predictable performance. These time-sensitive systems need fine-grained, real-time control at the RAN level to maintain stable operation. To address this limitation, we built a custom xApp on the Near-RT RIC that allocates PRBs to the mission-critical UEs. This enables fine-grained, per-UE, real-time prioritisation of radio resources.
 
-## <u>System Design</u>
+## System Design
 
 <b>RAN:</b> srsRAN Split 8 + USRP x310 + OctoClock-G CDA-2990
 
@@ -36,7 +36,7 @@ This reveals a gap for robotic systems that require strict, predictable performa
 <img src="/img/xappudp.png" alt="xApp system design" >
 <br>
 <br>
-## <u>Implementation</u>
+## Implementation
 We built a fully functional 5G Standalone (SA) testbed using the srsRAN
 stack configured in Split 8 architecture, running entirely on a local server.
 This server also hosted a UDP client and was connected to a wireless
@@ -65,7 +65,7 @@ decoded and the robot executed the corresponding motion, demonstrating low-laten
 </div>
 <br>
 
-## <u>Results</u>
+## Results
 
 Our xApp successfully delivered the PRB allocation commands to the gNB
 via the E2SM-RC interface, and the scheduler applied them immediately.
@@ -89,7 +89,7 @@ UE-2 (Non-critical)
 These observations confirm that PRB reallocation was applied correctly
 and that RIC-driven co
 
-## <u>Further Work</u>
+## Further Work
 
 <b>Intent-based operation:</b><br>
 Automating PRB adjustments using high-level intents (e.g. “prioritise

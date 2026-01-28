@@ -7,7 +7,7 @@ background: "/img/uoy-cse-1.jpg"
 
 The SYSTRON Lab is based in the Ian Wand Building, Campus East, at the University of York. We also have a presence in the nearby Institute for Safe Autonomy (ISA) and in City College, Thessaloniki - the University of York's Europe Campus.
 
-## <center><u>Locations</u></center><br>
+## <center>Locations</center><br>
 
 ### The Ian Wand Building
 
@@ -19,7 +19,7 @@ Also located on Campus East, the ISA building is a new £15m purpose-built facil
 
 This also has a number of [test spaces](https://www.york.ac.uk/safe-autonomy/facilities/laboratories-and-test-spaces/).
 
-## <center><u>Research Testbeds</u></center><br>
+## <center>Research Testbeds</center><br>
 
 ### Thread Edge Testbed
 
