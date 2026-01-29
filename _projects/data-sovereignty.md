@@ -3,15 +3,16 @@ layout: projects
 title: "Data Sovereignty in the Digital Society: A Framework for Empowering Data Generators"
 date: 2024-11-17 12:00:00 +0000
 authors:
-- Vijon Baraku
-- Iraklis Paraskakis
-- Simeon Veloudis
-- Poonam Yadav
-desc:  A framework for empowering data generators.
-image: '/img/projects/big-data.jpg'
+  - Vijon Baraku
+  - Iraklis Paraskakis
+  - Simeon Veloudis
+  - Poonam Yadav
+desc: A framework for empowering data generators.
+image: "/img/projects/big-data.jpg"
+tags: [Data, Privacy, GDPR]
 ---
 
-In the contemporary digital society, a critical problem can be highlighted: individuals lack granular control over their personal data. Despite current legislation like the General Data Protection Regulation (GDPR), the Data Governance Act, the Data Act, and the AI Act, these frameworks frequently fall short of empowering data generators - those who create data - to control how this data that refers to them is used. 
+In the contemporary digital society, a critical problem can be highlighted: individuals lack granular control over their personal data. Despite current legislation like the General Data Protection Regulation (GDPR), the Data Governance Act, the Data Act, and the AI Act, these frameworks frequently fall short of empowering data generators - those who create data - to control how this data that refers to them is used.
 
 This project proposes a novel framework to enhance data sharing by redefining data control and shifting ownership from data provider entities to data generators
 
@@ -26,6 +27,6 @@ To better understand the objectives, as well as the project overall, please have
 
 ## Publications
 
-- [(Paper) Personal Data Sovereignty in Virtual Enterprises: Implementing Data Capsules for Enhanced Privacy and Compliance. *Presented at PRO-VE 2024 where it won best student paper and best paper*](https://link.springer.com/chapter/10.1007/978-3-031-71739-0_29)
+- [(Paper) Personal Data Sovereignty in Virtual Enterprises: Implementing Data Capsules for Enhanced Privacy and Compliance. _Presented at PRO-VE 2024 where it won best student paper and best paper_](https://link.springer.com/chapter/10.1007/978-3-031-71739-0_29)
 
-- [(Paper) Responsible Information Sharing in the Era of Big Data Analytics Facilitating Digital Economy Through the Use of Blockchain Technology and Observing GDPR. *Presented at CLOSER 2024*](https://www.scitepress.org/Papers/2024/127115/127115.pdf)
+- [(Paper) Responsible Information Sharing in the Era of Big Data Analytics Facilitating Digital Economy Through the Use of Blockchain Technology and Observing GDPR. _Presented at CLOSER 2024_](https://www.scitepress.org/Papers/2024/127115/127115.pdf)

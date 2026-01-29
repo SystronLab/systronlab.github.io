@@ -10,6 +10,7 @@ authors:
 
 image: "/img/projects/interoperability.png"
 desc: Advancing RAN interoperability by bridging the gap between commercial and open-source E2 nodes and RAN Intelligent Controllers (RICs).
+tags: [6G, 5G, Networks, Open RAN, srsRAN, RIC]
 ---
 
 ## Project Overview

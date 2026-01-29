@@ -11,7 +11,7 @@ background: "/img/smart-cities.jpg"
         id="projectsSearch"
         class="projects-input"
         type="text"
-        placeholder="Search by Title, Authors, Description"
+        placeholder="Search by Title, Authors, Tags, or Description"
       />
     </div>
   </div>
@@ -29,6 +29,7 @@ background: "/img/smart-cities.jpg"
     class="col-12 research-topic project-item"
     data-title="{{ project.title | downcase | escape }}"
     data-authors="{{ project.authors | array_to_sentence_string | downcase | escape }}"
+    data-tags="{{ project.tags | join: ' ' | downcase | escape }}"
     data-desc="{% if project.desc %}{{ project.desc | strip_html | downcase | escape }}{% else %}{{ project.excerpt | strip_html | downcase | escape }}{% endif %}"
   >
     <div class="card project-card">
@@ -41,19 +42,23 @@ background: "/img/smart-cities.jpg"
       </div>
       <div class="card-body project-body">
         <h3 class="card-title">{{ project.title }}</h3>
-
         <h6 class="card-subtitle text-muted">
           {{ project.authors | array_to_sentence_string | truncatewords: 30 }}
         </h6>
 
         <div class="card-text">
-          {% if project.desc %}
+          {% if project.tags %}
+          <div class="project-tags-container mb-2">
+            {% for tag in project.tags %}
+            <span class="project-tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+          {% endif %} {% if project.desc %}
           <p>{{ project.desc | strip_html }}</p>
           {% else %}
           <p>{{ project.excerpt | truncatewords: 30 | strip_html }}</p>
           {% endif %}
         </div>
-
         <a
           href="{{ project.url | prepend: site.baseurl | replace: '//', '/' }}"
           class="btn btn-primary"
@@ -90,11 +95,13 @@ background: "/img/smart-cities.jpg"
         var title = norm(el.getAttribute("data-title"));
         var authors = norm(el.getAttribute("data-authors"));
         var desc = norm(el.getAttribute("data-desc"));
+        var tags = norm(el.getAttribute("data-tags"));
 
         var matchesSearch =
           !q ||
           title.indexOf(q) !== -1 ||
           authors.indexOf(q) !== -1 ||
+          tags.indexOf(q) !== -1 ||
           desc.indexOf(q) !== -1;
 
         if (matchesSearch) {
@@ -114,6 +121,7 @@ background: "/img/smart-cities.jpg"
       searchEl.addEventListener("input", applyFilters);
     }
 
+    // Initial run to set count
     applyFilters();
   })();
 </script>

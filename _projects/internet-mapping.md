@@ -3,11 +3,12 @@ layout: projects
 title: "Internet Topology Mapping"
 date: 2024-01-01 12:00:00 +0000
 authors:
-- Joshua Levett
-- Vassilios Vassilakis
-- Poonam Yadav
-image: '/img/projects/internet-topology-mapping.png'
+  - Joshua Levett
+  - Vassilios Vassilakis
+  - Poonam Yadav
+image: "/img/projects/internet-topology-mapping.png"
 desc: Exploring Internet architecture to improve Internet routing protocols.
+tags: [Internet, Security, Networks, Routing]
 ---
 
 Heightened interest from nation states to perform content censorship make it evermore critical to identify the impact of censorship efforts on the Internet. We undertake a study of Internet architecture, capturing the state of Internet topology with greater completeness than existing state-of-the-art.

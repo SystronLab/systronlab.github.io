@@ -3,11 +3,12 @@ layout: projects
 title: "Securing the Internet of Things"
 date: 2025-01-01 12:00:00 +0000
 authors:
-- Anthony Moulds
-- Peter Gillingham
-- Poonam Yadav
-image: '/img/posts/iot-testbed.jpg'
+  - Anthony Moulds
+  - Peter Gillingham
+  - Poonam Yadav
+image: "/img/posts/iot-testbed.jpg"
 desc: Developing defences to threats against Thread-protocol devices.
+tags: [IoT, Security, Thread Protocol, TinyEdge, eBPF]
 ---
 
 The Internet of Things (IoT) has permeated every aspect of our lives, from our homes to public spaces like train stations and hospitals. These smart devices, known as TinyEdge, are connected to the internet and provide us with numerous conveniences. For instance, we can use voice assistants like Alexa to control our lights and TV without getting up from our seats.

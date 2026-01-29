@@ -3,11 +3,12 @@ layout: projects
 title: "Dynamic Graph Neural Networks for Real-Time Failure Recovery"
 date: 2024-04-29 12:00:00 +0000
 authors:
-- Rehab Alawadh
-- Hamed Ahmadi
-- Poonam Yadav
-image: '/img/projects/gnns-in-networking.jpg'
+  - Rehab Alawadh
+  - Hamed Ahmadi
+  - Poonam Yadav
+image: "/img/projects/gnns-in-networking.jpg"
 desc: Improving fast failure-recovery models in software-defined networks.
+tags: [AI, Networks, IoT, GNN, SDN, Failure Recovery]
 ---
 
 This research introduces the **Dynamic Graph Neural Network for Real-Time Failure Recovery** (DGNN-RTFR) framework, a novel approach to network failure recovery specifically designed for Software-Defined Networking (SDN) environments supporting Industrial Internet of Things (IIoT) applications. Traditional failure recovery mechanisms suffer from slow convergence times, limited multi-failure handling capabilities, and inadequate optimization for industrial requirements, making them unsuitable for mission-critical industrial environments.

@@ -6,6 +6,7 @@ authors:
   - Mohit Bidikar, Anthony Moulds, Dr. Poonam Yadav
 image: "/img/projects/xapp-driven-ran-optimisation.jpeg"
 desc: A custom xApp on the Near-RT RIC that allocates PRBs to the mission-critical UEs
+tags: [6G, 5G, Networks, xApp, RIC, Slicing, Robotics]
 ---
 
 ## Problem and Motivation
