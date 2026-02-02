@@ -23,8 +23,8 @@ layout: default
     </div>
   </header>
 
-  <section role="region" class="container" id="research">
-    <h2 class="text-center">Our Research Themes</h2>
+  <section role="region" aria-labelledby="research-title" class="container" id="research">
+    <h2 class="text-center" id="research-title">Our Research Themes</h2>
 
     <div class="row">
       {% for theme in site.research %}
@@ -43,8 +43,8 @@ layout: default
   </section>
 
   <div class="container-fluid people-banner mx-auto">
-    <section role="region" class="container">
-        <h2 class="text-center">Our Research Team</h2>
+    <section role="region" aria-labelledby="research-team" class="container">
+        <h2 class="text-center" id="research-team">Our Research Team</h2>
         <div class="row justify-content-center">
         {% assign people = site.people | sort: "priority" | reverse %}
         {% for person in people %}
@@ -71,10 +71,10 @@ layout: default
 
     {% unless site.opportunities.size == 0 %}
   <div class="container-fluid opportunities-banner mx-auto">
-    <section role="region" class="container">
+    <section role="region" aria-labelledby="opportunities-title" class="container">
       <div class="row text-center">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <h2 class="text-center">Join Our Team!</h2>
+          <h2 class="text-center" id="opportunities-title">Join Our Team!</h2>
           {% for opportunity in site.opportunities %}
             <a href="{{ opportunity.url | prepend: site.baseurl | replace: '//', '/' }}">
               <article class="opportunity">
@@ -97,13 +97,13 @@ layout: default
   </div>
   {% endunless %}
 
-  <section role="region" class="container">
+  <section role="region" aria-labelledby="newsfeed-title" class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
 
         <!--{{ content }}-->
 
-        <h2 class="text-center">Latest News</h2>
+        <h2 class="text-center" id="newsfeed-title">Latest News</h2>
 
         <!-- Home Post List -->
         {% for post in site.posts limit : 5 %}
