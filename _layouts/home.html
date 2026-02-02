@@ -78,7 +78,7 @@ layout: default
           {% for opportunity in site.opportunities %}
             <a href="{{ opportunity.url | prepend: site.baseurl | replace: '//', '/' }}">
               <article class="opportunity">
-                <h3 class="opportunity-title">{{ opportunity.title }}</h3>
+                <h3 class="opportunity-title">{{ opportunity.title }} &rarr;</h3>
                 {% if opportunity.closing %}
                   <p class="opportunity-meta">
                     Apply by {{ opportunity.closing | date: "%d %B %Y" }}
