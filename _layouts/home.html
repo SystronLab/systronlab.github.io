@@ -23,7 +23,7 @@ layout: default
     </div>
   </header>
 
-  <div class="container" id="research">
+  <section role="region" class="container" id="research">
     <h2 class="text-center">Our Research Themes</h2>
 
     <div class="row">
@@ -40,10 +40,10 @@ layout: default
       {% endfor %}
     </div>
     <br>
-  </div>
+  </section>
 
   <div class="container-fluid people-banner mx-auto">
-    <div class="container">
+    <section role="region" class="container">
         <h2 class="text-center">Our Research Team</h2>
         <div class="row justify-content-center">
         {% assign people = site.people | sort: "priority" | reverse %}
@@ -66,12 +66,12 @@ layout: default
         <div class="clearfix text-center">
           <a class="btn btn-secondary" href="{{"/people" | relative_url }}">Meet our team &rarr;</a>
         </div>
-    </div>
+      </section>
   </div>
 
     {% unless site.opportunities.size == 0 %}
   <div class="container-fluid opportunities-banner mx-auto">
-    <div class="container">
+    <section role="region" class="container">
       <div class="row text-center">
         <div class="col-lg-8 col-md-10 mx-auto">
           <h2 class="text-center">Join Our Team!</h2>
@@ -93,11 +93,11 @@ layout: default
         <div class="clearfix text-center">
           <a class="btn btn-warning" href="{{"/opportunities" | relative_url }}">View All Opportunities <span aria-hidden="true">&rarr;</span></a>
         </div>
-    </div>
+    </section>
   </div>
   {% endunless %}
 
-  <div class="container">
+  <section role="region" class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
 
@@ -139,4 +139,4 @@ layout: default
 
       </div>
     </div>
-  </div>
+  </section>
