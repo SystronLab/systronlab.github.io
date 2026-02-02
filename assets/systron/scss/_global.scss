@@ -124,19 +124,34 @@ img::-moz-selection {
   }
 
   .opportunity {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 20px;
+    background-color: $systron-d2;
+    border-radius: 4px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 
-    a {
-      h3 {
-        color: $gray-300;
-        font-size: 22px;
-      }
-      p {
-        margin: 0;
-        font-size: 16px;
-        color: $gray-300;
-        font-style: italic;
+    h3 {
+      color: $gray-300;
+      font-size: 22px;
+      margin-bottom: 0;
+    }
+    p {
+      margin: 5px 0 0 0;
+      font-size: 16px;
+      color: $gray-300;
+    }
+  }
+
+  a {
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      .opportunity {
+        background-color: $systron-d1;
+
+        p {
+          text-decoration: none;
+        }
       }
     }
   }
