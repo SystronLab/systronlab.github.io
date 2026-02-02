@@ -50,7 +50,7 @@ layout: default
             data-toggle="tooltip"
             data-placement="top"
             title="{{ page.previous.title }}"
-            >&larr; Previous<span class="d-none d-md-inline"> Post</span></a
+            ><span aria-hidden="true">&larr;</span> Previous<span class="d-none d-md-inline"> Post</span></a
           >
           {% endif %} {% if page.next.url %}
           <a
@@ -59,7 +59,7 @@ layout: default
             data-toggle="tooltip"
             data-placement="top"
             title="{{ page.next.title }}"
-            >Next<span class="d-none d-md-inline"> Post</span> &rarr;</a
+            >Next<span class="d-none d-md-inline"> Post</span> <span aria-hidden="true">&rarr;</span></a
           >
           {% endif %}
         </div>

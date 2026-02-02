@@ -45,7 +45,7 @@ layout: default
             data-placement="top"
             title="{{ page.title }}"
             target="_blank"
-            >Download<span class="d-none d-md-inline"> Paper</span> &rarr;</a
+            >Download<span class="d-none d-md-inline"> Paper</span> <span aria-hidden="true">&rarr;</span></a
           >
         </div>
         {% endif %} {% if page.file and page.link %}<br />{% endif %} {% if
@@ -53,7 +53,7 @@ layout: default
         <div class="publication-link">
           <a class="btn btn-primary" href="{{ page.link }}" target="_blank"
             >Read<span class="d-none d-md-inline"> with publisher</span>
-            &rarr;</a
+            <span aria-hidden="true">&rarr;</span></a
           >
         </div>
         {% endif %}
@@ -68,7 +68,7 @@ layout: default
             data-toggle="tooltip"
             data-placement="top"
             title="{{ page.previous.title }}"
-            >&larr; Previous<span class="d-none d-md-inline">
+            ><span aria-hidden="true">&larr;</span> Previous<span class="d-none d-md-inline">
               Publication</span
             ></a
           >
@@ -79,7 +79,7 @@ layout: default
             data-toggle="tooltip"
             data-placement="top"
             title="{{ page.next.title }}"
-            >Next<span class="d-none d-md-inline"> Publication</span> &rarr;</a
+            >Next<span class="d-none d-md-inline"> Publication</span> <span aria-hidden="true">&rarr;</span></a
           >
           {% endif %}
         </div>
