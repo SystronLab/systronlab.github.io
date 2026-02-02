@@ -22,6 +22,20 @@
     }
 }
 
+.btn-secondary {
+    background-color: $white;
+    border-color: $white;
+    color: $systron-a;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $systron-a;
+        background-color: $systron-c1 !important;
+        border-color: $systron-c1 !important;
+    }
+}
+
 .btn-lg {
     font-size: 16px;
     padding: 25px 35px;

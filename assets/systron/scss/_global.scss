@@ -156,7 +156,7 @@ img::-moz-selection {
 
   .person {
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 
     img {
       max-width: 60%;
@@ -171,8 +171,7 @@ img::-moz-selection {
     p {
       margin: 0;
       font-size: 16px;
-      color: $systron-a1;
-      font-style: italic;
+      color: $gray-300;
     }
   }
 }

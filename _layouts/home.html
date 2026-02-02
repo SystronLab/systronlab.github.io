@@ -29,10 +29,10 @@ layout: default
     <div class="row">
       {% for theme in site.research %}
       <div class="col-lg-4 col-md-6 mx-auto research-topic">
-        <div class="card">
+        <div class="card text-center">
           <img src="{{ theme.background | prepend: site.baseurl | replace: '//', '/' }}" class="card-img-top" alt="">
           <div class="card-body">
-            <h4 class="card-title text-center">{{ theme.title }}</h4>
+            <h4 class="card-title">{{ theme.title }}</h4>
             <p class="card-text">{{ theme.description }}</p>
           </div>
         </div>
