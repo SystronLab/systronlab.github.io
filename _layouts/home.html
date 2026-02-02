@@ -23,16 +23,16 @@ layout: default
     </div>
   </header>
 
-  <div class="container" id="research">
-    <h2 class="text-center">Our Research Themes</h2>
+  <section role="region" aria-labelledby="research-title" class="container" id="research">
+    <h2 class="text-center" id="research-title">Our Research Themes</h2>
 
     <div class="row">
       {% for theme in site.research %}
       <div class="col-lg-4 col-md-6 mx-auto research-topic">
-        <div class="card">
+        <div class="card text-center">
           <img src="{{ theme.background | prepend: site.baseurl | replace: '//', '/' }}" class="card-img-top" alt="">
           <div class="card-body">
-            <h4 class="card-title text-center">{{ theme.title }}</h4>
+            <h3 class="card-title">{{ theme.title }}</h4>
             <p class="card-text">{{ theme.description }}</p>
           </div>
         </div>
@@ -40,11 +40,11 @@ layout: default
       {% endfor %}
     </div>
     <br>
-  </div>
+  </section>
 
   <div class="container-fluid people-banner mx-auto">
-    <div class="container">
-        <h2 class="text-center">Our Research Team</h2>
+    <section role="region" aria-labelledby="research-team" class="container">
+        <h2 class="text-center" id="research-team">Our Research Team</h2>
         <div class="row justify-content-center">
         {% assign people = site.people | sort: "priority" | reverse %}
         {% for person in people %}
@@ -52,7 +52,7 @@ layout: default
           <div class="col-sm-3 col-6 text-center person">
               {% if person.photo %}
               <img class="img-thumbnail border border-0 rounded-circle"
-                src="{{ person.photo | prepend: site.baseurl | replace: '//', '/' }}">
+                src="{{ person.photo | prepend: site.baseurl | replace: '//', '/' }}" alt="{{ person.name }}">
               {% else %}
               <img class="img-thumbnail border border-0 rounded-circle"
                 src="/img/people/placeholder.png">
@@ -66,44 +66,44 @@ layout: default
         <div class="clearfix text-center">
           <a class="btn btn-secondary" href="{{"/people" | relative_url }}">Meet our team &rarr;</a>
         </div>
-    </div>
+      </section>
   </div>
 
     {% unless site.opportunities.size == 0 %}
   <div class="container-fluid opportunities-banner mx-auto">
-    <div class="container">
+    <section role="region" aria-labelledby="opportunities-title" class="container">
       <div class="row text-center">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <h2 class="text-center">Join Our Team!</h2>
+          <h2 class="text-center" id="opportunities-title">Join Our Team!</h2>
           {% for opportunity in site.opportunities %}
-            <article class="opportunity">
-              <a href="{{ opportunity.url | prepend: site.baseurl | replace: '//', '/' }}">
-                <h3 class="opportunity-title">{{ opportunity.title }}</h3>
+            <a href="{{ opportunity.url | prepend: site.baseurl | replace: '//', '/' }}">
+              <article class="opportunity">
+                <h3 class="opportunity-title">{{ opportunity.title }} <span aria-hidden="true">&rarr;</span></h3>
                 {% if opportunity.closing %}
                   <p class="opportunity-meta">
                     Apply by {{ opportunity.closing | date: "%d %B %Y" }}
                   </p>
                 {% endif %}
-              </a>
-            </article>
+              </article>
+            </a>
           {% endfor %}
         </div>
       </div>
               <br>
         <div class="clearfix text-center">
-          <a class="btn btn-warning" href="{{"/opportunities" | relative_url }}">View All Opportunities &rarr;</a>
+          <a class="btn btn-warning" href="{{"/opportunities" | relative_url }}">View All Opportunities <span aria-hidden="true">&rarr;</span></a>
         </div>
-    </div>
+    </section>
   </div>
   {% endunless %}
 
-  <div class="container">
+  <section role="region" aria-labelledby="newsfeed-title" class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
 
         <!--{{ content }}-->
 
-        <h2 class="text-center">Latest News</h2>
+        <h2 class="text-center" id="newsfeed-title">Latest News</h2>
 
         <!-- Home Post List -->
         {% for post in site.posts limit : 5 %}
@@ -134,9 +134,9 @@ layout: default
 
         <!-- Pager -->
         <div class="clearfix">
-          <a class="btn btn-primary float-right" href="{{"/news" | relative_url }}">View All News &rarr;</a>
+          <a class="btn btn-primary float-right" href="{{"/news" | relative_url }}">View All News <span aria-hidden="true">&rarr;</span></a>
         </div>
 
       </div>
     </div>
-  </div>
+  </section>

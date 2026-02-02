@@ -5,7 +5,7 @@
     padding: 15px 25px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    border-radius: 0;
+    border-radius: 0.25rem;
     font-family: $headings-font-family;
 }
 
@@ -19,6 +19,20 @@
         color: $white;
         background-color: $systron-d !important;
         border-color: $systron-d !important;
+    }
+}
+
+.btn-secondary {
+    background-color: $white;
+    border-color: $white;
+    color: $systron-a;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $systron-a;
+        background-color: $systron-c1 !important;
+        border-color: $systron-c1 !important;
     }
 }
 
