@@ -52,7 +52,7 @@ layout: default
           <div class="col-sm-3 col-6 text-center person">
               {% if person.photo %}
               <img class="img-thumbnail border border-0 rounded-circle"
-                src="{{ person.photo | prepend: site.baseurl | replace: '//', '/' }}">
+                src="{{ person.photo | prepend: site.baseurl | replace: '//', '/' }}" alt="{{ person.name }}">
               {% else %}
               <img class="img-thumbnail border border-0 rounded-circle"
                 src="/img/people/placeholder.png">
