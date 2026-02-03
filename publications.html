@@ -35,7 +35,7 @@ background: "/img/smart-cities.jpg"
       data-date="{{ publication.date | date: '%d %B %Y' | downcase | escape }}"
       data-year="{{ publication.date | date: '%Y' | escape }}"
     >
-        <a class="stretched-link" href="{{ publication.url | prepend: site.baseurl | replace: '//', '/' }}"></a>
+        <a class="stretched-link" href="{{ publication.url | prepend: site.baseurl | replace: '//', '/' }}" aria-label="{{ publication.title }}"></a>
         <div class="card-body">
           <h3 class="post-title">{{ publication.title }}</h2>
 
