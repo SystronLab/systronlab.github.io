@@ -4,29 +4,39 @@ title: News
 background: "/img/smart-cities.jpg"
 ---
 
-{% for post in site.posts %} {% if post.categories contains 'news' %}
+<!-- Escapes page container -->
+</div>
+<div class="col-lg-10 col-md-12 mx-auto">
 
-<article class="post-preview">
-  <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
-    <h2 class="post-title">{{ post.title }}</h2>
-    {% if post.subtitle %}
-    <h3 class="post-subtitle">{{ post.subtitle }}</h3>
+<div class="card-columns news-posts">
+
+  {% for post in paginator.posts %}
+
+  <article class="post-preview card mb-6">
+    <a class="stretched-link" href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}"></a>
+    {% if post.background %}
+    <img src="{{ post.background | prepend: site.baseurl | replace: '//', '/' }}" class="card-img">
     {% else %}
-    <h3 class="post-subtitle">
-      {{ post.excerpt | strip_html | truncatewords: 15 }}
-    </h3>
+    <img src="/img/wireless-network.jpg" class="card-img">
     {% endif %}
-  </a>
-  <p class="post-meta">
-    Published by {% if post.author %} {{ post.author }} {% else %} {{
-    site.author }} {% endif %} on {{ post.date | date: '%B %d, %Y' }} &middot;
-    {% include read_time.html content=post.content %}
-  </p>
-</article>
 
-<hr />
+    <div class="card-body">
 
-{% endif %} {% endfor %}
+      <h2 class="post-title">{{ post.title }}</h2>
+      {% if post.subtitle %}
+      <h3 class="post-subtitle">{{ post.subtitle }}</h3>
+      {% else %}
+      <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
+      {% endif %}
+      <p class="post-meta">
+        {{ post.date | date: '%-d %B %Y' }} &middot; {% include read_time.html content=post.content %}
+      </p>
+    </div>
+  </article>
+
+  {% endfor %}
+
+</div>
 
 <!-- Pager -->
 {% if paginator.total_pages > 1 %}

@@ -126,7 +126,7 @@ img::-moz-selection {
   .opportunity {
     padding: 20px;
     background-color: $systron-d2;
-    border-radius: 0.25rem;
+    border-radius: 16px;
     margin-top: 10px;
     margin-bottom: 10px;
 
@@ -148,6 +148,11 @@ img::-moz-selection {
       text-decoration: none;
       .opportunity {
         background-color: $systron-d1;
+
+        h3 {
+          text-decoration: underline;
+          text-decoration-line: 2px;
+        }
 
         p {
           text-decoration: none;
@@ -415,4 +420,27 @@ img::-moz-selection {
   width: 100% !important;
   height: 100% !important;
   border: 0;
+}
+
+.publications-banner {
+  margin-top: 50px;
+  margin-bottom: -50px;
+  background-color: $systron-d;
+  color: $gray-300;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  .btn {
+    background-color: $white;
+    border-color: $white;
+    color: $systron-d;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $systron-a;
+        background-color: $systron-c1 !important;
+        border-color: $systron-c1 !important;
+    }
+}
 }

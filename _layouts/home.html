@@ -69,7 +69,7 @@ layout: default
       </section>
   </div>
 
-    {% unless site.opportunities.size == 0 %}
+  {% unless site.opportunities.size == 0 %}
   <div class="container-fluid opportunities-banner mx-auto">
     <section role="region" aria-labelledby="opportunities-title" class="container">
       <div class="row text-center">
@@ -97,46 +97,98 @@ layout: default
   </div>
   {% endunless %}
 
-  <section role="region" aria-labelledby="newsfeed-title" class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
 
-        <!--{{ content }}-->
+  <section role="region" aria-labelledby="newsfeed-title" class="container text-center">
 
-        <h2 class="text-center" id="newsfeed-title">Latest News</h2>
+    <h2 id="newsfeed-title">Latest News</h2>
+
+    <div class="card-columns home-posts">
 
         <!-- Home Post List -->
-        {% for post in site.posts limit : 5 %}
+        {% for post in site.posts limit : 3 %}
+        <article class="post-preview card mb-6">
+          <a class="stretched-link" href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}"></a>
+          {% if post.background %}
+          <img src="{{ post.background | prepend: site.baseurl | replace: '//', '/' }}" class="card-img">
+          {% else %}
+          <img src="/img/wireless-network.jpg" class="card-img">
+          {% endif %}
 
-        <article class="post-preview">
-          <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
-            <h2 class="post-title">{{ post.title }}</h2>
+          <div class="card-body">
+
+            <h3 class="post-title">{{ post.title }}</h2>
             {% if post.subtitle %}
-            <h3 class="post-subtitle">{{ post.subtitle }}</h3>
+            <p class="post-subtitle">{{ post.subtitle }}</h3>
             {% else %}
-            <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
+            <p class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
             {% endif %}
-          </a>
-          <p class="post-meta">
-            {% if post.author %}
-            Posted by {{ post.author }}
-            {% else %}
-            Posted
-            {% endif %}
-            on
-            {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}            
-          </p>
+            <p class="post-meta">
+              {{ post.date | date: '%-d %B %Y' }} &middot; {% include read_time.html content=post.content %}
+            </p>
+          </div>
         </article>
-
-        <hr>
 
         {% endfor %}
 
+      </div>
+
         <!-- Pager -->
-        <div class="clearfix">
-          <a class="btn btn-primary float-right" href="{{"/news" | relative_url }}">View All News <span aria-hidden="true">&rarr;</span></a>
-        </div>
+      <div class="clearfix">
+        <a class="btn btn-primary" href="{{"/news" | relative_url }}">View All News <span aria-hidden="true">&rarr;</span></a>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section role="region" aria-labelledby="publications-title" class="publications-banner container-fluid text-center">
+    <div class="container">
+
+    <h2 id="publications-title">Latest Publications</h2>
+
+    <div class="card-columns home-pubs">
+
+        <!-- Home Publication List -->
+        {% assign publications = site.publications | reverse %}
+        {% for publication in publications limit : 4 %}
+
+       <article
+        class="post-preview post-preview-inverted card mb-3"
+        data-title="{{ publication.title | downcase | escape }}"
+        data-authors="{{ publication.authors | array_to_sentence_string | downcase | escape }}"
+        data-desc="{{ publication.excerpt | strip_html | downcase | escape }}"
+        data-venue="{% if publication.venue %}{{ publication.venue | downcase | escape }}{% endif %}"
+        data-date="{{ publication.date | date: '%d %B %Y' | downcase | escape }}"
+        data-year="{{ publication.date | date: '%Y' | escape }}"
+      >
+          <a class="stretched-link" href="{{ publication.url | prepend: site.baseurl | replace: '//', '/' }}"></a>
+          <div class="card-body">
+            <h3 class="post-title">{{ publication.title }}</h2>
+
+            <p class="post-subtitle">
+              {{ publication.authors | array_to_sentence_string | truncatewords: 30 }}
+            </p>
+
+            <p class="post-meta">
+              {% if publication.venue %} Published in {{ publication.venue }} &middot;
+              {% endif %} Published on {{ publication.date | date: '%d %B %Y' }} {% if
+              publication.preprint %} &middot; Preprint {% endif %}
+            </p>
+          </div>
+        </article>
+
+        {% endfor %}
 
       </div>
+
+        <!-- Pager -->
+      <div class="clearfix">
+        <a class="btn" href="{{"/publications" | relative_url }}">View All Publications <span aria-hidden="true">&rarr;</span></a>
+      </div>
+
     </div>
+  
+  </div>
+
   </section>
