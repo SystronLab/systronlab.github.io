@@ -278,7 +278,7 @@ DEPENDENCIES
   github-pages
   http_parser.rb (~> 0.6.0)
   jekyll-feed (~> 0.6)
-  jekyll-paginate (~> 1.1.0)
+  jekyll-paginate
   jekyll-sitemap
   jekyll-theme-clean-blog
   tzinfo (~> 1.2)
