@@ -112,3 +112,49 @@ header.masthead {
         }
     }
 }
+
+.home-posts {
+    margin-top: 25px;
+    column-count: 3;
+
+    @include media-breakpoint-only(xs) {
+        column-count: 1;
+    }
+    @include media-breakpoint-only(sm) {
+        column-count: 1;
+    }
+}
+
+.news-posts {
+    column-count: 3;
+
+    @include media-breakpoint-only(xs) {
+        column-count: 1;
+    }
+    @include media-breakpoint-only(sm) {
+        column-count: 1;
+    }
+}
+
+.home-pubs {
+    margin-top: 25px;
+    column-count: 2;
+
+    @include media-breakpoint-only(xs) {
+        column-count: 1;
+    }
+    @include media-breakpoint-only(sm) {
+        column-count: 1;
+    }
+}
+
+.pubs-pubs {
+    column-count: 2;
+
+    @include media-breakpoint-only(xs) {
+        column-count: 1;
+    }
+    @include media-breakpoint-only(sm) {
+        column-count: 1;
+    }
+}

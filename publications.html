@@ -27,34 +27,29 @@ background: "/img/smart-cities.jpg"
   {% for publication in site.publications reversed %}
 
   <article
-    class="post-preview publication-item"
-    data-title="{{ publication.title | downcase | escape }}"
-    data-authors="{{ publication.authors | array_to_sentence_string | downcase | escape }}"
-    data-desc="{{ publication.excerpt | strip_html | downcase | escape }}"
-    data-venue="{% if publication.venue %}{{ publication.venue | downcase | escape }}{% endif %}"
-    data-date="{{ publication.date | date: '%d %B %Y' | downcase | escape }}"
-    data-year="{{ publication.date | date: '%Y' | escape }}"
-  >
-    <a
-      href="{{ publication.url | prepend: site.baseurl | replace: '//', '/' }}"
+      class="publication-item post-preview card mb-3"
+      data-title="{{ publication.title | downcase | escape }}"
+      data-authors="{{ publication.authors | array_to_sentence_string | downcase | escape }}"
+      data-desc="{{ publication.excerpt | strip_html | downcase | escape }}"
+      data-venue="{% if publication.venue %}{{ publication.venue | downcase | escape }}{% endif %}"
+      data-date="{{ publication.date | date: '%d %B %Y' | downcase | escape }}"
+      data-year="{{ publication.date | date: '%Y' | escape }}"
     >
-      <h2 class="post-title">{{ publication.title }}</h2>
-    </a>
+        <a class="stretched-link" href="{{ publication.url | prepend: site.baseurl | replace: '//', '/' }}"></a>
+        <div class="card-body">
+          <h3 class="post-title">{{ publication.title }}</h2>
 
-    <p class="post-meta">
-      {{ publication.authors | array_to_sentence_string | truncatewords: 30 }}
-    </p>
+          <p class="post-subtitle">
+            {{ publication.authors | array_to_sentence_string | truncatewords: 30 }}
+          </p>
 
-    <p>{{ publication.excerpt | strip_html | truncatewords: 30 }}</p>
-
-    <p class="post-meta">
-      {% if publication.venue %} Published in {{ publication.venue }} &middot;
-      {% endif %} Published on {{ publication.date | date: '%d %B %Y' }} {% if
-      publication.preprint %} &middot; Preprint {% endif %}
-    </p>
-  </article>
-
-  <hr class="publication-sep" />
+          <p class="post-meta">
+            {% if publication.venue %} Published in {{ publication.venue }} &middot;
+            {% endif %} Published on {{ publication.date | date: '%d %B %Y' }} {% if
+            publication.preprint %} &middot; Preprint {% endif %}
+          </p>
+        </div>
+      </article>
 
   {% endfor %}
 </div>

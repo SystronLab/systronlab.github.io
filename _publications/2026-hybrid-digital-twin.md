@@ -7,7 +7,7 @@ authors:
   - Paulina Lewinska
   - Daniel Marfiewicz-Dickson
   - Poonam Yadav
-venue: "Hong Kong, IET DTA APAC 2026: The Inaugural International Conference on Digital Twins and Applications 2026."
+venue: "IET International Conference on Digital Twins and Applications 2026"
 file: "/files/publications/2026-hybrid-digital-twin.pdf"
 ---
 

@@ -1,49 +1,132 @@
 // Styling for the post page
+// .post-preview {
+//     >a {
+//         color: $gray-900;
+
+//         &:focus,
+//         &:hover {
+//             text-decoration: none;
+//             color: $primary;
+//         }
+
+//         >.post-title {
+//             font-size: 30px;
+//             margin-top: 30px;
+//             margin-bottom: 10px;
+//         }
+
+//         >.post-subtitle {
+//             font-weight: 300;
+//             margin: 0 0 10px;
+//         }
+//     }
+
+//     >.post-meta {
+//         font-size: 18px;
+//         font-style: italic;
+//         margin-top: 0;
+//         color: $gray-600;
+
+//         >a {
+//             text-decoration: none;
+//             color: $gray-900;
+
+//             &:focus,
+//             &:hover {
+//                 text-decoration: underline;
+//                 color: $primary;
+//             }
+//         }
+//     }
+
+//     @media only screen and (min-width: 768px) {
+//         >a {
+//             >.post-title {
+//                 font-size: 36px;
+//             }
+//         }
+//     }
+// }
+
 .post-preview {
-    >a {
-        color: $gray-900;
 
-        &:focus,
-        &:hover {
-            text-decoration: none;
-            color: $primary;
+    background-color: $systron-a;
+    border-radius: 16px;
+    color: $white;
+    min-height: 44px;
+
+    .card-img {
+        border-radius: 16px 16px 0px 0px;
+        height: 300px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .card-body {
+        padding: 20px;
+
+        .post-title {
+            font-size: 24px;
+            font-weight: 600;
         }
 
-        >.post-title {
-            font-size: 30px;
-            margin-top: 30px;
-            margin-bottom: 10px;
+        .post-subtitle {
+            font-size: 20px;
+            font-weight: 400;
+            margin: 0;
         }
 
-        >.post-subtitle {
-            font-weight: 300;
-            margin: 0 0 10px;
+        .post-meta {
+            font-size: 14px;
+            font-weight: 400;
+            font-family: $headings-font-family;
+            color: $gray-300;
+            margin: 10px 0px 0px 0px;
         }
     }
 
-    >.post-meta {
-        font-size: 18px;
-        font-style: italic;
-        margin-top: 0;
-        color: $gray-600;
+    &:hover,
+    &:focus {
+        background-color: $systron-d;
 
-        >a {
-            text-decoration: none;
-            color: $gray-900;
-
-            &:focus,
-            &:hover {
-                text-decoration: underline;
-                color: $primary;
-            }
+        .post-title {
+            text-decoration: underline;
+            text-decoration-line: 2px;
         }
     }
+}
 
-    @media only screen and (min-width: 768px) {
-        >a {
-            >.post-title {
-                font-size: 36px;
-            }
-        }
+.post-preview-inverted {
+    background-color: $systron-d2;
+
+    &:hover,
+    &:focus {
+        background-color: $systron-d1;
     }
+}
+
+.post-content {
+    img {
+        min-width: 60%;
+    }
+}
+
+.section-header {
+    h2 {
+        font-weight: 800;
+        font-size: 30px;
+        color: $primary;
+    }
+    .subheading {
+        font-size: 20px;
+        font-weight: 400;
+        margin: 10px 0 30px;
+        font-family: $headings-font-family;
+    }
+
+    margin-bottom: 20px;
+}
+
+.home-separator {
+    margin: 30px 0px;
 }
