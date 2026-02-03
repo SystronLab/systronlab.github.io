@@ -1,49 +1,28 @@
 ---
 layout: page
 title: Opportunities
-description: <center>Join the SYSTRON Lab team</center>
+description: Join the SYSTRON Lab team
 background: "/img/smart-cities.jpg"
 ---
 
 {% for opportunity in site.opportunities %}
 
-<article class="post-preview">
-  <a href="{{ opportunity.url | prepend: site.baseurl | replace: '//', '/' }}">
-    <h2 class="post-title">{{ opportunity.title }}</h2>
-    {% if opportunity.subtitle %}
-    <h3 class="post-subtitle">{{ opportunity.subtitle }}</h3>
-    {% else %}
-    <h3 class="post-subtitle">
-      {{ opportunity.excerpt | strip_html | truncatewords: 15 }}
-    </h3>
-    {% endif %}
-  </a>
-  {% if opportunity.closing %}
-  <p class="post-meta">Apply by {{ opportunity.closing | date: '%d %B %Y' }}</p>
-  {% endif %}
+<article class="post-preview card mb-3">
+  <a class="stretched-link" href="{{ opportunity.url | prepend: site.baseurl | replace: '//', '/' }}" aria-label="{{ opportunity.title }}"></a>
+    <div class="card-body">
+      <h2 class="post-title">{{ opportunity.title }}</h2>
+      {% if opportunity.subtitle %}
+      <h3 class="post-subtitle">{{ opportunity.subtitle }}</h3>
+      {% else %}
+      <h3 class="post-subtitle">
+        {{ opportunity.excerpt | strip_html | truncatewords: 15 }}
+      </h3>
+      {% endif %}
+    
+      {% if opportunity.closing %}
+      <p class="post-meta">Apply by {{ opportunity.closing | date: '%d %B %Y' }}</p>
+      {% endif %}
+    </div>
 </article>
 
-<hr />
-
 {% endfor %}
-
-<!-- Pager -->
-{% if paginator.total_pages > 1 %}
-
-<div class="clearfix">
-  {% if paginator.previous_page %}
-  <a
-    class="btn btn-primary float-left"
-    href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"
-    >&larr; Newer<span class="d-none d-md-inline"> Posts</span></a
-  >
-  {% endif %} {% if paginator.next_page %}
-  <a
-    class="btn btn-primary float-right"
-    href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"
-    >Older<span class="d-none d-md-inline"> Posts</span> &rarr;</a
-  >
-  {% endif %}
-</div>
-
-{% endif %}
