@@ -13,11 +13,11 @@ background: "/img/smart-cities.jpg"
   {% for post in paginator.posts %}
 
   <article class="post-preview card mb-6">
-    <a class="stretched-link" href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}"></a>
+    <a class="stretched-link" href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}" aria-label="{{ post.title }}"></a>
     {% if post.background %}
-    <img src="{{ post.background | prepend: site.baseurl | replace: '//', '/' }}" class="card-img">
+    <img src="{{ post.background | prepend: site.baseurl | replace: '//', '/' }}" class="card-img" alt="">
     {% else %}
-    <img src="/img/wireless-network.jpg" class="card-img">
+    <img src="/img/wireless-network.jpg" class="card-img" alt="">
     {% endif %}
 
     <div class="card-body">
