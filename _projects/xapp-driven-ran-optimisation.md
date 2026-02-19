@@ -57,7 +57,7 @@ decoded and the robot executed the corresponding motion, demonstrating low-laten
 
 <div class="video-container">
 <iframe
-  src="https://www.youtube.com/embed/aPBsFGrEsEk"
+  src="https://www.youtube.com/embed/iogV3BOLQLQ"
   title="YouTube video player"
   frameborder="0"
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -87,8 +87,7 @@ UE-2 (Non-critical)
 <li>Controlled throughput reduction</li>
 <li>Connection remained fully stable</li>
 </ul>
-These observations confirm that PRB reallocation was applied correctly
-and that RIC-driven co
+These observations confirm that PRB reallocation was applied correctly.
 
 ## Further Work
 
