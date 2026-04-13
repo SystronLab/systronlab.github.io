@@ -458,3 +458,25 @@ img::-moz-selection {
     margin-bottom: -25px;
   }
 }
+
+blockquote {
+  background-color: $systron-d;
+  color: $white;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 10px;
+  font-style: normal;
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  a {
+    color: $white;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $systron-d1;
+    }
+  }
+}
