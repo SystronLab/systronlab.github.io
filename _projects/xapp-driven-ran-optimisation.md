@@ -3,7 +3,9 @@ layout: projects
 title: "xApp Driven RAN Optimisation for Mission Critical Robots in a Multi UE Environment"
 date: 2025-11-26 12:00:00 +0000
 authors:
-  - Mohit Bidikar, Anthony Moulds, Dr. Poonam Yadav
+  - Mohit Bidikar
+  - Anthony Moulds
+  - Poonam Yadav
 image: "/img/projects/xapp-driven-ran-optimisation.jpeg"
 desc: A custom xApp on the Near-RT RIC that allocates PRBs to the mission-critical UEs
 tags: [6G, 5G, Networks, xApp, RIC, Slicing, Robotics]
