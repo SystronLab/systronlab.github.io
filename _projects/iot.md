@@ -43,7 +43,7 @@ Our project seeks to address these challenges by:
 
 - [(Paper) Enhancing IoT Defenses Against Radio Jamming: Insights from a Thread Testbed Case Study](https://systronlab.github.io/publications/2025-enhancing-iot-defenses-against-radio-jamming)
 - [(Abstract and Poster) Evaluation of Radio Jamming Countermeasures in IoT Thread Networks](https://systronlab.github.io/publications/2025-evaluation-of-radio-jamming-countermeasures)
-- [(Paper) Mitigating IoT Botnet DDoS Attacks through MUD and eBPF based Traffic Filtering](https://dl.acm.org/doi/10.1145/3631461.3631549)
+- [(Paper) Mitigating IoT Botnet DDoS Attacks through MUD and eBPF based Traffic Filtering](https://systronlab.github.io/publications/2023-mitigating-iot-botnet-ddos-attacks)
 
 
 ## Repositories
