@@ -49,83 +49,81 @@
 // }
 
 .post-preview {
+  background-color: $systron-a;
+  color: $white;
+  min-height: 44px;
 
-    background-color: $systron-a;
-    color: $white;
-    min-height: 44px;
+  .card-img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+  }
 
-    .card-img {
-        border-radius: 16px 16px 0px 0px;
-        height: 300px;
-        width: 100%;
-        object-fit: cover;
+  .card-body {
+    padding: 20px;
+
+    .post-title {
+      font-size: 24px;
+      font-weight: 600;
     }
 
-    .card-body {
-        padding: 20px;
-
-        .post-title {
-            font-size: 24px;
-            font-weight: 600;
-        }
-
-        .post-subtitle {
-            font-size: 20px;
-            font-weight: 400;
-            margin: 0;
-        }
-
-        .post-meta {
-            font-size: 14px;
-            font-weight: 400;
-            font-family: $headings-font-family;
-            color: $gray-300;
-            margin: 10px 0px 0px 0px;
-        }
+    .post-subtitle {
+      font-size: 20px;
+      font-weight: 400;
+      margin: 0;
     }
 
-    &:hover,
-    &:focus {
-        background-color: $systron-d;
-
-        .post-title {
-            text-decoration: underline;
-            text-decoration-line: 2px;
-        }
+    .post-meta {
+      font-size: 14px;
+      font-weight: 400;
+      font-family: $headings-font-family;
+      color: $gray-300;
+      margin: 10px 0px 0px 0px;
     }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $systron-d;
+
+    .post-title {
+      text-decoration: underline;
+      text-decoration-line: 2px;
+    }
+  }
 }
 
 .post-preview-inverted {
-    background-color: $systron-d2;
+  background-color: $systron-d2;
 
-    &:hover,
-    &:focus {
-        background-color: $systron-d1;
-    }
+  &:hover,
+  &:focus {
+    background-color: $systron-d1;
+  }
 }
 
 .post-content {
-    img {
-        min-width: 60%;
-    }
+  img {
+    min-width: 60%;
+  }
 }
 
 .section-header {
-    h2 {
-        font-weight: 800;
-        font-size: 30px;
-        color: $primary;
-    }
-    .subheading {
-        font-size: 20px;
-        font-weight: 400;
-        margin: 10px 0 30px;
-        font-family: $headings-font-family;
-    }
+  h2 {
+    font-weight: 800;
+    font-size: 30px;
+    color: $primary;
+  }
+  .subheading {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 10px 0 30px;
+    font-family: $headings-font-family;
+  }
 
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .home-separator {
-    margin: 30px 0px;
+  margin: 30px 0px;
 }
