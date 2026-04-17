@@ -4,6 +4,7 @@ title: "Mitigating IoT Botnet DDos Attacks through MUD and eBPF based Traffic Fi
 venue: "IEEE/ACM ICDCN 2023"
 date: 2023-05-03 12:09:27
 file: "/files/publications/2023-mitigating-iot-botnet-ddos-attacks.pdf"
+link: "https://dl.acm.org/doi/10.1145/3631461.3631549"
 authors:
 - Angelo Feraudo
 - Diana Andreea Popescu
