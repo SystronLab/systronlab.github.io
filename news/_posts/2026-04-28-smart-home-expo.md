@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Smart Home Expo (Mumbai): learn about our work on IoT"
+title: "Dr Poonam Yadav at Smart Home Expo, Mumbai"
 date: 2026-04-17 12:00:00 +0000
 subtitle: "Joining leading smart home brands at the Jio World Convention Centre, Mumbai"
-background: '/img/projects/thread-jamming.jpg'
+background: "/img/projects/thread-jamming.jpg"
 ---
 
 Speak with Dr Poonam Yadav, part of the [Connectivity Standards Alliance (CSA)](https://csa-iot.org/) and board advisor to [Microelectronics UK](https://microelectronicsuk.com), as she attends the [Smart Home Expo](https://smarthomeexpo.in.messefrankfurt.com/mumbai/en.html) in Mumbai, India, at the end of April this year.
