@@ -13,6 +13,10 @@ p {
   }
 }
 
+img {
+  border-radius: 5px;
+}
+
 h1,
 h2,
 h3,
@@ -126,7 +130,7 @@ img::-moz-selection {
   .opportunity {
     padding: 20px;
     background-color: $systron-d2;
-    border-radius: 16px;
+    border-radius: 5px;
     margin-top: 10px;
     margin-bottom: 10px;
 
@@ -438,11 +442,11 @@ img::-moz-selection {
     &:hover,
     &:focus,
     &:active {
-        color: $systron-a;
-        background-color: $systron-c1 !important;
-        border-color: $systron-c1 !important;
+      color: $systron-a;
+      background-color: $systron-c1 !important;
+      border-color: $systron-c1 !important;
     }
-}
+  }
 }
 
 .red-banner {
@@ -476,7 +480,7 @@ blockquote {
     &:hover,
     &:focus,
     &:active {
-        color: $systron-d1;
+      color: $systron-d1;
     }
   }
 }
