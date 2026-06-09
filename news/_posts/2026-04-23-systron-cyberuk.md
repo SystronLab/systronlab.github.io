@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Systron LAB at CyberUK 2026, Glasgow"
+title: "SYSTRON Lab at CyberUK 2026, Glasgow"
 date: 2026-04-23 12:00:00 +0000
 background: "/img/posts/systron-cyberuk-2026.jpg"
 ---

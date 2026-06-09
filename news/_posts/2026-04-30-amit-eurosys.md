@@ -2,7 +2,7 @@
 layout: post
 title: "Amit More at EuroSys 2026, Edinburgh"
 date: 2026-04-30 12:00:00 +0000
-subtitle: "𝗖𝗘𝗗𝗔𝗥: 𝗖𝗮𝗿𝗯𝗼𝗻 𝗘𝗳𝗳𝗶𝗰𝗶𝗲𝗻𝘁 𝗗𝘆𝗻𝗮𝗺𝗶𝗰 𝗔𝗹𝗹𝗼𝗰𝗮𝘁𝗶𝗼𝗻 𝗮𝗻𝗱 𝗥𝗼𝘂𝘁𝗶𝗻𝗴 𝗳𝗼𝗿 𝗔𝗴𝗲𝗻𝘁𝗶𝗰 𝗟𝗟𝗠 𝗜𝗻𝗳𝗲𝗿𝗲𝗻𝗰𝗲"
+subtitle: "CEDAR: Carbon Efficient Dynamic Allocation and Routing for Agentic LLM Inference"
 background: "/img/posts/amit-eurosys-2026.jpg"
 ---
 
@@ -12,7 +12,7 @@ The conference brought together researchers, engineers, and innovators from arou
 
 We are especially proud that Amit received the Best Paper Award at GreenSys workshop for the paper:
 
-𝗖𝗘𝗗𝗔𝗥: 𝗖𝗮𝗿𝗯𝗼𝗻 𝗘𝗳𝗳𝗶𝗰𝗶𝗲𝗻𝘁 𝗗𝘆𝗻𝗮𝗺𝗶𝗰 𝗔𝗹𝗹𝗼𝗰𝗮𝘁𝗶𝗼𝗻 𝗮𝗻𝗱 𝗥𝗼𝘂𝘁𝗶𝗻𝗴 𝗳𝗼𝗿 𝗔𝗴𝗲𝗻𝘁𝗶𝗰 𝗟𝗟𝗠 𝗜𝗻𝗳𝗲𝗿𝗲𝗻𝗰𝗲
+**CEDAR: Carbon Efficient Dynamic Allocation and Routing for Agentic LLM Inference**
 
 This recognition reflects the dedication, collaboration, and hard work behind the research, and we are delighted to see the work receive such appreciation from the community.
 
