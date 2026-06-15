@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "See SYSTRON Lab's Demos at ACM MobiSys 2026"
-date: 2026-06-15 09:00:00 +0000
+date: 2026-06-15 08:00:00 +0000
 background: "/img/projects/xapp-driven-ran-optimisation.jpeg"
 ---
 
