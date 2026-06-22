@@ -54,6 +54,7 @@ people %} {% if person.former %}{% continue %}{% endif %}
       <img
         class="img-thumbnail img-fluid border border-0 rounded-circle"
         src="{{ person.photo | prepend: site.baseurl | replace: '//', '/' }}"
+        style="width: 350px; aspect-ratio: 1 / 1; object-fit: cover;"
       />
       {% else %}
       <img
