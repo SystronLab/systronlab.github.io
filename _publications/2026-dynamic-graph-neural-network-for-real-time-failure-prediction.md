@@ -1,7 +1,7 @@
 ---
 layout: publication
 title: "Dynamic Graph Neural Network for Real-Time Failure Prediction in Industrial IoT Networks"
-date: 2026-01-01 00:00:00 +0000
+date: 2026-08-10 00:00:00 +0000
 date_format: "%Y"
 authors:
   - Rehab Alawadh
