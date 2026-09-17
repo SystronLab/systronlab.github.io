@@ -1,61 +1,13 @@
 ---
 layout: default
 ---
-
-<!-- Page Header -->
-{% if page.background %}
-<header class="masthead"
-    style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
-    {% else %}
-    <header class="masthead">
-        {% endif %}
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-md-10 mx-auto">
-                    <div class="post-heading smaller-heading">
-                        <h1>{{ page.title }}</h1>
-                        {% if page.subtitle %}
-                        <h2 class="subheading">{{ page.subtitle }}</h2>
-                        {% endif %}
-                        {% if page.salary %}
-                        <p>{{ page.salary }}</p>
-                        {% endif %}
-                        <span class="meta">
-                            {% if page.closing %}
-                            Closing date {{ page.closing | date: '%d %B %Y' }} &middot;
-                            {% endif %}
-                            Published on {{ page.date | date: '%d %B %Y' }}
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-md-10 mx-auto post-content">
-
-                {{ content }}
-
-                {% if page.link %}
-                <hr>
-                <p>Main posting at: <a href="{{ page.link }}" target="_blank">{{ page.link }}</a></p>
-                {% endif %}
-                <hr>
-
-                <div class="clearfix">
-                    <a class="btn btn-primary float-left"
-                        href="/opportunities">&larr;
-                        <span class="d-none d-md-inline">All </span>Opportunities</a>
-                    {% if page.link %}
-                    <a class="btn btn-primary float-right"
-                        href="{{ page.link }}" target="_blank">Apply</a>
-                    {% endif %}
-
-                </div>
-
-            </div>
-        </div>
-    </div>
+<main id="main-content" class="interior-refresh">
+  {% include page-header.html kind='opportunity' back_url='/opportunities' back_label='All opportunities' %}
+  <article class="container interior-content reading-width">
+    <div class="prose">{{ content }}</div>
+    <nav class="detail-pagination" aria-label="Opportunity navigation">
+      <a class="section-link" href="{{ '/opportunities' | relative_url }}">&larr; All opportunities</a>
+      {% if page.link %}<a class="refresh-button" href="{{ page.link }}">Application details <span aria-hidden="true">↗</span></a>{% endif %}
+    </nav>
+  </article>
+</main>

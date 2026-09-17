@@ -1,111 +1,34 @@
 ---
 layout: page
-title: About the SYSTRON Lab
-background: "/img/systron-team.jpg"
+title: About SYSTRON Lab
+eyebrow: People behind the research
+description: A multidisciplinary community advancing secure, resilient and intelligent distributed systems.
+wide: true
 ---
-
-<!-- Escapes page container -->
-</div></div></div>
-
-<div class="container-fluid red-banner mx-auto text-center">
-  <section role="region" aria-labelledby="about-us" class="container">
-
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-
-        <h2 id="about-us">Who We Are</h2>
-    
-        <p>
-          The SYSTRON Lab is an established research laboratory with a multidisciplinary team of around 20 researchers, focused on advancing secure, resilient, and intelligent distributed systems for future digital infrastructure. Our work addresses key UK and global priorities across telecommunications, IoT, edge-cloud systems, AI-native networking,  Internet governance,  and cyber security, with a strong emphasis on interoperable, deployable, sustainable, and societally relevant solutions.
-        </p>
-
-        <h2>What We Research</h2>
-
-        <p>
-          We tackle fundamental challenges facing modern networked systems, including scalability under uncertainty, trust and security in open and autonomous systems, machine-speed automation, and resilience across heterogeneous and interconnected environments. Our research integrates foundational methods with experimental validation, ensuring that new ideas are rigorously tested against real-world constraints and contribute to both scientific understanding and practical capability.
-        </p>
-
-        <h2>Our Collaborations</h2>
-
-        <p>
-          We work closely with industry partners, standards bodies, and national and international research programmes, contributing to areas such as 5G/6G security, Open RAN, zero-trust and zero-touch network management, edge intelligence, and sustainable digital systems. Through these collaborations, we translate research outcomes into economic, societal, and policy impact, supporting the UK's leadership in secure digital infrastructure and future communications.
-        </p>
-
-        <h2>Our Aims</h2>
-
-        <p>
-          Alongside research excellence, Systron Lab is committed to capacity building, skills development, and inclusive research practice, supporting doctoral and postdoctoral researchers and fostering interdisciplinary collaboration. We aim to create an open, supportive environment where researchers at all career stages can thrive, while delivering trusted, adaptive, and resilient systems by design that have impact beyond academia.
-        </p>
-
-      </div>
-    </div>
-
-  </section>
-</div>
-
-<div class="col-lg-8 col-md-10 mx-auto">
-
-{% assign people = site.people | sort: "priority" | reverse %} {% for person in
-people %} {% if person.former %}{% continue %}{% endif %}
-<article class="people-preview">
-  <div class="row">
-    <div class="col-md-3">
-      {% if person.photo %}
-      <img
-        class="img-thumbnail img-fluid border border-0 rounded-circle"
-        src="{{ person.photo | prepend: site.baseurl | replace: '//', '/' }}"
-        style="width: 350px; aspect-ratio: 1 / 1; object-fit: cover;"
-      />
-      {% else %}
-      <img
-        class="img-thumbnail img-fluid border border-0 rounded-circle"
-        src="/img/people/placeholder.png"
-      />
-      {% endif %}
-    </div>
-    <div class="col-md-9">
-      <h2 class="people-title">
-        <span>{{ person.name }}</span
-        ><span style="float: right">
-          {% if person.site %}
-          <a href="{{ person.site }}" target="_blank" rel="noopener noreferrer">
-            <i
-              style="color: #609732"
-              class="fas fa-external-link-alt"
-              aria-hidden="true"
-            ></i>
-          </a>
-          {% endif %}</span
-        >
-      </h2>
-      <h3 class="people-subtitle">{{ person.role }}</h3>
-      <p>{{ person.content | strip_html }}</p>
-    </div>
+<nav class="page-jump-links" aria-label="About page sections"><a href="#about">About the lab</a><a href="#team">Our team</a><a href="#former">Former members</a></nav>
+<section id="about" class="about-grid" aria-label="About the lab">
+<article><h2>Who we are</h2><p>The SYSTRON Lab is an established research laboratory with a multidisciplinary team of around 20 researchers, focused on advancing secure, resilient, and intelligent distributed systems for future digital infrastructure. Our work addresses key UK and global priorities across telecommunications, IoT, edge-cloud systems, AI-native networking,  Internet governance,  and cyber security, with a strong emphasis on interoperable, deployable, sustainable, and societally relevant solutions.</p></article>
+<article><h2>What we research</h2><p>We tackle fundamental challenges facing modern networked systems, including scalability under uncertainty, trust and security in open and autonomous systems, machine-speed automation, and resilience across heterogeneous and interconnected environments. Our research integrates foundational methods with experimental validation, ensuring that new ideas are rigorously tested against real-world constraints and contribute to both scientific understanding and practical capability.</p></article>
+<article><h2>Our collaborations</h2><p>We work closely with industry partners, standards bodies, and national and international research programmes, contributing to areas such as 5G/6G security, Open RAN, zero-trust and zero-touch network management, edge intelligence, and sustainable digital systems. Through these collaborations, we translate research outcomes into economic, societal, and policy impact, supporting the UK's leadership in secure digital infrastructure and future communications.</p></article>
+<article><h2>Our aims</h2><p>Alongside research excellence, Systron Lab is committed to capacity building, skills development, and inclusive research practice, supporting doctoral and postdoctoral researchers and fostering interdisciplinary collaboration. We aim to create an open, supportive environment where researchers at all career stages can thrive, while delivering trusted, adaptive, and resilient systems by design that have impact beyond academia.</p></article>
+</section>
+<section id="team" class="team-directory-section" aria-labelledby="team-title">
+  <div class="section-heading-row"><div><p class="eyebrow">Our community</p><h2 id="team-title">Meet the team</h2></div><a class="section-link" href="{{ '/opportunities' | relative_url }}">Join the lab &rarr;</a></div>
+  <div class="people-grid">
+    {% assign people = site.people | sort: 'priority' | reverse %}
+    {% for person in people %}{% unless person.former %}
+    <article class="person-card">
+      <img src="{{ person.photo | default: '/img/people/placeholder.png' | relative_url }}" alt="{{ person.name | escape }}" width="160" height="160" loading="lazy">
+      <h3>{{ person.name }}</h3><p class="person-role">{{ person.role }}</p>
+      {% assign bio = person.content | strip_html | strip %}
+      {% if bio != '' or person.site %}<div class="person-actions{% if person.site %} has-profile{% endif %}">
+      {% if bio != '' %}<details class="person-bio"><summary>Biography<span class="sr-only"> of {{ person.name }}</span></summary><div>{{ person.content }}</div></details>{% endif %}
+      {% if person.site %}<a class="section-link" href="{{ person.site }}" aria-label="Profile of {{ person.name | escape }}">Profile <span aria-hidden="true">↗</span></a>{% endif %}
+      </div>{% endif %}
+    </article>
+    {% endunless %}{% endfor %}
   </div>
-</article>
-<hr />
-<br />
-{% endfor %}
-
-<article class="people-preview">
-  <h2 class="people-title text-center">Former Members</h2>
-  <ul class="list-group">
-    {% for person in people %} {% if person.former %}
-    <li class="list-group-item">
-      <h4>
-        <span>{{ person.name }} ({{ person.role }})</span> {% if person.site %}
-        <span style="float: right">
-          <a href="{{ person.site }}" target="_blank" rel="noopener noreferrer">
-            <i
-              style="color: #609732"
-              class="fas fa-external-link-alt"
-              aria-hidden="true"
-            ></i>
-          </a>
-        </span>
-        {% endif %}
-      </h4>
-    </li>
-    {% endif %} {% endfor %}
-  </ul>
-</article>
+</section>
+<section id="former" class="former-section" aria-labelledby="former-title"><p class="eyebrow">Our wider community</p><h2 id="former-title">Former members</h2>
+  <ul class="former-grid">{% for person in people %}{% if person.former %}<li><h3>{% if person.site %}<a href="{{ person.site }}">{{ person.name }} <span aria-hidden="true">↗</span></a>{% else %}{{ person.name }}{% endif %}</h3><p>{{ person.role }}</p></li>{% endif %}{% endfor %}</ul>
+</section>

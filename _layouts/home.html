@@ -1,194 +1,87 @@
 ---
 layout: default
 ---
-
-<!-- Page Header -->
-{% if page.background %}
-<header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
-  {% else %}
-  <header class="masthead">
-    {% endif %}
-    <div class="overlay"></div>
+<main class="home-refresh" id="main-content">
+  <header class="research-hero" style="background-image: linear-gradient(90deg, rgba(0,35,20,.96), rgba(0,35,20,.72)), url('{{ page.background | relative_url }}')">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="page-heading home-heading">
-            <h1 class="text-center">{{ site.title }}</h1>
-            {% if site.description %}
-            <span class="text-center subheading">{{ site.description }}</span>
-            {% endif %}
-          </div>
-        </div>
+      <p class="eyebrow">System and Network Interoperability Lab</p>
+      <h1>Connected systems.<br>Trusted futures.</h1>
+      <p class="hero-description">We research secure, resilient and intelligent distributed systems, connecting ideas across networks, IoT and edge computing.</p>
+      <div class="hero-actions">
+        <a class="refresh-button button-light" href="#research">Explore our research <span aria-hidden="true">&rarr;</span></a>
+        <a class="refresh-button button-outline" href="{{ '/publications' | relative_url }}">View publications</a>
       </div>
     </div>
   </header>
 
-  <section role="region" aria-labelledby="research-title" class="container" id="research">
-    <h2 class="text-center" id="research-title">Our Research Themes</h2>
-
-    <div class="row">
+  <section class="refresh-section container" id="research" aria-labelledby="research-title">
+    <div class="section-intro"><p class="eyebrow">Our focus</p><h2 id="research-title">Research that connects.</h2><p>Exploring the foundations of tomorrow’s digital infrastructure.</p></div>
+    <div class="refresh-grid theme-grid">
       {% for theme in site.research %}
-      <div class="col-lg-4 col-md-6 mx-auto research-topic">
-        <div class="card text-center">
-          <img src="{{ theme.background | prepend: site.baseurl | replace: '//', '/' }}" class="card-img-top" alt="">
-          <div class="card-body">
-            <h3 class="card-title">{{ theme.title }}</h4>
-            <p class="card-text">{{ theme.description }}</p>
-          </div>
-        </div>
-      </div>
+      <article class="refresh-card">
+        <img src="{{ theme.background | relative_url }}" alt="" loading="lazy" width="600" height="360">
+        <div class="refresh-card-body"><h3>{{ theme.title }}</h3><p>{{ theme.description }}</p></div>
+      </article>
       {% endfor %}
     </div>
-    <br>
   </section>
 
-  <div class="container-fluid people-banner mx-auto">
-    <section role="region" aria-labelledby="research-team" class="container">
-        <h2 class="text-center" id="research-team">Our Research Team</h2>
-        <div class="row justify-content-center">
-        {% assign people = site.people | sort: "priority" | reverse %}
-        {% for person in people %}
-        {% if person.former %}{% continue %}{% endif %}
-          <div class="col-sm-3 col-6 text-center person">
-              {% if person.photo %}
-              <img class="img-thumbnail border border-0 rounded-circle"
-                src="{{ person.photo | prepend: site.baseurl | replace: '//', '/' }}" alt="{{ person.name }}">
-              {% else %}
-              <img class="img-thumbnail border border-0 rounded-circle"
-                src="/img/people/placeholder.png">
-              {% endif %}
-              <h3>{{ person.name }}</h3>
-              <p>{{ person.role }}</p>
-          </div>
-        {% endfor %}
-        </div>
-        <br>
-        <div class="clearfix text-center">
-          <a class="btn btn-secondary" href="{{"/people" | relative_url }}">Meet our team &rarr;</a>
-        </div>
-      </section>
-  </div>
-
-  {% unless site.opportunities.size == 0 %}
-  <div class="container-fluid opportunities-banner mx-auto">
-    <section role="region" aria-labelledby="opportunities-title" class="container">
-      <div class="row text-center">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <h2 class="text-center" id="opportunities-title">Join Our Team!</h2>
-          {% for opportunity in site.opportunities %}
-            <a href="{{ opportunity.url | prepend: site.baseurl | replace: '//', '/' }}">
-              <article class="opportunity">
-                <h3 class="opportunity-title">{{ opportunity.title }} <span aria-hidden="true">&rarr;</span></h3>
-                {% if opportunity.closing %}
-                  <p class="opportunity-meta">
-                    Apply by {{ opportunity.closing | date: "%d %B %Y" }}
-                  </p>
-                {% endif %}
-              </article>
-            </a>
-          {% endfor %}
-        </div>
-      </div>
-              <br>
-        <div class="clearfix text-center">
-          <a class="btn btn-warning" href="{{"/opportunities" | relative_url }}">View All Opportunities <span aria-hidden="true">&rarr;</span></a>
-        </div>
-    </section>
-  </div>
-  {% endunless %}
-
-
-  <section role="region" aria-labelledby="newsfeed-title" class="container text-center">
-
-    <h2 id="newsfeed-title">Latest News</h2>
-
-    <div class="card-columns home-posts">
-
-        <!-- Home Post List -->
-        {% for post in site.posts limit : 3 %}
-        <article class="post-preview card mb-6">
-          <a class="stretched-link" href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}" aria-label="{{ post.title }}"></a>
-          {% if post.background %}
-          <img src="{{ post.background | prepend: site.baseurl | replace: '//', '/' }}" class="card-img" alt="">
-          {% else %}
-          <img src="/img/wireless-network.jpg" class="card-img" alt="">
-          {% endif %}
-
-          <div class="card-body">
-
-            <h3 class="post-title">{{ post.title }}</h2>
-            {% if post.subtitle %}
-            <p class="post-subtitle">{{ post.subtitle }}</h3>
-            {% else %}
-            <p class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
-            {% endif %}
-            <p class="post-meta">
-              {{ post.date | date: '%-d %B %Y' }} &middot; {% include read_time.html content=post.content %}
-            </p>
-          </div>
-        </article>
-
-        {% endfor %}
-
-      </div>
-
-        <!-- Pager -->
-      <div class="clearfix">
-        <a class="btn btn-primary" href="{{"/news" | relative_url }}">View All News <span aria-hidden="true">&rarr;</span></a>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <section role="region" aria-labelledby="publications-title" class="publications-banner container-fluid text-center">
+  <section class="refresh-section section-tint" aria-labelledby="projects-title">
     <div class="container">
-
-    <h2 id="publications-title">Latest Publications</h2>
-
-    <div class="card-columns home-pubs">
-
-        <!-- Home Publication List -->
-        {% assign publications = site.publications | reverse %}
-        {% for publication in publications limit : 4 %}
-
-       <article
-        class="post-preview post-preview-inverted card mb-3"
-        data-title="{{ publication.title | downcase | escape }}"
-        data-authors="{{ publication.authors | array_to_sentence_string | downcase | escape }}"
-        data-desc="{{ publication.excerpt | strip_html | downcase | escape }}"
-        data-venue="{% if publication.venue %}{{ publication.venue | downcase | escape }}{% endif %}"
-        data-date="{{ publication.date | date: '%d %B %Y' | downcase | escape }}"
-        data-year="{{ publication.date | date: '%Y' | escape }}"
-      >
-          <a class="stretched-link" href="{{ publication.url | prepend: site.baseurl | replace: '//', '/' }}" aria-label="{{ publication.title }}"></a>
-          <div class="card-body">
-            <h3 class="post-title">{{ publication.title }}</h2>
-
-            <p class="post-subtitle">
-              {{ publication.authors | array_to_sentence_string | truncatewords: 30 }}
-            </p>
-
-            <p class="post-meta">
-              {% if publication.venue %} Published in {{ publication.venue }} &middot;
-              {% endif %} Published on {{ publication.date | date: '%d %B %Y' }} {% if
-              publication.preprint %} &middot; Preprint {% endif %}
-            </p>
+      <div class="section-heading-row"><div><p class="eyebrow">Ideas in action</p><h2 id="projects-title">Explore our projects</h2></div><a class="section-link" href="{{ '/projects' | relative_url }}">All projects <span aria-hidden="true">&rarr;</span></a></div>
+      <div class="refresh-grid projects-preview">
+        {% assign projects = site.projects | sort: 'date' | reverse %}
+        {% for project in projects limit: 2 %}
+        <article class="refresh-card">
+          {% if project.image %}<img class="project-preview-image" src="{{ project.image | relative_url }}" alt="" loading="lazy" width="600" height="360">{% endif %}
+          <div class="refresh-card-body">
+            <div class="refresh-tags">{% for tag in project.tags limit: 3 %}<span>{{ tag }}</span>{% endfor %}</div>
+            <h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
+            <p>{{ project.desc | default: project.excerpt | strip_html | truncatewords: 28 }}</p>
+            <a class="section-link" href="{{ project.url | relative_url }}" aria-label="Explore project: {{ project.title | escape }}">Explore project <span aria-hidden="true">&rarr;</span></a>
           </div>
         </article>
-
         {% endfor %}
-
       </div>
-
-        <!-- Pager -->
-      <div class="clearfix">
-        <a class="btn" href="{{"/publications" | relative_url }}">View All Publications <span aria-hidden="true">&rarr;</span></a>
-      </div>
-
     </div>
-  
-  </div>
-
   </section>
+
+  <section class="refresh-section container" aria-labelledby="publications-title">
+    <div class="section-heading-row"><div><p class="eyebrow">Recent work</p><h2 id="publications-title">Latest publications</h2></div><a class="section-link" href="{{ '/publications' | relative_url }}">All publications <span aria-hidden="true">&rarr;</span></a></div>
+    <div class="home-publication-list">
+      {% assign publications = site.publications | sort: 'date' | reverse %}
+      {% for publication in publications limit: 4 %}{% include publication-entry.html publication=publication %}{% endfor %}
+    </div>
+  </section>
+
+  <section class="refresh-section section-tint" aria-labelledby="news-title">
+    <div class="container">
+      <div class="section-heading-row"><div><p class="eyebrow">From the lab</p><h2 id="news-title">Latest news</h2></div><a class="section-link" href="{{ '/news' | relative_url }}">All news <span aria-hidden="true">&rarr;</span></a></div>
+      <div class="refresh-grid news-preview">
+        {% for post in site.posts limit: 3 %}
+        <article class="refresh-card">
+          <img src="{{ post.background | default: '/img/wireless-network.jpg' | relative_url }}" alt="" loading="lazy" width="600" height="360">
+          <div class="refresh-card-body"><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%-d %B %Y' }}</time><h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3><p>{{ post.subtitle | default: post.excerpt | strip_html | truncatewords: 22 }}</p></div>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="refresh-section container" aria-labelledby="team-title">
+    <div class="section-heading-row"><div><p class="eyebrow">People behind the research</p><h2 id="team-title">Meet our team</h2></div><a class="section-link" href="{{ '/people' | relative_url }}">Meet everyone <span aria-hidden="true">&rarr;</span></a></div>
+    <div class="team-preview">
+      {% assign people = site.people | sort: 'priority' | reverse %}
+      {% assign shown = 0 %}
+      {% for person in people %}
+      {% unless person.former %}
+      <article><img src="{{ person.photo | default: '/img/people/placeholder.png' | relative_url }}" alt="{{ person.name | escape }}" loading="lazy" width="160" height="160"><h3>{{ person.name }}</h3><p>{{ person.role }}</p></article>
+      {% assign shown = shown | plus: 1 %}{% if shown == 4 %}{% break %}{% endif %}
+      {% endunless %}
+      {% endfor %}
+    </div>
+    {% unless site.opportunities.size == 0 %}
+    <div class="join-callout"><div><h3>Build what comes next.</h3><p>Explore opportunities to join our research community.</p></div><a class="refresh-button" href="{{ '/opportunities' | relative_url }}">View opportunities <span aria-hidden="true">&rarr;</span></a></div>
+    {% endunless %}
+  </section>
+</main>

@@ -1,120 +1,37 @@
 ---
-layout: page
+layout: default
 title: Publications
-background: "/img/smart-cities.jpg"
 ---
-
-<div class="projects-controls">
-  <div class="projects-controls-row">
-    <div class="projects-control">
-      <input
-        id="publicationsSearch"
-        class="projects-input"
-        type="text"
-        placeholder="Search by Title, Authors, Description, Venue, Date"
-      />
+<main class="publications-refresh" id="main-content">
+  <header class="publications-header">
+    <div class="container"><p class="eyebrow">Research from SYSTRON Lab</p><h1>Publications</h1><p>Discover our work on distributed systems, interoperability and network technologies.</p></div>
+  </header>
+  <div class="container publications-content">
+    <form class="publication-filters" role="search" onsubmit="return false;" hidden>
+      <div class="publication-search"><label for="publicationsSearch">Search publications</label><input id="publicationsSearch" type="search" placeholder="Title, author, topic or venue…" autocomplete="off"></div>
+      <div><label for="publicationsYear">Year</label><select id="publicationsYear"><option value="">All years</option>
+        {% assign publications = site.publications | sort: 'date' | reverse %}
+        {% assign previous_year = '' %}
+        {% for publication in publications %}{% assign year = publication.date | date: '%Y' %}{% if year != previous_year %}<option value="{{ year }}">{{ year }}</option>{% assign previous_year = year %}{% endif %}{% endfor %}
+      </select></div>
+      <button class="filter-reset" type="reset">Clear filters</button>
+    </form>
+    <p id="publicationsCount" class="publication-count" role="status" aria-live="polite" aria-atomic="true">{{ site.publications.size }} publications</p>
+    <div id="publicationsGrid">
+      {% assign publications = site.publications | sort: 'date' | reverse %}
+      {% assign previous_year = '' %}
+      {% for publication in publications %}
+      {% assign year = publication.date | date: '%Y' %}
+      {% if year != previous_year %}{% unless forloop.first %}</div></section>{% endunless %}
+      <section class="publication-year" aria-labelledby="year-{{ year }}"><h2 id="year-{{ year }}">{{ year }}</h2><div class="publication-year-items">
+      {% assign previous_year = year %}{% endif %}
+      <div class="publication-item" data-year="{{ year }}" data-search="{{ publication.title | escape }} {{ publication.authors | join: ' ' | escape }} {{ publication.venue | escape }} {{ publication.excerpt | strip_html | escape }} {{ publication.date | date: '%d %B %Y' }}">
+        {% include publication-entry.html publication=publication %}
+      </div>
+      {% if forloop.last %}</div></section>{% endif %}
+      {% endfor %}
     </div>
+    <div id="publicationsEmpty" class="publication-empty" hidden><h2>No publications found</h2><p>Try a different keyword or select another year.</p><button type="button" class="refresh-button" id="publicationsReset">Clear filters</button></div>
   </div>
-
-  <div class="projects-meta">
-    <span id="publicationsCount"></span>
-  </div>
-</div>
-
-<br />
-
-<div id="publicationsGrid">
-  {% for publication in site.publications reversed %}
-  {% assign publication_date_format = publication.date_format | default: "%d %B %Y" %}
-
-  <article
-      class="publication-item post-preview card mb-3"
-      data-title="{{ publication.title | downcase | escape }}"
-      data-authors="{{ publication.authors | array_to_sentence_string | downcase | escape }}"
-      data-desc="{{ publication.excerpt | strip_html | downcase | escape }}"
-      data-venue="{% if publication.venue %}{{ publication.venue | downcase | escape }}{% endif %}"
-      data-date="{{ publication.date | date: publication_date_format | downcase | escape }}"
-      data-year="{{ publication.date | date: '%Y' | escape }}"
-    >
-        <a class="stretched-link" href="{{ publication.url | prepend: site.baseurl | replace: '//', '/' }}" aria-label="{{ publication.title }}"></a>
-        <div class="card-body">
-          <h3 class="post-title">{{ publication.title }}</h2>
-
-          <p class="post-subtitle">
-            {{ publication.authors | array_to_sentence_string | truncatewords: 30 }}
-          </p>
-
-          <p class="post-meta">
-            {% if publication.venue %} Published in {{ publication.venue }} &middot;
-            {% endif %} Published on {{ publication.date | date: publication_date_format }} {% if
-            publication.preprint %} &middot; Preprint {% endif %}
-          </p>
-        </div>
-      </article>
-
-  {% endfor %}
-</div>
-
-<script>
-  (function () {
-    var grid = document.getElementById("publicationsGrid");
-    if (!grid) return;
-
-    var items = Array.prototype.slice.call(
-      grid.querySelectorAll(".publication-item"),
-    );
-    var seps = Array.prototype.slice.call(
-      grid.querySelectorAll(".publication-sep"),
-    );
-
-    var searchEl = document.getElementById("publicationsSearch");
-    var countEl = document.getElementById("publicationsCount");
-
-    function norm(s) {
-      return (s || "").toString().trim().toLowerCase();
-    }
-
-    function applyFilters() {
-      var q = norm(searchEl && searchEl.value);
-      var shown = 0;
-
-      items.forEach(function (el, idx) {
-        var title = norm(el.getAttribute("data-title"));
-        var authors = norm(el.getAttribute("data-authors"));
-        var desc = norm(el.getAttribute("data-desc"));
-        var venue = norm(el.getAttribute("data-venue"));
-        var dateStr = norm(el.getAttribute("data-date"));
-        var year = norm(el.getAttribute("data-year"));
-
-        var matchesSearch =
-          !q ||
-          title.indexOf(q) !== -1 ||
-          authors.indexOf(q) !== -1 ||
-          desc.indexOf(q) !== -1 ||
-          venue.indexOf(q) !== -1 ||
-          dateStr.indexOf(q) !== -1 ||
-          year.indexOf(q) !== -1;
-
-        if (matchesSearch) {
-          el.classList.remove("is-hidden");
-          if (seps[idx]) seps[idx].classList.remove("is-hidden");
-          shown += 1;
-        } else {
-          el.classList.add("is-hidden");
-          if (seps[idx]) seps[idx].classList.add("is-hidden");
-        }
-      });
-
-      if (countEl) {
-        countEl.textContent =
-          shown + " of " + items.length + " Publications Shown";
-      }
-    }
-
-    if (searchEl) {
-      searchEl.addEventListener("input", applyFilters);
-    }
-
-    applyFilters();
-  })();
-</script>
+</main>
+<script src="{{ '/assets/publications.js' | relative_url }}" defer></script>

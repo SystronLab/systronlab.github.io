@@ -1,28 +1,22 @@
 ---
 layout: page
 title: Opportunities
-description: Join the SYSTRON Lab team
-background: "/img/smart-cities.jpg"
+eyebrow: Join our community
+description: Develop your research and help shape the future of connected systems.
+wide: true
 ---
-
-{% for opportunity in site.opportunities %}
-
-<article class="post-preview card mb-3">
-  <a class="stretched-link" href="{{ opportunity.url | prepend: site.baseurl | replace: '//', '/' }}" aria-label="{{ opportunity.title }}"></a>
-    <div class="card-body">
-      <h2 class="post-title">{{ opportunity.title }}</h2>
-      {% if opportunity.subtitle %}
-      <h3 class="post-subtitle">{{ opportunity.subtitle }}</h3>
-      {% else %}
-      <h3 class="post-subtitle">
-        {{ opportunity.excerpt | strip_html | truncatewords: 15 }}
-      </h3>
-      {% endif %}
-    
-      {% if opportunity.closing %}
-      <p class="post-meta">Apply by {{ opportunity.closing | date: '%d %B %Y' }}</p>
-      {% endif %}
+<div class="opportunities-intro"><h2>Research with us</h2><p>Explore research positions, doctoral study and fellowship opportunities at SYSTRON Lab.</p></div>
+<div class="opportunities-list">
+  {% assign opportunities = site.opportunities | sort: 'date' | reverse %}
+  {% for opportunity in opportunities %}
+  <article class="opportunity-card">
+    <div><p class="eyebrow">{% if opportunity.closing %}Closing {{ opportunity.closing | date: '%d %B %Y' }}{% else %}Posted {{ opportunity.date | date: '%d %B %Y' }}{% endif %}</p>
+      <h2><a href="{{ opportunity.url | relative_url }}">{{ opportunity.title }}</a></h2>
+      <p>{{ opportunity.subtitle | default: opportunity.excerpt | strip_html | truncatewords: 35 }}</p>
+      {% if opportunity.salary %}<p>{{ opportunity.salary }}</p>{% endif %}
     </div>
-</article>
-
-{% endfor %}
+    <a class="section-link" href="{{ opportunity.url | relative_url }}" aria-label="View opportunity: {{ opportunity.title | escape }}">View details <span aria-hidden="true">&rarr;</span></a>
+  </article>
+  {% else %}<p>There are no opportunities listed at the moment. Please check back for updates.</p>{% endfor %}
+</div>
+<div class="join-callout"><div><h3>Interested in collaborating?</h3><p>Get in touch to discuss research interests and potential collaborations.</p></div><a class="refresh-button" href="mailto:systronlab@gmail.com">Contact the lab <span aria-hidden="true">&rarr;</span></a></div>

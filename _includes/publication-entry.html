@@ -1,0 +1,16 @@
+{% assign publication = include.publication %}
+{% assign publication_date_format = publication.date_format | default: "%d %B %Y" %}
+<article class="publication-entry">
+  <div class="publication-meta">
+    <time datetime="{{ publication.date | date: '%Y-%m-%d' }}">{{ publication.date | date: publication_date_format }}</time>
+    {% if publication.preprint %}<span class="publication-badge">Preprint</span>{% endif %}
+  </div>
+  <h3><a href="{{ publication.url | relative_url }}">{{ publication.title }}</a></h3>
+  <p class="publication-authors">{{ publication.authors | array_to_sentence_string }}</p>
+  {% if publication.venue %}<p class="publication-venue">{{ publication.venue }}</p>{% endif %}
+  <div class="publication-actions">
+    <a href="{{ publication.url | relative_url }}" aria-label="Abstract: {{ publication.title | escape }}">Abstract <span aria-hidden="true">&rarr;</span></a>
+    {% if publication.link %}<a href="{{ publication.link }}" aria-label="Publisher page: {{ publication.title | escape }}">Publisher <span aria-hidden="true">↗</span></a>{% endif %}
+    {% if publication.file %}<a href="{{ publication.file | relative_url }}" aria-label="Download paper: {{ publication.title | escape }}">PDF <span aria-hidden="true">↓</span></a>{% endif %}
+  </div>
+</article>

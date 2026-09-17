@@ -1,91 +1,17 @@
 ---
 layout: default
 ---
-
-{% assign publication_date_format = page.date_format | default: "%d %B %Y" %}
-
-<!-- Page Header -->
-{% if page.background %}
-<header
-  class="masthead"
-  style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')"
->
-  {% else %}
-  <header class="masthead">
-    {% endif %}
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="post-heading smaller-heading">
-            <h1>{{ page.title }}</h1>
-            {% if page.subtitle %}
-            <h2 class="subheading">{{ page.subtitle }}</h2>
-            {% endif %}
-            <p>{{ page.authors | array_to_sentence_string }}</p>
-            <span class="meta">
-              {% if page.venue %} Published in {{ page.venue }} &middot;
-              Published on {{ page.date | date: publication_date_format }} {% else %}
-              Published on {{ page.date | date: publication_date_format }} {% endif %} {% if
-              page.preprint %} &middot; Preprint {% endif %}
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto post-content">
-        {{ content }} {% if page.file %}
-        <div class="publication-download">
-          <a
-            class="btn btn-primary"
-            href="{{ page.file | prepend: site.baseurl | replace: '//', '/' }}"
-            data-toggle="tooltip"
-            data-placement="top"
-            title="{{ page.title }}"
-            target="_blank"
-            >Download<span class="d-none d-md-inline"> Paper</span> <span aria-hidden="true">&rarr;</span></a
-          >
-        </div>
-        {% endif %} {% if page.file and page.link %}<br />{% endif %} {% if
-        page.link %}
-        <div class="publication-link">
-          <a class="btn btn-primary" href="{{ page.link }}" target="_blank"
-            >Read<span class="d-none d-md-inline"> with publisher</span>
-            <span aria-hidden="true">&rarr;</span></a
-          >
-        </div>
-        {% endif %}
-
-        <hr />
-
-        <div class="clearfix">
-          {% if page.previous.url %}
-          <a
-            class="btn btn-primary float-left"
-            href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}"
-            data-toggle="tooltip"
-            data-placement="top"
-            title="{{ page.previous.title }}"
-            ><span aria-hidden="true">&larr;</span> Previous<span class="d-none d-md-inline">
-              Publication</span
-            ></a
-          >
-          {% endif %} {% if page.next.url %}
-          <a
-            class="btn btn-primary float-right"
-            href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}"
-            data-toggle="tooltip"
-            data-placement="top"
-            title="{{ page.next.title }}"
-            >Next<span class="d-none d-md-inline"> Publication</span> <span aria-hidden="true">&rarr;</span></a
-          >
-          {% endif %}
-        </div>
-      </div>
-    </div>
-  </div>
-</header>
+<main id="main-content" class="interior-refresh">
+  {% include page-header.html kind='publication' back_url='/publications' back_label='All publications' %}
+  <article class="container interior-content reading-width">
+    {% if page.file or page.link %}<div class="paper-links">
+      {% if page.file %}<a class="refresh-button" href="{{ page.file | relative_url }}">Download paper <span aria-hidden="true">↓</span></a>{% endif %}
+      {% if page.link %}<a class="refresh-button button-soft" href="{{ page.link }}">Read with publisher <span aria-hidden="true">↗</span></a>{% endif %}
+    </div>{% endif %}
+    <div class="prose">{{ content }}</div>
+    <nav class="detail-pagination" aria-label="Publication navigation">
+      {% if page.previous.url %}<a href="{{ page.previous.url | relative_url }}">&larr; Previous publication<span>{{ page.previous.title }}</span></a>{% endif %}
+      {% if page.next.url %}<a href="{{ page.next.url | relative_url }}">Next publication &rarr;<span>{{ page.next.title }}</span></a>{% endif %}
+    </nav>
+  </article>
+</main>

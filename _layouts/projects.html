@@ -1,36 +1,12 @@
 ---
 layout: default
 ---
-
-{% if page.image %}
-<header
-  class="masthead"
-  style="background-image: url('{{ page.image | prepend: site.baseurl | replace: '//', '/' }}')"
->
-  {% else %}
-  <header class="masthead">
-    {% endif %}
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="post-heading smaller-heading">
-            <h1>{{ page.title }}</h1>
-            <p>{{ page.authors | array_to_sentence_string }}</p>
-            {% if page.repo %}
-            <a class="btn btn-primary" href="{{ page.repo }}" target="_blank"
-              >View Repository <span class="d-none d-md-inline"></span>&rarr;</a
-            ><br />
-            {% endif %}
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto post-content">{{ content }}</div>
-    </div>
+<main id="main-content" class="interior-refresh">
+  {% include page-header.html kind='projects' back_url='/projects' back_label='All projects' %}
+  <div class="container interior-content reading-width">
+    {% if page.image %}<img class="detail-cover project-cover" src="{{ page.image | relative_url }}" alt="" fetchpriority="high">{% endif %}
+    {% if page.repo %}<p><a class="refresh-button" href="{{ page.repo }}">View repository <span aria-hidden="true">↗</span></a></p>{% endif %}
+    <div class="prose">{{ content }}</div>
+    <nav class="detail-pagination" aria-label="Project navigation"><a class="section-link" href="{{ '/projects' | relative_url }}">&larr; All projects</a></nav>
   </div>
-</header>
+</main>

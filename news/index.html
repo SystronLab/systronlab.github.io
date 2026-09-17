@@ -1,67 +1,26 @@
 ---
 layout: page
 title: News
-background: "/img/smart-cities.jpg"
+eyebrow: From the lab
+description: Research milestones, demonstrations and stories from our community.
+wide: true
 ---
-
-<!-- Escapes page container -->
-</div>
-<div class="col-lg-10 col-md-12 mx-auto">
-
-<div class="row news-posts">
-
+<div class="refresh-grid news-directory">
   {% for post in paginator.posts %}
-
-  <div class="col-md-6 mb-4">
-    <article class="post-preview card h-100">
-      <a class="stretched-link" href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}" aria-label="{{ post.title }}"></a>
-
-      {% if post.background %}
-      <img src="{{ post.background | prepend: site.baseurl | replace: '//', '/' }}" class="card-img-top" alt="">
-      {% else %}
-      <img src="/img/wireless-network.jpg" class="card-img-top" alt="">
-      {% endif %}
-
-      <div class="card-body">
-
-        <h2 class="post-title">{{ post.title }}</h2>
-
-        {% if post.subtitle %}
-        <h3 class="post-subtitle">{{ post.subtitle }}</h3>
-        {% else %}
-        <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
-        {% endif %}
-
-        <p class="post-meta">
-          {{ post.date | date: '%-d %B %Y' }} &middot;
-          {% include read_time.html content=post.content %}
-        </p>
-
-      </div>
-    </article>
-  </div>
-
+  <article class="refresh-card">
+    <img src="{{ post.background | default: '/img/wireless-network.jpg' | relative_url }}" alt="" loading="lazy" width="600" height="360">
+    <div class="refresh-card-body">
+      <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%-d %B %Y' }} &middot; {% include read_time.html content=post.content %}</time>
+      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+      <p>{{ post.subtitle | default: post.excerpt | strip_html | truncatewords: 25 }}</p>
+    </div>
+  </article>
   {% endfor %}
-
 </div>
-
-<!-- Pager -->
 {% if paginator.total_pages > 1 %}
-
-<div class="clearfix">
-  {% if paginator.previous_page %}
-  <a
-    class="btn btn-primary float-left"
-    href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"
-    >&larr; Newer<span class="d-none d-md-inline"> Posts</span></a>
-  {% endif %}
-
-  {% if paginator.next_page %}
-  <a
-    class="btn btn-primary float-right"
-    href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"
-    >Older<span class="d-none d-md-inline"> Posts</span> &rarr;</a>
-  {% endif %}
-</div>
-
+<nav class="news-pagination" aria-label="News pages">
+  {% if paginator.previous_page %}<a class="refresh-button button-soft" href="{{ paginator.previous_page_path | relative_url }}">&larr; Newer posts</a>{% endif %}
+  <span>Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  {% if paginator.next_page %}<a class="refresh-button button-soft" href="{{ paginator.next_page_path | relative_url }}">Older posts &rarr;</a>{% endif %}
+</nav>
 {% endif %}

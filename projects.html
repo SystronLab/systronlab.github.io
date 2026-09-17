@@ -1,127 +1,33 @@
 ---
 layout: page
 title: Projects
-background: "/img/smart-cities.jpg"
+eyebrow: Ideas in action
+description: Explore the systems, networks and technologies we are building and investigating.
+wide: true
 ---
-
-<div class="projects-controls">
-  <div class="projects-controls-row">
-    <div class="projects-control">
-      <input
-        id="projectsSearch"
-        class="projects-input"
-        type="text"
-        placeholder="Search by Title, Authors, Tags, or Description"
-      />
+<form class="publication-filters" id="projectsFilters" role="search" hidden>
+  <div class="publication-search"><label for="projectsSearch">Search projects</label><input id="projectsSearch" type="search" placeholder="Title, researcher or topic…" autocomplete="off"></div>
+  <div><label for="projectsTopic">Topic</label><select id="projectsTopic"><option value="">All topics</option>
+    {% assign tags = site.projects | map: 'tags' | join: '|' | split: '|' | uniq | sort %}
+    {% for tag in tags %}<option value="{{ tag | escape }}">{{ tag }}</option>{% endfor %}
+  </select></div>
+  <button class="filter-reset" type="reset">Clear filters</button>
+</form>
+<p id="projectsCount" class="directory-count" role="status" aria-live="polite" aria-atomic="true">{{ site.projects.size }} projects</p>
+<div class="refresh-grid projects-directory" id="projectsGrid">
+  {% assign projects = site.projects | sort: 'date' | reverse %}
+  {% for project in projects %}
+  <article class="refresh-card project-result" data-tags="{{ project.tags | jsonify | escape }}" data-search="{{ project.title | escape }} {{ project.authors | join: ' ' | escape }} {{ project.tags | join: ' ' | escape }} {{ project.desc | default: project.excerpt | strip_html | escape }}">
+    {% if project.image %}<img class="project-preview-image" src="{{ project.image | relative_url }}" alt="" loading="lazy" width="600" height="360">{% endif %}
+    <div class="refresh-card-body">
+      <div class="refresh-tags">{% for tag in project.tags %}<span>{{ tag }}</span>{% endfor %}</div>
+      <h2><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h2>
+      <p class="project-researchers">{{ project.authors | array_to_sentence_string }}</p>
+      <p>{{ project.desc | default: project.excerpt | strip_html | truncatewords: 38 }}</p>
+      <a class="section-link" href="{{ project.url | relative_url }}" aria-label="Explore project: {{ project.title | escape }}">Explore project <span aria-hidden="true">&rarr;</span></a>
     </div>
-  </div>
-
-  <div class="projects-meta">
-    <span id="projectsCount"></span>
-  </div>
-</div>
-<br />
-
-<div class="row" id="projectsGrid">
-  {% for project in site.projects reversed %}
-
-  <div
-    class="col-12 research-topic project-item"
-    data-title="{{ project.title | downcase | escape }}"
-    data-authors="{{ project.authors | array_to_sentence_string | downcase | escape }}"
-    data-tags="{{ project.tags | join: ' ' | downcase | escape }}"
-    data-desc="{% if project.desc %}{{ project.desc | strip_html | downcase | escape }}{% else %}{{ project.excerpt | strip_html | downcase | escape }}{% endif %}"
-  >
-    <div class="card project-card">
-      <div class="project-img-wrapper">
-        <img
-          src="{{ project.image | prepend: site.baseurl | replace: '//', '/' }}"
-          class="card-img-top project-img"
-          alt="{{ project.title }}"
-        />
-      </div>
-      <div class="card-body project-body">
-        <h3 class="card-title">{{ project.title }}</h3>
-        <h6 class="card-subtitle text-muted">
-          {{ project.authors | array_to_sentence_string | truncatewords: 30 }}
-        </h6>
-
-        <div class="card-text">
-          {% if project.tags %}
-          <div class="project-tags-container mb-2">
-            {% for tag in project.tags %}
-            <span class="project-tag">{{ tag }}</span>
-            {% endfor %}
-          </div>
-          {% endif %} {% if project.desc %}
-          <p>{{ project.desc | strip_html }}</p>
-          {% else %}
-          <p>{{ project.excerpt | truncatewords: 30 | strip_html }}</p>
-          {% endif %}
-        </div>
-        <a
-          href="{{ project.url | prepend: site.baseurl | replace: '//', '/' }}"
-          class="btn btn-primary"
-          style="border-radius: 8px; padding: 10px 20px; font-weight: 600"
-          >Read more &rarr;</a
-        >
-      </div>
-    </div>
-  </div>
-
+  </article>
   {% endfor %}
 </div>
-
-<script>
-  (function () {
-    var grid = document.getElementById("projectsGrid");
-    if (!grid) return;
-
-    var items = Array.prototype.slice.call(
-      grid.querySelectorAll(".project-item"),
-    );
-    var searchEl = document.getElementById("projectsSearch");
-    var countEl = document.getElementById("projectsCount");
-
-    function norm(s) {
-      return (s || "").toString().trim().toLowerCase();
-    }
-
-    function applyFilters() {
-      var q = norm(searchEl && searchEl.value);
-      var shown = 0;
-
-      items.forEach(function (el) {
-        var title = norm(el.getAttribute("data-title"));
-        var authors = norm(el.getAttribute("data-authors"));
-        var desc = norm(el.getAttribute("data-desc"));
-        var tags = norm(el.getAttribute("data-tags"));
-
-        var matchesSearch =
-          !q ||
-          title.indexOf(q) !== -1 ||
-          authors.indexOf(q) !== -1 ||
-          tags.indexOf(q) !== -1 ||
-          desc.indexOf(q) !== -1;
-
-        if (matchesSearch) {
-          el.classList.remove("is-hidden");
-          shown += 1;
-        } else {
-          el.classList.add("is-hidden");
-        }
-      });
-
-      if (countEl) {
-        countEl.textContent = shown + " of " + items.length + " Projects Shown";
-      }
-    }
-
-    if (searchEl) {
-      searchEl.addEventListener("input", applyFilters);
-    }
-
-    // Initial run to set count
-    applyFilters();
-  })();
-</script>
+<div id="projectsEmpty" class="publication-empty" hidden><h2>No projects found</h2><p>Try another keyword or topic.</p><button class="refresh-button" id="projectsReset" type="button">Clear filters</button></div>
+<script src="{{ '/assets/projects.js' | relative_url }}" defer></script>

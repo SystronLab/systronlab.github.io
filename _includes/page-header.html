@@ -1,0 +1,20 @@
+<header class="interior-header">
+  <div class="container">
+    {% if include.back_url %}<a class="back-link" href="{{ include.back_url | relative_url }}"><span aria-hidden="true">&larr;</span> {{ include.back_label }}</a>{% else %}<p class="eyebrow">{{ page.eyebrow | default: 'SYSTRON Lab' }}</p>{% endif %}
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}<p class="interior-description">{{ page.description }}</p>{% endif %}
+    {% if page.subtitle %}<p class="interior-description">{{ page.subtitle }}</p>{% endif %}
+    {% if include.kind == 'projects' or include.kind == 'publication' %}<p class="detail-authors">{{ page.authors | array_to_sentence_string }}</p>{% endif %}
+    {% if include.kind == 'projects' %}<div class="refresh-tags">{% for tag in page.tags %}<span>{{ tag }}</span>{% endfor %}</div>{% endif %}
+    {% if include.kind == 'post' %}<p class="detail-meta">{{ page.date | date: '%-d %B %Y' }} &middot; {{ page.author | default: site.author }} &middot; {% include read_time.html content=page.content %}</p>{% endif %}
+    {% if include.kind == 'publication' %}
+      {% assign date_format = page.date_format | default: '%d %B %Y' %}
+      {% if page.venue %}<p class="detail-meta">{{ page.venue }}</p>{% endif %}
+      <p class="detail-meta">Published on <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: date_format }}</time>{% if page.preprint %} &middot; Preprint{% endif %}</p>
+    {% endif %}
+    {% if include.kind == 'opportunity' %}
+      {% if page.salary %}<p class="detail-authors">{{ page.salary }}</p>{% endif %}
+      <p class="detail-meta">{% if page.closing %}Closing date: {{ page.closing | date: '%d %B %Y' }} &middot; {% endif %}Posted {{ page.date | date: '%d %B %Y' }}</p>
+    {% endif %}
+  </div>
+</header>
