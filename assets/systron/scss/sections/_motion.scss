@@ -1,0 +1,64 @@
+// Motion is opt-in through the visitor's system preference.
+@keyframes systron-reveal {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes systron-heading {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes systron-callout-pulse {
+  0%, 100% { box-shadow: 0 2px 8px rgba($systron-a3, .05), 0 0 0 0 rgba($systron-d1, .22); }
+  50% { box-shadow: 0 5px 18px rgba($systron-a3, .10), 0 0 0 8px rgba($systron-d1, 0); }
+}
+@keyframes systron-status-pulse {
+  0%, 100% { opacity: .65; transform: scale(.85); }
+  50% { opacity: 1; transform: scale(1); }
+}
+@keyframes systron-callout-shimmer {
+  from { transform: translateX(-115%); }
+  to { transform: translateX(115%); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+  .motion-enter { animation: systron-reveal 800ms cubic-bezier(.2, .7, .2, 1) var(--motion-delay, 0ms) both; }
+  .research-hero .eyebrow, .research-hero h1, .research-hero .hero-description, .research-hero .hero-actions,
+  .interior-header h1, .publications-header h1 {
+    animation: systron-heading 900ms cubic-bezier(.2, .7, .2, 1) both;
+  }
+  .research-hero h1 { animation-delay: 60ms; }
+  .research-hero .hero-description { animation-delay: 120ms; }
+  .research-hero .hero-actions { animation-delay: 180ms; }
+  .research-hero:focus-within .hero-actions { animation: none; }
+  .refresh-button, .page-jump-links a {
+    transition: background-color 280ms ease, color 280ms ease, box-shadow 280ms ease;
+  }
+  .refresh-card, .person-card, .opportunity-card {
+    transition: transform 360ms cubic-bezier(.2, .7, .2, 1), box-shadow 360ms ease;
+  }
+  .section-link > span, .publication-actions a > span, .refresh-button > span {
+    display: inline-block; transition: transform 260ms ease;
+  }
+  .section-link:hover > span, .section-link:focus-visible > span,
+  .publication-actions a:hover > span, .publication-actions a:focus-visible > span,
+  .refresh-button:hover > span, .refresh-button:focus-visible > span { transform: translateX(3px); }
+  .hot-callout { animation: systron-callout-pulse 3.2s ease-in-out infinite; }
+  .hot-callout::before { animation: systron-callout-shimmer 4.5s ease-in-out infinite; }
+  .callout-status i { animation: systron-status-pulse 1.8s ease-in-out infinite; }
+  @media (hover: hover) and (pointer: fine) {
+    .refresh-card:hover, .person-card:hover, .opportunity-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 10px rgba($systron-a3, .05), 0 14px 28px rgba($systron-a3, .09);
+    }
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .motion-enter { animation: none; }
+  .hot-callout, .hot-callout::before, .callout-status i { animation: none; }
+  #mainNav, .collapsing { transition: none !important; }
+}
+@media print {
+  .motion-enter, .research-hero .eyebrow, .research-hero h1, .research-hero .hero-description,
+  .research-hero .hero-actions, .interior-header h1, .publications-header h1 { animation: none !important; }
+}

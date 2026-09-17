@@ -26,6 +26,25 @@ layout: default
     </div>
   </section>
 
+  <section class="refresh-section team-section" aria-labelledby="team-title">
+    <div class="container">
+      <div class="section-heading-row"><div><p class="eyebrow">People behind the research</p><h2 id="team-title">Meet our team</h2></div><a class="section-link" href="{{ '/people' | relative_url }}">Meet everyone <span aria-hidden="true">&rarr;</span></a></div>
+      <div class="team-preview">
+        {% assign people = site.people | sort: 'priority' | reverse %}
+        {% assign shown = 0 %}
+        {% for person in people %}
+        {% unless person.former %}
+        <article><img src="{{ person.photo | default: '/img/people/placeholder.png' | relative_url }}" alt="{{ person.name | escape }}" loading="lazy" width="160" height="160"><h3>{{ person.name }}</h3><p>{{ person.role }}</p></article>
+        {% assign shown = shown | plus: 1 %}{% if shown == 4 %}{% break %}{% endif %}
+        {% endunless %}
+        {% endfor %}
+      </div>
+      {% unless site.opportunities.size == 0 %}
+      <div class="join-callout hot-callout"><div><span class="callout-status"><i aria-hidden="true"></i> Now welcoming researchers</span><h3>Build what comes next.</h3><p>Explore opportunities to join our research community.</p></div><a class="refresh-button" href="{{ '/opportunities' | relative_url }}">View opportunities <span aria-hidden="true">&rarr;</span></a></div>
+      {% endunless %}
+    </div>
+  </section>
+
   <section class="refresh-section section-tint" aria-labelledby="projects-title">
     <div class="container">
       <div class="section-heading-row"><div><p class="eyebrow">Ideas in action</p><h2 id="projects-title">Explore our projects</h2></div><a class="section-link" href="{{ '/projects' | relative_url }}">All projects <span aria-hidden="true">&rarr;</span></a></div>
@@ -46,11 +65,13 @@ layout: default
     </div>
   </section>
 
-  <section class="refresh-section container" aria-labelledby="publications-title">
-    <div class="section-heading-row"><div><p class="eyebrow">Recent work</p><h2 id="publications-title">Latest publications</h2></div><a class="section-link" href="{{ '/publications' | relative_url }}">All publications <span aria-hidden="true">&rarr;</span></a></div>
-    <div class="home-publication-list">
-      {% assign publications = site.publications | sort: 'date' | reverse %}
-      {% for publication in publications limit: 4 %}{% include publication-entry.html publication=publication %}{% endfor %}
+  <section class="refresh-section publications-section" aria-labelledby="publications-title">
+    <div class="container">
+      <div class="section-heading-row"><div><p class="eyebrow">Recent work</p><h2 id="publications-title">Latest publications</h2></div><a class="section-link" href="{{ '/publications' | relative_url }}">All publications <span aria-hidden="true">&rarr;</span></a></div>
+      <div class="home-publication-list">
+        {% assign publications = site.publications | sort: 'date' | reverse %}
+        {% for publication in publications limit: 4 %}{% include publication-entry.html publication=publication %}{% endfor %}
+      </div>
     </div>
   </section>
 
@@ -68,20 +89,4 @@ layout: default
     </div>
   </section>
 
-  <section class="refresh-section container" aria-labelledby="team-title">
-    <div class="section-heading-row"><div><p class="eyebrow">People behind the research</p><h2 id="team-title">Meet our team</h2></div><a class="section-link" href="{{ '/people' | relative_url }}">Meet everyone <span aria-hidden="true">&rarr;</span></a></div>
-    <div class="team-preview">
-      {% assign people = site.people | sort: 'priority' | reverse %}
-      {% assign shown = 0 %}
-      {% for person in people %}
-      {% unless person.former %}
-      <article><img src="{{ person.photo | default: '/img/people/placeholder.png' | relative_url }}" alt="{{ person.name | escape }}" loading="lazy" width="160" height="160"><h3>{{ person.name }}</h3><p>{{ person.role }}</p></article>
-      {% assign shown = shown | plus: 1 %}{% if shown == 4 %}{% break %}{% endif %}
-      {% endunless %}
-      {% endfor %}
-    </div>
-    {% unless site.opportunities.size == 0 %}
-    <div class="join-callout"><div><h3>Build what comes next.</h3><p>Explore opportunities to join our research community.</p></div><a class="refresh-button" href="{{ '/opportunities' | relative_url }}">View opportunities <span aria-hidden="true">&rarr;</span></a></div>
-    {% endunless %}
-  </section>
 </main>

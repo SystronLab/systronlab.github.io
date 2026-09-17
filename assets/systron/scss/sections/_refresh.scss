@@ -206,7 +206,10 @@ $refresh-rust-tint: mix($white, $systron-d1, 94%);
   background: linear-gradient(115deg, mix($white, $systron-a1, 90%) 0%, $refresh-green-tint 55%, $refresh-blue-tint 100%);
 }
 .home-refresh .section-tint { background: $refresh-green-tint; }
-.home-refresh section[aria-labelledby="news-title"] { background: $refresh-blue-tint; }
+.home-refresh .team-section { background: $refresh-blue-tint; }
+.home-refresh section[aria-labelledby="projects-title"] { background: white; }
+.home-refresh .publications-section { background: $refresh-green-tint; }
+.home-refresh section[aria-labelledby="news-title"] { background: white; }
 
 .theme-grid .refresh-card {
   border-bottom: 4px solid $systron-a1;
@@ -226,6 +229,13 @@ $refresh-rust-tint: mix($white, $systron-d1, 94%);
 .person-card { background: linear-gradient(180deg, $refresh-green-tint 0, mix($white, $systron-c1, 97%) 96px, $white 170px); }
 .person-card > img, .team-preview img { box-shadow: 0 0 0 5px $refresh-green-tint; }
 .join-callout { background: $refresh-rust-tint; border: 1px solid mix($white, $systron-d1, 75%); }
+.hot-callout { position: relative; overflow: hidden; }
+.hot-callout::before { content: ''; position: absolute; top: 0; bottom: 0; left: 0; width: 34%; background: linear-gradient(90deg, transparent, rgba($systron-d1, .16), transparent); pointer-events: none; }
+.hot-callout > * { position: relative; z-index: 1; }
+.callout-status { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 10px; color: $systron-c2; font-size: 12px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.callout-status i { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: $systron-c1; box-shadow: 0 0 0 3px rgba($systron-c1, .16); }
+.hot-callout .refresh-button { background: $systron-d1; border-color: $systron-d1; color: $white; }
+.hot-callout .refresh-button:hover, .hot-callout .refresh-button:focus-visible { background: $systron-d2; border-color: $systron-d2; color: $white; }
 .opportunity-card { border-left: 4px solid $systron-d1; background: mix($white, $systron-d1, 98%); }
 .testbed-specs { background: $refresh-blue-tint; }
 .page-jump-links a { background: $refresh-blue-tint; color: $systron-b1; }
