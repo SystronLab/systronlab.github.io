@@ -6,12 +6,11 @@ description: Explore the systems, networks and technologies we are building and 
 wide: true
 ---
 <form class="publication-filters" id="projectsFilters" role="search" hidden>
-  <div class="publication-search"><label for="projectsSearch">Search projects</label><input id="projectsSearch" type="search" placeholder="Title, researcher or topic…" autocomplete="off"></div>
   <div><label for="projectsTopic">Topic</label><select id="projectsTopic"><option value="">All topics</option>
     {% assign tags = site.projects | map: 'tags' | join: '|' | split: '|' | uniq | sort %}
     {% for tag in tags %}<option value="{{ tag | escape }}">{{ tag }}</option>{% endfor %}
   </select></div>
-  <button class="filter-reset" type="reset">Clear filters</button>
+  <div class="publication-search"><label for="projectsSearch">Search projects</label><input id="projectsSearch" type="search" placeholder="Title, researcher or topic…" autocomplete="off"></div>
 </form>
 <p id="projectsCount" class="directory-count" role="status" aria-live="polite" aria-atomic="true">{{ site.projects.size }} projects</p>
 <div class="refresh-grid projects-directory" id="projectsGrid">
@@ -29,5 +28,5 @@ wide: true
   </article>
   {% endfor %}
 </div>
-<div id="projectsEmpty" class="publication-empty" hidden><h2>No projects found</h2><p>Try another keyword or topic.</p><button class="refresh-button" id="projectsReset" type="button">Clear filters</button></div>
+<div id="projectsEmpty" class="publication-empty" hidden><h2>No projects found</h2><p>Try another keyword or topic.</p></div>
 <script src="{{ '/assets/projects.js' | relative_url }}" defer></script>

@@ -1,6 +1,7 @@
 ---
 name: "Dr Panos Papanastasiou"
 role: "Research Associate"
+former: true
 photo: '/img/people/panos.png'
 ---
 

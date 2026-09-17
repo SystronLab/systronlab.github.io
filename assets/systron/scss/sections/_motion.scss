@@ -17,7 +17,8 @@
 }
 @keyframes systron-callout-shimmer {
   from { transform: translateX(-115%); }
-  to { transform: translateX(115%); }
+  // The shimmer is 34% of the callout width; move it fully past the right edge.
+  to { transform: translateX(300%); }
 }
 @media (prefers-reduced-motion: no-preference) {
   html { scroll-behavior: smooth; }

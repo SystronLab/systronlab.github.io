@@ -23,15 +23,8 @@
     count.textContent = shown + ' of ' + items.length + ' publications';
     empty.hidden = shown !== 0;
   }
-  function reset() {
-    search.value = '';
-    year.value = '';
-    applyFilters();
-  }
   search.addEventListener('input', applyFilters);
   year.addEventListener('change', applyFilters);
-  form.addEventListener('reset', function (event) { event.preventDefault(); reset(); });
-  document.getElementById('publicationsReset').addEventListener('click', function () { reset(); search.focus(); });
   form.hidden = false;
   applyFilters();
 })();

@@ -22,7 +22,7 @@ This reveals a gap for robotic systems that require strict, predictable performa
 
 ## System Design
 
-<b>RAN:</b> srsRAN Split 8 + USRP x310 + OctoClock-G CDA-2990
+<b>RAN:</b> OCUDU Split 8 + USRP x310 + OctoClock-G CDA-2990
 
 <b>Core:</b> Open5GS
 
@@ -40,7 +40,7 @@ This reveals a gap for robotic systems that require strict, predictable performa
 <br>
 <br>
 ## Implementation
-We built a fully functional 5G Standalone (SA) testbed using the srsRAN
+We built a fully functional 5G Standalone (SA) testbed using the OCUDU
 stack configured in Split 8 architecture, running entirely on a local server.
 This server also hosted a UDP client and was connected to a wireless
 controller, which generated motion commands serialized as JSON.

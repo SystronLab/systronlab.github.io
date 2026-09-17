@@ -8,13 +8,12 @@ title: Publications
   </header>
   <div class="container publications-content">
     <form class="publication-filters" role="search" onsubmit="return false;" hidden>
-      <div class="publication-search"><label for="publicationsSearch">Search publications</label><input id="publicationsSearch" type="search" placeholder="Title, author, topic or venue…" autocomplete="off"></div>
       <div><label for="publicationsYear">Year</label><select id="publicationsYear"><option value="">All years</option>
         {% assign publications = site.publications | sort: 'date' | reverse %}
         {% assign previous_year = '' %}
         {% for publication in publications %}{% assign year = publication.date | date: '%Y' %}{% if year != previous_year %}<option value="{{ year }}">{{ year }}</option>{% assign previous_year = year %}{% endif %}{% endfor %}
       </select></div>
-      <button class="filter-reset" type="reset">Clear filters</button>
+      <div class="publication-search"><label for="publicationsSearch">Search publications</label><input id="publicationsSearch" type="search" placeholder="Title, author, topic or venue…" autocomplete="off"></div>
     </form>
     <p id="publicationsCount" class="publication-count" role="status" aria-live="polite" aria-atomic="true">{{ site.publications.size }} publications</p>
     <div id="publicationsGrid">
@@ -31,7 +30,7 @@ title: Publications
       {% if forloop.last %}</div></section>{% endif %}
       {% endfor %}
     </div>
-    <div id="publicationsEmpty" class="publication-empty" hidden><h2>No publications found</h2><p>Try a different keyword or select another year.</p><button type="button" class="refresh-button" id="publicationsReset">Clear filters</button></div>
+    <div id="publicationsEmpty" class="publication-empty" hidden><h2>No publications found</h2><p>Try a different keyword or select another year.</p></div>
   </div>
 </main>
 <script src="{{ '/assets/publications.js' | relative_url }}" defer></script>

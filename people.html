@@ -16,17 +16,24 @@ wide: true
   <div class="section-heading-row"><div><p class="eyebrow">Our community</p><h2 id="team-title">Meet the team</h2></div><a class="section-link" href="{{ '/opportunities' | relative_url }}">Join the lab &rarr;</a></div>
   <div class="people-grid">
     {% assign people = site.people | sort: 'priority' | reverse %}
-    {% for person in people %}{% unless person.former %}
+    {% assign active_people = people | where_exp: 'person', 'person.former != true' %}
+    {% assign sebati = active_people | where: 'slug', 'sebati-ghosh' %}
+    {% assign hasan = active_people | where: 'slug', 'hasan-abodihin' %}
+    {% assign amit = active_people | where: 'slug', 'amit-more' %}
+    {% assign biography_row = sebati | concat: hasan | concat: amit %}
+    {% assign other_people = active_people | where_exp: 'person', 'person.slug != "sebati-ghosh"' | where_exp: 'person', 'person.slug != "hasan-abodihin"' | where_exp: 'person', 'person.slug != "amit-more"' %}
+    {% assign first_row = other_people | slice: 0, 3 %}
+    {% assign remaining_people = other_people | slice: 3, other_people.size %}
+    {% assign directory_people = first_row | concat: biography_row | concat: remaining_people %}
+    {% for person in directory_people %}
     <article class="person-card">
+      {% if person.site %}<a class="person-profile" href="{{ person.site }}" aria-label="Profile of {{ person.name | escape }}" title="Profile of {{ person.name | escape }}"><span aria-hidden="true">↗</span></a>{% endif %}
       <img src="{{ person.photo | default: '/img/people/placeholder.png' | relative_url }}" alt="{{ person.name | escape }}" width="160" height="160" loading="lazy">
       <h3>{{ person.name }}</h3><p class="person-role">{{ person.role }}</p>
       {% assign bio = person.content | strip_html | strip %}
-      {% if bio != '' or person.site %}<div class="person-actions{% if person.site %} has-profile{% endif %}">
-      {% if bio != '' %}<details class="person-bio"><summary>Biography<span class="sr-only"> of {{ person.name }}</span></summary><div>{{ person.content }}</div></details>{% endif %}
-      {% if person.site %}<a class="section-link" href="{{ person.site }}" aria-label="Profile of {{ person.name | escape }}">Profile <span aria-hidden="true">↗</span></a>{% endif %}
-      </div>{% endif %}
+      {% if bio != '' %}<div class="person-bio">{{ person.content }}</div>{% endif %}
     </article>
-    {% endunless %}{% endfor %}
+    {% endfor %}
   </div>
 </section>
 <section id="former" class="former-section" aria-labelledby="former-title"><p class="eyebrow">Our wider community</p><h2 id="former-title">Former members</h2>

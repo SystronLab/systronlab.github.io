@@ -18,12 +18,9 @@
     document.getElementById('projectsCount').textContent = shown + ' of ' + items.length + ' projects';
     document.getElementById('projectsEmpty').hidden = shown !== 0;
   }
-  function reset() { search.value = ''; topic.value = ''; filter(); }
   form.addEventListener('submit', function (event) { event.preventDefault(); });
-  form.addEventListener('reset', function (event) { event.preventDefault(); reset(); });
   search.addEventListener('input', filter);
   topic.addEventListener('change', filter);
-  document.getElementById('projectsReset').addEventListener('click', function () { reset(); search.focus(); });
   form.hidden = false;
   filter();
 })();

@@ -10,7 +10,7 @@ authors:
 
 image: "/img/projects/interoperability.png"
 desc: Advancing RAN interoperability by bridging the gap between commercial and open-source E2 nodes and RAN Intelligent Controllers (RICs).
-tags: [6G, 5G, Networks, Open RAN, srsRAN, RIC]
+tags: [6G, 5G, Networks, Open RAN, OCUDU, RIC]
 ---
 
 ## Project Overview
@@ -32,27 +32,27 @@ We began with the integration of a commercial E2 node (VIAVI tester) with an ope
 
 Although current E2 interfaces limit actuation capabilities, we have laid the groundwork to test E2SM-RC and E2SM-CCC functionalities in future RIC updates.
 
-#### 2. Open-Source E2 Node (srsRAN) with Open-Source RICs (OSC, FlexRIC)
+#### 2. Open-Source E2 Node (OCUDU) with Open-Source RICs (OSC, FlexRIC)
 
-Building on the initial milestone, we transitioned to an entirely open-source setup, experimenting with multiple configurations of the srsRAN E2 node and RIC implementations.
+Building on the initial milestone, we transitioned to an entirely open-source setup, experimenting with multiple configurations of the OCUDU E2 node and RIC implementations.
 
-##### 2.1 srsRAN with ZMQ
+##### 2.1 OCUDU with ZMQ
 
-**GitHub**: [SystronLab/srsRAN-ZMQ](https://github.com/SystronLab/srsRAN-ZMQ)<br>
+**GitHub**: [SystronLab/OCUDU-ZMQ](https://github.com/SystronLab/srsRAN-ZMQ)<br>
 
-We first deployed srsRAN using its ZeroMQ-based virtual radio interface. This software-centric setup allowed us to simulate RF behavior without hardware, accelerating development and continuous integration testing. It provided an efficient base for integrating our xApps with both FlexRIC and OSC RICs.
+We first deployed OCUDU using its ZeroMQ-based virtual radio interface. This software-centric setup allowed us to simulate RF behavior without hardware, accelerating development and continuous integration testing. It provided an efficient base for integrating our xApps with both FlexRIC and OSC RICs.
 
-<img src="/img/zmq.png" alt="srsRAN with ZMQ" >
-<p><em>Image credit: <a href="https://www.srsran.com/" target="_blank">srsRAN project</a></em></p>
+<img src="/img/zmq.png" alt="OCUDU with ZMQ" >
+<p><em>Image credit: <a href="https://www.srsran.com/" target="_blank">OCUDU project</a></em></p>
 
 The GitHub repository includes comprehensive guides for various deployment scenarios (Docker/non-Docker, single/multiple UEs/gNBs, different RICs).
 
-##### 2.2 srsRAN Over-the-Air (OTA) Setup with USRP x310
+##### 2.2 OCUDU Over-the-Air (OTA) Setup with USRP x310
 
-**GitHub**: [SystronLab/srsRAN-USRPs-OTA](https://github.com/SystronLab/srsRAN-USRPs-OTA)<br>
+**GitHub**: [SystronLab/OCUDU-USRPs-OTA](https://github.com/SystronLab/srsRAN-USRPs-OTA)<br>
 
 <img src="/img/ota.png" alt="Over-the-Air (OTA) Setup" >
-<p><em>Image credit: <a href="https://www.srsran.com/" target="_blank">srsRAN project</a></em></p>
+<p><em>Image credit: <a href="https://www.srsran.com/" target="_blank">OCUDU project</a></em></p>
 <div class="video-container">
 <iframe
           src="https://www.youtube.com/embed/xW7LMHVnIJk"
@@ -62,11 +62,11 @@ The GitHub repository includes comprehensive guides for various deployment scena
           allowfullscreen>
 </iframe>
 </div>
-With the foundation set in ZMQ-based virtual testing, we progressed to over-the-air deployments using USRP x310 hardware. This enabled a realistic 5G setup using srsUE, srsRAN gNB, and the Open5GS core network, resulting in a fully open-source end-to-end OTA 5G network.
+With the foundation set in ZMQ-based virtual testing, we progressed to over-the-air deployments using USRP x310 hardware. This enabled a realistic 5G setup using srsUE, OCUDU gNB, and the Open5GS core network, resulting in a fully open-source end-to-end OTA 5G network.
 
-##### 2.3 srsRAN split 8 Setup with USRP x310 and COTS UEs / Quectel Modem
+##### 2.3 OCUDU split 8 Setup with USRP x310 and COTS UEs / Quectel Modem
 
-**GitHub**: [SystronLab/srsRAN-USRPs-COTS](https://github.com/SystronLab/srsRAN-USRPs-COTS)<br>
+**GitHub**: [SystronLab/OCUDU-USRPs-COTS](https://github.com/SystronLab/srsRAN-USRPs-COTS)<br>
 
 <div class="video-container">
 <iframe
@@ -78,9 +78,9 @@ With the foundation set in ZMQ-based virtual testing, we progressed to over-the-
 </iframe>
 </div>
 
-In this phase, we implemented a fully functional 5G standalone (SA) network using srsRAN integrated with USRP X310 and commercial off-the-shelf (COTS) UEs. This setup employs a Split 8 architecture, where the entire gNB stack is deployed locally. Coupled with Open5GS core services and programmable SIMs (sysmoISIM), the system enables full internet connectivity for COTS devices.
+In this phase, we implemented a fully functional 5G standalone (SA) network using OCUDU integrated with USRP X310 and commercial off-the-shelf (COTS) UEs. This setup employs a Split 8 architecture, where the entire gNB stack is deployed locally. Coupled with Open5GS core services and programmable SIMs (sysmoISIM), the system enables full internet connectivity for COTS devices.
 
-##### 2.5 srsRAN split 7.2 Setup with Benetel RU and COTS UEs
+##### 2.5 OCUDU split 7.2 Setup with Benetel RU and COTS UEs
 
 **Status**: <span style="color: #f39c12;">In Progress</span>
 
