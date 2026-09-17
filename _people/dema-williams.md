@@ -2,6 +2,7 @@
 name: "Dema Williams"
 role: "Research Support Assistant"
 photo: '/img/people/dema.png'
+order: 120
 ---
 
 <!-- PUT THE PERSON'S DESCRIPTION OR RESEARCH OVERVIEW HERE -->

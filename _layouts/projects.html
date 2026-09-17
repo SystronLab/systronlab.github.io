@@ -4,7 +4,7 @@ layout: default
 <main id="main-content" class="interior-refresh">
   {% include page-header.html kind='projects' back_url='/projects' back_label='All projects' %}
   <div class="container interior-content reading-width">
-    {% if page.image %}<img class="detail-cover project-cover" src="{{ page.image | relative_url }}" alt="" fetchpriority="high">{% endif %}
+    {% if page.image %}<img class="detail-cover project-cover" src="{{ page.image | relative_url }}" alt="" fetchpriority="high" {% include image-srcset.html src=page.image sizes="(max-width: 767px) calc(100vw - 30px), 535px" %}>{% endif %}
     {% if page.repo %}<p><a class="refresh-button" href="{{ page.repo }}">View repository <span aria-hidden="true">↗</span></a></p>{% endif %}
     <div class="prose">{{ content }}</div>
     <nav class="detail-pagination" aria-label="Project navigation"><a class="section-link" href="{{ '/projects' | relative_url }}">&larr; All projects</a></nav>

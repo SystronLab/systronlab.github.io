@@ -8,7 +8,7 @@ wide: true
 <div class="refresh-grid news-directory">
   {% for post in paginator.posts %}
   <article class="refresh-card">
-    <img src="{{ post.background | default: '/img/wireless-network.jpg' | relative_url }}" alt="" loading="lazy" width="600" height="360">
+    <img src="{{ post.background | default: '/img/wireless-network.jpg' | relative_url }}" alt="" loading="lazy" width="600" height="360" {% include image-srcset.html src=post.background fallback='/img/wireless-network.jpg' sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 991px) 345px, 350px" %}>
     <div class="refresh-card-body">
       <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%-d %B %Y' }} &middot; {% include read_time.html content=post.content %}</time>
       <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>

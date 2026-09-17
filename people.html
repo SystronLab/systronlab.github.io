@@ -17,18 +17,11 @@ wide: true
   <div class="people-grid">
     {% assign people = site.people | sort: 'priority' | reverse %}
     {% assign active_people = people | where_exp: 'person', 'person.former != true' %}
-    {% assign sebati = active_people | where: 'slug', 'sebati-ghosh' %}
-    {% assign hasan = active_people | where: 'slug', 'hasan-abodihin' %}
-    {% assign amit = active_people | where: 'slug', 'amit-more' %}
-    {% assign biography_row = sebati | concat: hasan | concat: amit %}
-    {% assign other_people = active_people | where_exp: 'person', 'person.slug != "sebati-ghosh"' | where_exp: 'person', 'person.slug != "hasan-abodihin"' | where_exp: 'person', 'person.slug != "amit-more"' %}
-    {% assign first_row = other_people | slice: 0, 3 %}
-    {% assign remaining_people = other_people | slice: 3, other_people.size %}
-    {% assign directory_people = first_row | concat: biography_row | concat: remaining_people %}
+    {% assign directory_people = active_people | sort: 'order' %}
     {% for person in directory_people %}
     <article class="person-card">
       {% if person.site %}<a class="person-profile" href="{{ person.site }}" aria-label="Profile of {{ person.name | escape }}" title="Profile of {{ person.name | escape }}"><span aria-hidden="true">↗</span></a>{% endif %}
-      <img src="{{ person.photo | default: '/img/people/placeholder.png' | relative_url }}" alt="{{ person.name | escape }}" width="160" height="160" loading="lazy">
+      <img src="{{ person.photo | default: '/img/people/placeholder.png' | relative_url }}" alt="{{ person.name | escape }}" width="160" height="160" loading="lazy" {% include image-srcset.html src=person.photo fallback='/img/people/placeholder.png' sizes="132px" %}>
       <h3>{{ person.name }}</h3><p class="person-role">{{ person.role }}</p>
       {% assign bio = person.content | strip_html | strip %}
       {% if bio != '' %}<div class="person-bio">{{ person.content }}</div>{% endif %}

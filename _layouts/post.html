@@ -4,7 +4,7 @@ layout: default
 <main id="main-content" class="interior-refresh">
   {% include page-header.html kind='post' back_url='/news' back_label='All news' %}
   <article class="container interior-content reading-width">
-    {% if page.background %}<img class="detail-cover" src="{{ page.background | relative_url }}" alt="" fetchpriority="high">{% endif %}
+    {% if page.background %}<img class="detail-cover" src="{{ page.background | relative_url }}" alt="" fetchpriority="high" {% include image-srcset.html src=page.background sizes="(max-width: 767px) calc(100vw - 30px), 1110px" %}>{% endif %}
     <div class="prose">{{ content }}</div>
     <nav class="detail-pagination" aria-label="News navigation">
       {% if page.previous.url %}<a href="{{ page.previous.url | relative_url }}">&larr; Older post<span>{{ page.previous.title }}</span></a>{% endif %}

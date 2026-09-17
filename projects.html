@@ -17,7 +17,7 @@ wide: true
   {% assign projects = site.projects | sort: 'date' | reverse %}
   {% for project in projects %}
   <article class="refresh-card project-result" data-tags="{{ project.tags | jsonify | escape }}" data-search="{{ project.title | escape }} {{ project.authors | join: ' ' | escape }} {{ project.tags | join: ' ' | escape }} {{ project.desc | default: project.excerpt | strip_html | escape }}">
-    {% if project.image %}<img class="project-preview-image" src="{{ project.image | relative_url }}" alt="" loading="lazy" width="600" height="360">{% endif %}
+    {% if project.image %}<img class="project-preview-image" src="{{ project.image | relative_url }}" alt="" loading="lazy" width="600" height="360" {% include image-srcset.html src=project.image sizes="(max-width: 767px) calc(100vw - 30px), 535px" %}>{% endif %}
     <div class="refresh-card-body">
       <div class="refresh-tags">{% for tag in project.tags %}<span>{{ tag }}</span>{% endfor %}</div>
       <h2><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h2>

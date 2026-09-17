@@ -2,6 +2,7 @@
 name: "Amit More"
 role: "PhD Student"
 photo: "/img/people/amit.jpg" 
+order: 60
 ---
 
 <!-- PUT THE PERSON'S DESCRIPTION OR RESEARCH OVERVIEW HERE -->

@@ -19,7 +19,7 @@ layout: default
     <div class="refresh-grid theme-grid">
       {% for theme in site.research %}
       <article class="refresh-card">
-        <img src="{{ theme.background | relative_url }}" alt="" loading="lazy" width="600" height="360">
+        <img src="{{ theme.background | relative_url }}" alt="" loading="lazy" width="600" height="360" {% include image-srcset.html src=theme.background sizes="(max-width: 767px) calc(100vw - 30px), 350px" %}>
         <div class="refresh-card-body"><h3>{{ theme.title }}</h3><p>{{ theme.description }}</p></div>
       </article>
       {% endfor %}
@@ -34,7 +34,7 @@ layout: default
         {% assign shown = 0 %}
         {% for person in people %}
         {% unless person.former %}
-        <article><img src="{{ person.photo | default: '/img/people/placeholder.png' | relative_url }}" alt="{{ person.name | escape }}" loading="lazy" width="160" height="160"><h3>{{ person.name }}</h3><p>{{ person.role }}</p></article>
+        <article><img src="{{ person.photo | default: '/img/people/placeholder.png' | relative_url }}" alt="{{ person.name | escape }}" loading="lazy" width="160" height="160" {% include image-srcset.html src=person.photo fallback='/img/people/placeholder.png' sizes="160px" %}><h3>{{ person.name }}</h3><p>{{ person.role }}</p></article>
         {% assign shown = shown | plus: 1 %}{% if shown == 4 %}{% break %}{% endif %}
         {% endunless %}
         {% endfor %}
@@ -52,7 +52,7 @@ layout: default
         {% assign projects = site.projects | sort: 'date' | reverse %}
         {% for project in projects limit: 2 %}
         <article class="refresh-card">
-          {% if project.image %}<img class="project-preview-image" src="{{ project.image | relative_url }}" alt="" loading="lazy" width="600" height="360">{% endif %}
+          {% if project.image %}<img class="project-preview-image" src="{{ project.image | relative_url }}" alt="" loading="lazy" width="600" height="360" {% include image-srcset.html src=project.image sizes="(max-width: 767px) calc(100vw - 30px), 535px" %}>{% endif %}
           <div class="refresh-card-body">
             <div class="refresh-tags">{% for tag in project.tags limit: 3 %}<span>{{ tag }}</span>{% endfor %}</div>
             <h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
@@ -81,7 +81,7 @@ layout: default
       <div class="refresh-grid news-preview">
         {% for post in site.posts limit: 3 %}
         <article class="refresh-card">
-          <img src="{{ post.background | default: '/img/wireless-network.jpg' | relative_url }}" alt="" loading="lazy" width="600" height="360">
+          <img src="{{ post.background | default: '/img/wireless-network.jpg' | relative_url }}" alt="" loading="lazy" width="600" height="360" {% include image-srcset.html src=post.background fallback='/img/wireless-network.jpg' sizes="(max-width: 767px) calc(100vw - 30px), 350px" %}>
           <div class="refresh-card-body"><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%-d %B %Y' }}</time><h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3><p>{{ post.subtitle | default: post.excerpt | strip_html | truncatewords: 22 }}</p></div>
         </article>
         {% endfor %}

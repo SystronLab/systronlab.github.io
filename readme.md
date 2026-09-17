@@ -96,6 +96,17 @@ You can optionally add:
 
 - `photo`, the path to a person's photo, if uploaded to `/img/people`. If this isn't present, it'll default to a placeholder image
 - `site`, the person's personal website
+- `order`, the card's position on About Us: smaller numbers appear first. Current values increase by 10, so use an intermediate number to insert a person between two others. Every three consecutive people share a row on desktop. Homepage selection still uses `priority`.
+
+### Optimizing images
+
+Keep full-resolution originals outside this repository. After adding photos to `img/`, run `python3 scripts/optimize-images.py` (requires Pillow: `python3 -m pip install Pillow`). The script compresses JPEGs to a maximum of 1920 pixels per side, optimizes PNGs losslessly, and creates smaller variants in `img/responsive/`. Commit those files together with `_data/image_variants.json`.
+
+The homepage, team, project and post templates, and Facilities use `_includes/image-srcset.html` to select smaller images on narrow screens. New images still display before running the script; responsive variants become available after it runs. Inline images added to Markdown can use the same include, for example:
+
+```liquid
+<img src="{{ '/img/example.jpg' | relative_url }}" alt="Describe the image" loading="lazy" {% include image-srcset.html src='/img/example.jpg' %}>
+```
 
 
 ### Adding a new Project

@@ -1,0 +1,1864 @@
+{
+  "/img/2024-responsible-information-sharing/responsible-information-sharing.jpg": [
+    {
+      "src": "/img/responsive/2024-responsible-information-sharing/responsible-information-sharing-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/2024-responsible-information-sharing/responsible-information-sharing-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/2024-responsible-information-sharing/responsible-information-sharing.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/2024-threadbatteryattack/1-cmos-battery-check.png": [
+    {
+      "src": "/img/responsive/2024-threadbatteryattack/1-cmos-battery-check-png-480.png",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/2024-threadbatteryattack/1-cmos-battery-check-png-960.png",
+      "width": 960
+    },
+    {
+      "src": "/img/2024-threadbatteryattack/1-cmos-battery-check.png",
+      "width": 1280
+    }
+  ],
+  "/img/2024-threadbatteryattack/10-attack-1.png": [
+    {
+      "src": "/img/responsive/2024-threadbatteryattack/10-attack-1-png-480.png",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/2024-threadbatteryattack/10-attack-1-png-960.png",
+      "width": 960
+    },
+    {
+      "src": "/img/2024-threadbatteryattack/10-attack-1.png",
+      "width": 1280
+    }
+  ],
+  "/img/2024-threadbatteryattack/11-attack-2.png": [
+    {
+      "src": "/img/responsive/2024-threadbatteryattack/11-attack-2-png-480.png",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/2024-threadbatteryattack/11-attack-2-png-960.png",
+      "width": 960
+    },
+    {
+      "src": "/img/2024-threadbatteryattack/11-attack-2.png",
+      "width": 1280
+    }
+  ],
+  "/img/2024-threadbatteryattack/12-attack-3.png": [
+    {
+      "src": "/img/responsive/2024-threadbatteryattack/12-attack-3-png-480.png",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/2024-threadbatteryattack/12-attack-3-png-960.png",
+      "width": 960
+    },
+    {
+      "src": "/img/2024-threadbatteryattack/12-attack-3.png",
+      "width": 1280
+    }
+  ],
+  "/img/2024-threadbatteryattack/13-attack-4.png": [
+    {
+      "src": "/img/responsive/2024-threadbatteryattack/13-attack-4-png-480.png",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/2024-threadbatteryattack/13-attack-4-png-960.png",
+      "width": 960
+    },
+    {
+      "src": "/img/2024-threadbatteryattack/13-attack-4.png",
+      "width": 1280
+    }
+  ],
+  "/img/2024-threadbatteryattack/2-devices.png": [
+    {
+      "src": "/img/responsive/2024-threadbatteryattack/2-devices-png-480.png",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/2024-threadbatteryattack/2-devices-png-960.png",
+      "width": 960
+    },
+    {
+      "src": "/img/2024-threadbatteryattack/2-devices.png",
+      "width": 1280
+    }
+  ],
+  "/img/2024-threadbatteryattack/3-thread-topology-monitor.png": [
+    {
+      "src": "/img/responsive/2024-threadbatteryattack/3-thread-topology-monitor-png-480.png",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/2024-threadbatteryattack/3-thread-topology-monitor-png-960.png",
+      "width": 960
+    },
+    {
+      "src": "/img/2024-threadbatteryattack/3-thread-topology-monitor.png",
+      "width": 1280
+    }
+  ],
+  "/img/2024-threadbatteryattack/4-network-ping.png": [
+    {
+      "src": "/img/responsive/2024-threadbatteryattack/4-network-ping-png-480.png",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/2024-threadbatteryattack/4-network-ping-png-960.png",
+      "width": 960
+    },
+    {
+      "src": "/img/2024-threadbatteryattack/4-network-ping.png",
+      "width": 1280
+    }
+  ],
+  "/img/2024-threadbatteryattack/5-network-scanning-1.png": [
+    {
+      "src": "/img/responsive/2024-threadbatteryattack/5-network-scanning-1-png-480.png",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/2024-threadbatteryattack/5-network-scanning-1-png-960.png",
+      "width": 960
+    },
+    {
+      "src": "/img/2024-threadbatteryattack/5-network-scanning-1.png",
+      "width": 1280
+    }
+  ],
+  "/img/2024-threadbatteryattack/6-network-scanning-2.png": [
+    {
+      "src": "/img/responsive/2024-threadbatteryattack/6-network-scanning-2-png-480.png",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/2024-threadbatteryattack/6-network-scanning-2-png-960.png",
+      "width": 960
+    },
+    {
+      "src": "/img/2024-threadbatteryattack/6-network-scanning-2.png",
+      "width": 1280
+    }
+  ],
+  "/img/2024-threadbatteryattack/7-network-sniffer.png": [
+    {
+      "src": "/img/responsive/2024-threadbatteryattack/7-network-sniffer-png-480.png",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/2024-threadbatteryattack/7-network-sniffer-png-960.png",
+      "width": 960
+    },
+    {
+      "src": "/img/2024-threadbatteryattack/7-network-sniffer.png",
+      "width": 1280
+    }
+  ],
+  "/img/2024-threadbatteryattack/8-wireshark-details-and-mle.png": [
+    {
+      "src": "/img/responsive/2024-threadbatteryattack/8-wireshark-details-and-mle-png-480.png",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/2024-threadbatteryattack/8-wireshark-details-and-mle-png-960.png",
+      "width": 960
+    },
+    {
+      "src": "/img/2024-threadbatteryattack/8-wireshark-details-and-mle.png",
+      "width": 1280
+    }
+  ],
+  "/img/2024-threadbatteryattack/9-python-script.png": [
+    {
+      "src": "/img/responsive/2024-threadbatteryattack/9-python-script-png-480.png",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/2024-threadbatteryattack/9-python-script-png-960.png",
+      "width": 960
+    },
+    {
+      "src": "/img/2024-threadbatteryattack/9-python-script.png",
+      "width": 1280
+    }
+  ],
+  "/img/2024-threadbatteryattack/threadbatteryattack.png": [
+    {
+      "src": "/img/responsive/2024-threadbatteryattack/threadbatteryattack-png-480.png",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/2024-threadbatteryattack/threadbatteryattack-png-960.png",
+      "width": 960
+    },
+    {
+      "src": "/img/2024-threadbatteryattack/threadbatteryattack.png",
+      "width": 4400
+    }
+  ],
+  "/img/5g-mast.jpg": [
+    {
+      "src": "/img/responsive/5g-mast-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/5g-mast-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/5g-mast.jpg",
+      "width": 1280
+    }
+  ],
+  "/img/5g-minirobot.jpeg": [
+    {
+      "src": "/img/responsive/5g-minirobot-jpeg-480.jpeg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/5g-minirobot-jpeg-960.jpeg",
+      "width": 960
+    },
+    {
+      "src": "/img/5g-minirobot.jpeg",
+      "width": 1920
+    }
+  ],
+  "/img/5g-networks.jpg": [
+    {
+      "src": "/img/responsive/5g-networks-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/5g-networks-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/5g-networks.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/5g-pixel.jpeg": [
+    {
+      "src": "/img/responsive/5g-pixel-jpeg-480.jpeg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/5g-pixel-jpeg-960.jpeg",
+      "width": 960
+    },
+    {
+      "src": "/img/5g-pixel.jpeg",
+      "width": 1920
+    }
+  ],
+  "/img/5g-split72.jpg": [
+    {
+      "src": "/img/responsive/5g-split72-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/5g-split72-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/5g-split72.jpg",
+      "width": 1800
+    }
+  ],
+  "/img/6g-workshop.jpg": [
+    {
+      "src": "/img/responsive/6g-workshop-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/6g-workshop-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/6g-workshop.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/censorship.jpg": [
+    {
+      "src": "/img/responsive/censorship-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/censorship-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/censorship.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/internet-globe.jpg": [
+    {
+      "src": "/img/responsive/internet-globe-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/internet-globe-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/internet-globe.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/isa-building.jpg": [
+    {
+      "src": "/img/responsive/isa-building-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/isa-building-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/isa-building.jpg",
+      "width": 1200
+    }
+  ],
+  "/img/logos/ukri.png": [
+    {
+      "src": "/img/responsive/logos/ukri-png-480.png",
+      "width": 480
+    },
+    {
+      "src": "/img/logos/ukri.png",
+      "width": 840
+    }
+  ],
+  "/img/minirobot.png": [
+    {
+      "src": "/img/responsive/minirobot-png-480.png",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/minirobot-png-960.png",
+      "width": 960
+    },
+    {
+      "src": "/img/minirobot.png",
+      "width": 1024
+    }
+  ],
+  "/img/people/amit.jpg": [
+    {
+      "src": "/img/responsive/people/amit-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/people/amit-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/people/amit.jpg",
+      "width": 1200
+    }
+  ],
+  "/img/people/bidushi.png": [
+    {
+      "src": "/img/responsive/people/bidushi-png-480.png",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/people/bidushi-png-960.png",
+      "width": 960
+    },
+    {
+      "src": "/img/people/bidushi.png",
+      "width": 1405
+    }
+  ],
+  "/img/people/brad.png": [
+    {
+      "src": "/img/responsive/people/brad-png-480.png",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/people/brad-png-960.png",
+      "width": 960
+    },
+    {
+      "src": "/img/people/brad.png",
+      "width": 2205
+    }
+  ],
+  "/img/people/dema.png": [
+    {
+      "src": "/img/responsive/people/dema-png-480.png",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/people/dema-png-960.png",
+      "width": 960
+    },
+    {
+      "src": "/img/people/dema.png",
+      "width": 1080
+    }
+  ],
+  "/img/people/evangelos.png": [
+    {
+      "src": "/img/responsive/people/evangelos-png-480.png",
+      "width": 480
+    },
+    {
+      "src": "/img/people/evangelos.png",
+      "width": 500
+    }
+  ],
+  "/img/people/hasanAboDihin.jpg": [
+    {
+      "src": "/img/responsive/people/hasanAboDihin-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/people/hasanAboDihin-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/people/hasanAboDihin.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/people/jinkun.jpg": [
+    {
+      "src": "/img/responsive/people/jinkun-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/people/jinkun-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/people/jinkun.jpg",
+      "width": 1314
+    }
+  ],
+  "/img/people/kavan.jpg": [
+    {
+      "src": "/img/responsive/people/kavan-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/people/kavan.jpg",
+      "width": 960
+    }
+  ],
+  "/img/people/mohit.jpeg": [
+    {
+      "src": "/img/responsive/people/mohit-jpeg-480.jpeg",
+      "width": 480
+    },
+    {
+      "src": "/img/people/mohit.jpeg",
+      "width": 640
+    }
+  ],
+  "/img/people/panos.png": [
+    {
+      "src": "/img/responsive/people/panos-png-480.png",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/people/panos-png-960.png",
+      "width": 960
+    },
+    {
+      "src": "/img/people/panos.png",
+      "width": 1645
+    }
+  ],
+  "/img/people/peter.png": [
+    {
+      "src": "/img/responsive/people/peter-png-480.png",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/people/peter-png-960.png",
+      "width": 960
+    },
+    {
+      "src": "/img/people/peter.png",
+      "width": 1920
+    }
+  ],
+  "/img/people/reem.png": [
+    {
+      "src": "/img/responsive/people/reem-png-480.png",
+      "width": 480
+    },
+    {
+      "src": "/img/people/reem.png",
+      "width": 492
+    }
+  ],
+  "/img/people/rehab.png": [
+    {
+      "src": "/img/responsive/people/rehab-png-480.png",
+      "width": 480
+    },
+    {
+      "src": "/img/people/rehab.png",
+      "width": 767
+    }
+  ],
+  "/img/people/yifan.jpeg": [
+    {
+      "src": "/img/responsive/people/yifan-jpeg-480.jpeg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/people/yifan-jpeg-960.jpeg",
+      "width": 960
+    },
+    {
+      "src": "/img/people/yifan.jpeg",
+      "width": 1902
+    }
+  ],
+  "/img/pi-iot.jpg": [
+    {
+      "src": "/img/responsive/pi-iot-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/pi-iot-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/pi-iot.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/pi-router-testbed.jpg": [
+    {
+      "src": "/img/responsive/pi-router-testbed-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/pi-router-testbed-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/pi-router-testbed.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/pixel.jpeg": [
+    {
+      "src": "/img/responsive/pixel-jpeg-480.jpeg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/pixel-jpeg-960.jpeg",
+      "width": 960
+    },
+    {
+      "src": "/img/pixel.jpeg",
+      "width": 1022
+    }
+  ],
+  "/img/posts/06.jpg": [
+    {
+      "src": "/img/responsive/posts/06-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/06-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/06.jpg",
+      "width": 1900
+    }
+  ],
+  "/img/posts/2024-rehab-alawadh-poster-presentation.png": [
+    {
+      "src": "/img/responsive/posts/2024-rehab-alawadh-poster-presentation-png-480.png",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/2024-rehab-alawadh-poster-presentation-png-960.png",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/2024-rehab-alawadh-poster-presentation.png",
+      "width": 1170
+    }
+  ],
+  "/img/posts/6g-expert-1.jpg": [
+    {
+      "src": "/img/responsive/posts/6g-expert-1-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/6g-expert-1-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/6g-expert-1.jpg",
+      "width": 1160
+    }
+  ],
+  "/img/posts/6g-expert-3.jpg": [
+    {
+      "src": "/img/responsive/posts/6g-expert-3-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/6g-expert-3-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/6g-expert-3.jpg",
+      "width": 1160
+    }
+  ],
+  "/img/posts/amit-eurosys-2026.jpg": [
+    {
+      "src": "/img/responsive/posts/amit-eurosys-2026-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/amit-eurosys-2026-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/amit-eurosys-2026.jpg",
+      "width": 1600
+    }
+  ],
+  "/img/posts/ants-cultural.jpg": [
+    {
+      "src": "/img/responsive/posts/ants-cultural-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/ants-cultural-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/ants-cultural.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/posts/ants-entrance.jpg": [
+    {
+      "src": "/img/responsive/posts/ants-entrance-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/ants-entrance-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/ants-entrance.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/posts/c3ihub-at-iit-kanpur.jpg": [
+    {
+      "src": "/img/responsive/posts/c3ihub-at-iit-kanpur-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/c3ihub-at-iit-kanpur-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/c3ihub-at-iit-kanpur.jpg",
+      "width": 1600
+    }
+  ],
+  "/img/posts/cfaa-at-dnv-spadeadam.jpg": [
+    {
+      "src": "/img/responsive/posts/cfaa-at-dnv-spadeadam-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/cfaa-at-dnv-spadeadam-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/cfaa-at-dnv-spadeadam.jpg",
+      "width": 1698
+    }
+  ],
+  "/img/posts/cheddar-edi.jpg": [
+    {
+      "src": "/img/responsive/posts/cheddar-edi-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/cheddar-edi-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/cheddar-edi.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/posts/cheddar-group.jpg": [
+    {
+      "src": "/img/responsive/posts/cheddar-group-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/cheddar-group-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/cheddar-group.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/posts/cheddar-hub-meeting-glasgow.jpg": [
+    {
+      "src": "/img/responsive/posts/cheddar-hub-meeting-glasgow-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/cheddar-hub-meeting-glasgow-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/cheddar-hub-meeting-glasgow.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/posts/cheddar-room.jpg": [
+    {
+      "src": "/img/responsive/posts/cheddar-room-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/cheddar-room-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/cheddar-room.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/posts/eurosec-rotterdam.jpg": [
+    {
+      "src": "/img/responsive/posts/eurosec-rotterdam-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/eurosec-rotterdam-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/eurosec-rotterdam.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/posts/fth-1.jpg": [
+    {
+      "src": "/img/responsive/posts/fth-1-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/fth-1-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/fth-1.jpg",
+      "width": 1500
+    }
+  ],
+  "/img/posts/fth-2.jpg": [
+    {
+      "src": "/img/responsive/posts/fth-2-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/fth-2-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/fth-2.jpg",
+      "width": 1999
+    }
+  ],
+  "/img/posts/fth-3.jpg": [
+    {
+      "src": "/img/responsive/posts/fth-3-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/fth-3-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/fth-3.jpg",
+      "width": 1999
+    }
+  ],
+  "/img/posts/future-telecom-1.jpg": [
+    {
+      "src": "/img/responsive/posts/future-telecom-1-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/future-telecom-1-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/future-telecom-1.jpg",
+      "width": 1999
+    }
+  ],
+  "/img/posts/future-telecom-2.jpg": [
+    {
+      "src": "/img/responsive/posts/future-telecom-2-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/future-telecom-2-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/future-telecom-2.jpg",
+      "width": 1999
+    }
+  ],
+  "/img/posts/iot-tech-expo.jpg": [
+    {
+      "src": "/img/responsive/posts/iot-tech-expo-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/iot-tech-expo-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/iot-tech-expo.jpg",
+      "width": 1600
+    }
+  ],
+  "/img/posts/iot-testbed.jpg": [
+    {
+      "src": "/img/responsive/posts/iot-testbed-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/iot-testbed-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/iot-testbed.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/posts/iot-transforming-cybersecurity.jpg": [
+    {
+      "src": "/img/responsive/posts/iot-transforming-cybersecurity-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/iot-transforming-cybersecurity-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/iot-transforming-cybersecurity.jpg",
+      "width": 1908
+    }
+  ],
+  "/img/posts/jinkun-at-icc.jpg": [
+    {
+      "src": "/img/responsive/posts/jinkun-at-icc-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/posts/jinkun-at-icc.jpg",
+      "width": 754
+    }
+  ],
+  "/img/posts/jinkun-presenting-cheddar.jpg": [
+    {
+      "src": "/img/responsive/posts/jinkun-presenting-cheddar-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/jinkun-presenting-cheddar-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/jinkun-presenting-cheddar.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/posts/josh-at-ripe88.jpg": [
+    {
+      "src": "/img/responsive/posts/josh-at-ripe88-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/josh-at-ripe88-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/josh-at-ripe88.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/posts/josh-at-ripe90.jpg": [
+    {
+      "src": "/img/responsive/posts/josh-at-ripe90-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/josh-at-ripe90-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/josh-at-ripe90.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/posts/josh-at-ripe92.jpg": [
+    {
+      "src": "/img/responsive/posts/josh-at-ripe92-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/josh-at-ripe92-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/josh-at-ripe92.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/posts/josh-at-yisec-2024.jpg": [
+    {
+      "src": "/img/responsive/posts/josh-at-yisec-2024-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/josh-at-yisec-2024-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/josh-at-yisec-2024.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/posts/josh-presenting-at-ycsc-march-2025.jpg": [
+    {
+      "src": "/img/responsive/posts/josh-presenting-at-ycsc-march-2025-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/josh-presenting-at-ycsc-march-2025-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/josh-presenting-at-ycsc-march-2025.jpg",
+      "width": 2048
+    }
+  ],
+  "/img/posts/joshua-at-uksystems-workshop.jpeg": [
+    {
+      "src": "/img/responsive/posts/joshua-at-uksystems-workshop-jpeg-480.jpeg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/joshua-at-uksystems-workshop-jpeg-960.jpeg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/joshua-at-uksystems-workshop.jpeg",
+      "width": 1920
+    }
+  ],
+  "/img/posts/kangfeng-presenting-at-sefm-2024-1.jpg": [
+    {
+      "src": "/img/responsive/posts/kangfeng-presenting-at-sefm-2024-1-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/posts/kangfeng-presenting-at-sefm-2024-1.jpg",
+      "width": 729
+    }
+  ],
+  "/img/posts/kangfeng-presenting-at-sefm-2024-2.jpg": [
+    {
+      "src": "/img/responsive/posts/kangfeng-presenting-at-sefm-2024-2-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/kangfeng-presenting-at-sefm-2024-2-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/kangfeng-presenting-at-sefm-2024-2.jpg",
+      "width": 1600
+    }
+  ],
+  "/img/posts/kangfeng-presenting-in-glasgow.jpg": [
+    {
+      "src": "/img/responsive/posts/kangfeng-presenting-in-glasgow-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/kangfeng-presenting-in-glasgow-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/kangfeng-presenting-in-glasgow.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/posts/kangfeng-presenting-lightning-talk-at-celebrating-space.jpg": [
+    {
+      "src": "/img/responsive/posts/kangfeng-presenting-lightning-talk-at-celebrating-space-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/kangfeng-presenting-lightning-talk-at-celebrating-space-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/kangfeng-presenting-lightning-talk-at-celebrating-space.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/posts/mobisys-demo-poonam-shows.jpg": [
+    {
+      "src": "/img/responsive/posts/mobisys-demo-poonam-shows-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/mobisys-demo-poonam-shows-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/mobisys-demo-poonam-shows.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/posts/mohit-presenting-in-glasgow.jpg": [
+    {
+      "src": "/img/responsive/posts/mohit-presenting-in-glasgow-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/mohit-presenting-in-glasgow-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/mohit-presenting-in-glasgow.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/posts/panos-qsi-2025-1.jpg": [
+    {
+      "src": "/img/responsive/posts/panos-qsi-2025-1-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/panos-qsi-2025-1-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/panos-qsi-2025-1.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/posts/panos-qsi-2025-2.jpg": [
+    {
+      "src": "/img/responsive/posts/panos-qsi-2025-2-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/panos-qsi-2025-2-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/panos-qsi-2025-2.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/posts/poonam-at-ripe88.jpg": [
+    {
+      "src": "/img/responsive/posts/poonam-at-ripe88-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/poonam-at-ripe88-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/poonam-at-ripe88.jpg",
+      "width": 1600
+    }
+  ],
+  "/img/posts/poonam-at-uksystems-workshop.jpg": [
+    {
+      "src": "/img/responsive/posts/poonam-at-uksystems-workshop-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/poonam-at-uksystems-workshop-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/poonam-at-uksystems-workshop.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/posts/pro-ve-2024-1.jpg": [
+    {
+      "src": "/img/responsive/posts/pro-ve-2024-1-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/pro-ve-2024-1-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/pro-ve-2024-1.jpg",
+      "width": 1600
+    }
+  ],
+  "/img/posts/pro-ve-2024-2.jpg": [
+    {
+      "src": "/img/responsive/posts/pro-ve-2024-2-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/pro-ve-2024-2-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/pro-ve-2024-2.jpg",
+      "width": 1600
+    }
+  ],
+  "/img/posts/pro-ve-2024-3.jpg": [
+    {
+      "src": "/img/responsive/posts/pro-ve-2024-3-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/pro-ve-2024-3-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/pro-ve-2024-3.jpg",
+      "width": 1600
+    }
+  ],
+  "/img/posts/pro-ve-2024-vijon-with-awards.jpg": [
+    {
+      "src": "/img/responsive/posts/pro-ve-2024-vijon-with-awards-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/pro-ve-2024-vijon-with-awards-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/pro-ve-2024-vijon-with-awards.jpg",
+      "width": 1204
+    }
+  ],
+  "/img/posts/rana-presenting-in-glasgow.jpg": [
+    {
+      "src": "/img/responsive/posts/rana-presenting-in-glasgow-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/rana-presenting-in-glasgow-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/rana-presenting-in-glasgow.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/posts/reem-at-bcca-2024.jpeg": [
+    {
+      "src": "/img/responsive/posts/reem-at-bcca-2024-jpeg-480.jpeg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/reem-at-bcca-2024-jpeg-960.jpeg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/reem-at-bcca-2024.jpeg",
+      "width": 1440
+    }
+  ],
+  "/img/posts/reem-presenting-at-wincom.jpg": [
+    {
+      "src": "/img/responsive/posts/reem-presenting-at-wincom-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/reem-presenting-at-wincom-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/reem-presenting-at-wincom.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/posts/systron-at-cyberuk.png": [
+    {
+      "src": "/img/responsive/posts/systron-at-cyberuk-png-480.png",
+      "width": 480
+    },
+    {
+      "src": "/img/posts/systron-at-cyberuk.png",
+      "width": 960
+    }
+  ],
+  "/img/posts/systron-cyberuk-2026.jpg": [
+    {
+      "src": "/img/responsive/posts/systron-cyberuk-2026-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/systron-cyberuk-2026-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/systron-cyberuk-2026.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/posts/systron-cyberuk1-2026.jpg": [
+    {
+      "src": "/img/responsive/posts/systron-cyberuk1-2026-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/systron-cyberuk1-2026-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/systron-cyberuk1-2026.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/posts/systron-cyberuk2-2026.jpg": [
+    {
+      "src": "/img/responsive/posts/systron-cyberuk2-2026-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/systron-cyberuk2-2026-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/systron-cyberuk2-2026.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/posts/systron-cyberuk3-2026.jpg": [
+    {
+      "src": "/img/responsive/posts/systron-cyberuk3-2026-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/systron-cyberuk3-2026-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/systron-cyberuk3-2026.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/posts/systron-cyberuk4-2026.jpg": [
+    {
+      "src": "/img/responsive/posts/systron-cyberuk4-2026-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/systron-cyberuk4-2026-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/systron-cyberuk4-2026.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/posts/vijon-at-closer-2024-posters.jpg": [
+    {
+      "src": "/img/responsive/posts/vijon-at-closer-2024-posters-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/posts/vijon-at-closer-2024-posters.jpg",
+      "width": 637
+    }
+  ],
+  "/img/posts/vijon-at-closer-2024.jpg": [
+    {
+      "src": "/img/responsive/posts/vijon-at-closer-2024-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/posts/vijon-at-closer-2024.jpg",
+      "width": 637
+    }
+  ],
+  "/img/posts/vijon-at-pci-2026.jpg": [
+    {
+      "src": "/img/responsive/posts/vijon-at-pci-2026-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/vijon-at-pci-2026-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/vijon-at-pci-2026.jpg",
+      "width": 1791
+    }
+  ],
+  "/img/posts/vijon-presenting-at-bci-2024-1.jpg": [
+    {
+      "src": "/img/responsive/posts/vijon-presenting-at-bci-2024-1-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/posts/vijon-presenting-at-bci-2024-1.jpg",
+      "width": 900
+    }
+  ],
+  "/img/posts/vijon-presenting-at-bci-2024-2.jpg": [
+    {
+      "src": "/img/responsive/posts/vijon-presenting-at-bci-2024-2-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/vijon-presenting-at-bci-2024-2-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/vijon-presenting-at-bci-2024-2.jpg",
+      "width": 1200
+    }
+  ],
+  "/img/posts/west-midland-1.jpg": [
+    {
+      "src": "/img/responsive/posts/west-midland-1-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/west-midland-1-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/west-midland-1.jpg",
+      "width": 1500
+    }
+  ],
+  "/img/posts/west-midland-2.jpg": [
+    {
+      "src": "/img/responsive/posts/west-midland-2-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/west-midland-2-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/west-midland-2.jpg",
+      "width": 1999
+    }
+  ],
+  "/img/posts/wincom-6g-summit-1.jpg": [
+    {
+      "src": "/img/responsive/posts/wincom-6g-summit-1-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/wincom-6g-summit-1-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/wincom-6g-summit-1.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/posts/wincom-6g-summit-2.jpg": [
+    {
+      "src": "/img/responsive/posts/wincom-6g-summit-2-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/wincom-6g-summit-2-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/wincom-6g-summit-2.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/posts/wincom-6g-summit-3.jpg": [
+    {
+      "src": "/img/responsive/posts/wincom-6g-summit-3-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/wincom-6g-summit-3-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/wincom-6g-summit-3.jpg",
+      "width": 1277
+    }
+  ],
+  "/img/posts/wincom-6g-summit-4.jpg": [
+    {
+      "src": "/img/responsive/posts/wincom-6g-summit-4-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/wincom-6g-summit-4-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/wincom-6g-summit-4.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/posts/wincom-6g-summit-5.jpg": [
+    {
+      "src": "/img/responsive/posts/wincom-6g-summit-5-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/wincom-6g-summit-5-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/wincom-6g-summit-5.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/posts/workshop-on-6g-comms-1.jpg": [
+    {
+      "src": "/img/responsive/posts/workshop-on-6g-comms-1-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/workshop-on-6g-comms-1-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/workshop-on-6g-comms-1.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/posts/workshop-on-6g-comms-2.jpg": [
+    {
+      "src": "/img/responsive/posts/workshop-on-6g-comms-2-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/posts/workshop-on-6g-comms-2-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/posts/workshop-on-6g-comms-2.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/projects/big-data.jpg": [
+    {
+      "src": "/img/responsive/projects/big-data-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/projects/big-data-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/projects/big-data.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/projects/cheddar-pillar-3_2-xapp.png": [
+    {
+      "src": "/img/responsive/projects/cheddar-pillar-3_2-xapp-png-480.png",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/projects/cheddar-pillar-3_2-xapp-png-960.png",
+      "width": 960
+    },
+    {
+      "src": "/img/projects/cheddar-pillar-3_2-xapp.png",
+      "width": 2000
+    }
+  ],
+  "/img/projects/gnns-in-networking.jpg": [
+    {
+      "src": "/img/responsive/projects/gnns-in-networking-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/projects/gnns-in-networking.jpg",
+      "width": 629
+    }
+  ],
+  "/img/projects/hyperledger-fabric-platform-for-av-overview.jpg": [
+    {
+      "src": "/img/responsive/projects/hyperledger-fabric-platform-for-av-overview-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/projects/hyperledger-fabric-platform-for-av-overview-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/projects/hyperledger-fabric-platform-for-av-overview.jpg",
+      "width": 1358
+    }
+  ],
+  "/img/projects/inetvisor.png": [
+    {
+      "src": "/img/responsive/projects/inetvisor-png-480.png",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/projects/inetvisor-png-960.png",
+      "width": 960
+    },
+    {
+      "src": "/img/projects/inetvisor.png",
+      "width": 1615
+    }
+  ],
+  "/img/projects/internet-topology-mapping.png": [
+    {
+      "src": "/img/responsive/projects/internet-topology-mapping-png-480.png",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/projects/internet-topology-mapping-png-960.png",
+      "width": 960
+    },
+    {
+      "src": "/img/projects/internet-topology-mapping.png",
+      "width": 3236
+    }
+  ],
+  "/img/projects/interoperability.png": [
+    {
+      "src": "/img/responsive/projects/interoperability-png-480.png",
+      "width": 480
+    },
+    {
+      "src": "/img/projects/interoperability.png",
+      "width": 770
+    }
+  ],
+  "/img/projects/network-optimisation.jpg": [
+    {
+      "src": "/img/responsive/projects/network-optimisation-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/projects/network-optimisation-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/projects/network-optimisation.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/projects/thread-jamming-2.jpg": [
+    {
+      "src": "/img/responsive/projects/thread-jamming-2-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/projects/thread-jamming-2-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/projects/thread-jamming-2.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/projects/thread-jamming.jpg": [
+    {
+      "src": "/img/responsive/projects/thread-jamming-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/projects/thread-jamming-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/projects/thread-jamming.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/projects/xapp-driven-ran-optimisation.jpeg": [
+    {
+      "src": "/img/responsive/projects/xapp-driven-ran-optimisation-jpeg-480.jpeg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/projects/xapp-driven-ran-optimisation-jpeg-960.jpeg",
+      "width": 960
+    },
+    {
+      "src": "/img/projects/xapp-driven-ran-optimisation.jpeg",
+      "width": 1920
+    }
+  ],
+  "/img/server-cloud.jpg": [
+    {
+      "src": "/img/responsive/server-cloud-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/server-cloud-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/server-cloud.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/silicon-chip.jpg": [
+    {
+      "src": "/img/responsive/silicon-chip-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/silicon-chip-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/silicon-chip.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/smart-cities-cropped.jpg": [
+    {
+      "src": "/img/responsive/smart-cities-cropped-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/smart-cities-cropped-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/smart-cities-cropped.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/smart-cities.jpg": [
+    {
+      "src": "/img/responsive/smart-cities-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/smart-cities-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/smart-cities.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/systron-card.png": [
+    {
+      "src": "/img/responsive/systron-card-png-480.png",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/systron-card-png-960.png",
+      "width": 960
+    },
+    {
+      "src": "/img/systron-card.png",
+      "width": 1920
+    }
+  ],
+  "/img/systron-team.jpg": [
+    {
+      "src": "/img/responsive/systron-team-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/systron-team-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/systron-team.jpg",
+      "width": 1024
+    }
+  ],
+  "/img/telecoms-tower.jpg": [
+    {
+      "src": "/img/responsive/telecoms-tower-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/telecoms-tower-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/telecoms-tower.jpg",
+      "width": 1280
+    }
+  ],
+  "/img/uoy-campus-east.jpg": [
+    {
+      "src": "/img/responsive/uoy-campus-east-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/uoy-campus-east-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/uoy-campus-east.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/uoy-cse-1.jpg": [
+    {
+      "src": "/img/responsive/uoy-cse-1-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/uoy-cse-1-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/uoy-cse-1.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/uoy-cse-2.jpg": [
+    {
+      "src": "/img/responsive/uoy-cse-2-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/uoy-cse-2-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/uoy-cse-2.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/usrp.png": [
+    {
+      "src": "/img/responsive/usrp-png-480.png",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/usrp-png-960.png",
+      "width": 960
+    },
+    {
+      "src": "/img/usrp.png",
+      "width": 4032
+    }
+  ],
+  "/img/wifi-router.jpg": [
+    {
+      "src": "/img/responsive/wifi-router-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/wifi-router-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/wifi-router.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/wired-fibre.jpg": [
+    {
+      "src": "/img/responsive/wired-fibre-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/wired-fibre-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/wired-fibre.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/wireless-network.jpg": [
+    {
+      "src": "/img/responsive/wireless-network-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/wireless-network-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/wireless-network.jpg",
+      "width": 1920
+    }
+  ],
+  "/img/xappdesign.png": [
+    {
+      "src": "/img/responsive/xappdesign-png-480.png",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/xappdesign-png-960.png",
+      "width": 960
+    },
+    {
+      "src": "/img/xappdesign.png",
+      "width": 2386
+    }
+  ],
+  "/img/xappudp.png": [
+    {
+      "src": "/img/responsive/xappudp-png-480.png",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/xappudp-png-960.png",
+      "width": 960
+    },
+    {
+      "src": "/img/xappudp.png",
+      "width": 1536
+    }
+  ]
+}

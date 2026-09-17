@@ -2,6 +2,7 @@
 name: "Jinkun Zhang"
 role: "Research Associate"
 photo: "/img/people/jinkun.jpg"
+order: 100
 ---
 
 <!-- PUT THE PERSON'S DESCRIPTION OR RESEARCH OVERVIEW HERE -->

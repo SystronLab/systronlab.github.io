@@ -65,6 +65,7 @@ paginate_path: "/news/page-:num/"
 # their entries' file path in the `include:` list.
 #
 exclude:
+  - scripts/
   - news/_posts/template.md
   - _opportunities/template.md
   - _people/template.md
