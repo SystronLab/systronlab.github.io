@@ -2,6 +2,8 @@
 layout: default
 ---
 
+{% assign publication_date_format = page.date_format | default: "%d %B %Y" %}
+
 <!-- Page Header -->
 {% if page.background %}
 <header
@@ -23,8 +25,8 @@ layout: default
             <p>{{ page.authors | array_to_sentence_string }}</p>
             <span class="meta">
               {% if page.venue %} Published in {{ page.venue }} &middot;
-              Published on {{ page.date | date: '%d %B %Y' }} {% else %}
-              Published on {{ page.date | date: '%d %B %Y' }} {% endif %} {% if
+              Published on {{ page.date | date: publication_date_format }} {% else %}
+              Published on {{ page.date | date: publication_date_format }} {% endif %} {% if
               page.preprint %} &middot; Preprint {% endif %}
             </span>
           </div>
