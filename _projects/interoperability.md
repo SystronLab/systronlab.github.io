@@ -25,11 +25,6 @@ This project aims to improve interoperability in the Radio Access Network (RAN) 
 
 We began with the integration of a commercial E2 node (VIAVI tester) with an open-source RIC (OSC). This required significant modifications to the OSC RIC (Github repo attached above) to resolve compatibility issues. After successful adaptation, our xApp was able to fetch KPMs directly from the VIAVI node.
 
-<video controls preload="auto" style="width: 100%; height: auto;">
-  <source src="/vid/viavi-kpm.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-
 Although current E2 interfaces limit actuation capabilities, we have laid the groundwork to test E2SM-RC and E2SM-CCC functionalities in future RIC updates.
 
 #### 2. Open-Source E2 Node (OCUDU) with Open-Source RICs (OSC, FlexRIC)
