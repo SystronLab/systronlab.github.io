@@ -50,6 +50,7 @@ wide: true
       <h4 id="split-7-2-title">Split 7.2</h4>
       <div class="testbed-specs"><div><span>gNB stack</span><strong>OCUDU</strong></div><div><span>Radio unit</span><strong>Benetel RAN650</strong></div><div><span>Clock distribution</span><strong>FibroLAN Falcon-RX/812/G</strong></div></div>
       <figure class="facility-figure"><img src="{{ '/img/5g-split72.jpg' | relative_url }}" alt="Open-RAN Split 7.2 testbed" loading="lazy" {% include image-srcset.html src='/img/5g-split72.jpg' sizes="(max-width: 767px) calc(100vw - 30px), 1110px" %}><figcaption>The Open-RAN Split 7.2 testbed.</figcaption></figure>
+      <div class="facility-gallery"><figure><img src="{{ '/img/5g-split72-ru.jpg' | relative_url }}" alt="Benetel radio unit in the Open-RAN Split 7.2 testbed" loading="lazy" {% include image-srcset.html src='/img/5g-split72-ru.jpg' sizes="(max-width: 767px) calc(100vw - 30px), 740px" %}><figcaption>The Benetel RAN650 radio unit.</figcaption></figure><figure><img src="{{ '/img/5g-split72-switch.jpg' | relative_url }}" alt="Network switch used in the Open-RAN Split 7.2 testbed" loading="lazy" {% include image-srcset.html src='/img/5g-split72-switch.jpg' sizes="(max-width: 767px) calc(100vw - 30px), 370px" %}><figcaption>Switching and clock-distribution hardware.</figcaption></figure></div>
     </section>
   </section>
   <section class="facility-category" aria-labelledby="ai-ran-title">

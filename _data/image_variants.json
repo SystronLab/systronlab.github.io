@@ -265,6 +265,34 @@
       "width": 1920
     }
   ],
+  "/img/5g-split72-ru.jpg": [
+    {
+      "src": "/img/responsive/5g-split72-ru-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/5g-split72-ru-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/5g-split72-ru.jpg",
+      "width": 1235
+    }
+  ],
+  "/img/5g-split72-switch.jpg": [
+    {
+      "src": "/img/responsive/5g-split72-switch-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/5g-split72-switch-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/5g-split72-switch.jpg",
+      "width": 1920
+    }
+  ],
   "/img/5g-split72.jpg": [
     {
       "src": "/img/responsive/5g-split72-jpg-480.jpg",
@@ -276,7 +304,7 @@
     },
     {
       "src": "/img/5g-split72.jpg",
-      "width": 1800
+      "width": 1440
     }
   ],
   "/img/6g-workshop.jpg": [
