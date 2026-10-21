@@ -10,21 +10,10 @@
 
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link
-  href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,700;1,9..40,400;1,9..40,700&display=swap"
-  rel="stylesheet">
-
-  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-
-  <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous" defer></script>
-
   <link rel="stylesheet" href="{{"/assets/main.css" | relative_url }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
-  <link rel="shortcut icon" type="image/png" href="{{"/img/favicon.png" | absolute_url }}">
+  <link rel="shortcut icon" type="image/png" href="{{"/img/favicon.png" | relative_url }}">
   <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
   <meta property="og:image" content="{%if page.card %}{{ page.card | prepend: site.url }}{% else %}/img/systron-card.png{% endif %}">
   <meta property="og:description" content="{% if page.subtitle %}{{ page.subtitle }}{% else %}{{ site.description }}{% endif %}">

@@ -1,0 +1,8 @@
+{%- assign project = include.project -%}
+{%- if project.image_rotate == 'right' -%}
+<div class="{{ include.class }} project-image-landscape">
+{%- endif -%}
+<img {% unless project.image_rotate == 'right' %}class="{{ include.class }}"{% unless include.priority %} width="600" height="360"{% endunless %}{% endunless %} src="{{ project.image | relative_url }}" alt="" {% if include.priority %}fetchpriority="high"{% else %}loading="lazy"{% endif %} {% include image-srcset.html src=project.image sizes=include.sizes %}>
+{%- if project.image_rotate == 'right' -%}
+</div>
+{%- endif -%}

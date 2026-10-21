@@ -6,6 +6,7 @@ from pathlib import Path
 
 from PIL import Image, ImageOps
 
+LANCZOS = getattr(Image, 'Resampling', Image).LANCZOS
 ROOT = Path(__file__).resolve().parents[1]
 IMAGES = ROOT / 'img'
 manifest_path = ROOT / '_data' / 'image_variants.json'
@@ -27,7 +28,7 @@ for path in sorted(paths):
         if source.format in ('JPEG', 'MPO'):
             already_optimized = source.info.get('progressive') and max(image.size) <= 1920 and not source.getexif()
             image = image.convert('RGB')
-            image.thumbnail((1920, 1920), Image.Resampling.LANCZOS)
+            image.thumbnail((1920, 1920), LANCZOS)
             buffer = io.BytesIO()
             image.save(buffer, 'JPEG', quality=85, optimize=True, progressive=True)
             if already_optimized:
@@ -41,16 +42,20 @@ for path in sorted(paths):
         image = ImageOps.exif_transpose(source)
         width, height = image.size
         variants = []
-        for target in (480, 960):
-            if width <= target:
+        # PNG originals remain available as fallbacks. WebP variants reduce
+        # transfer sizes for photographs and diagrams without changing URLs.
+        targets = sorted(set((160, 480, 960, width))) if source.format == 'PNG' else (160, 480, 960)
+        for target in targets:
+            if width < target or (width == target and source.format != 'PNG'):
                 continue
-            resized = image.resize((target, round(height * target / width)), Image.Resampling.LANCZOS)
-            destination = IMAGES / 'responsive' / path.relative_to(IMAGES).parent / f'{path.stem}-{path.suffix[1:]}-{target}{path.suffix}'
+            resized = image.resize((target, round(height * target / width)), LANCZOS)
+            extension = '.webp' if source.format == 'PNG' else path.suffix
+            destination = IMAGES / 'responsive' / path.relative_to(IMAGES).parent / f'{path.stem}-{path.suffix[1:]}-{target}{extension}'
             destination.parent.mkdir(parents=True, exist_ok=True)
             if source.format in ('JPEG', 'MPO'):
                 resized.convert('RGB').save(destination, 'JPEG', quality=82, optimize=True, progressive=True)
             else:
-                resized.save(destination, 'PNG', compress_level=6)
+                resized.convert('RGBA' if 'A' in resized.getbands() or 'transparency' in resized.info else 'RGB').save(destination, 'WEBP', quality=90, method=6)
             if destination.stat().st_size < path.stat().st_size:
                 variants.append({'src': '/' + destination.relative_to(ROOT).as_posix(), 'width': target})
             else:
@@ -58,7 +63,8 @@ for path in sorted(paths):
         key = '/' + path.relative_to(ROOT).as_posix()
         manifest.pop(key, None)
         if variants:
-            variants.append({'src': key, 'width': width})
+            if variants[-1]['width'] != width:
+                variants.append({'src': key, 'width': width})
             manifest[key] = variants
     after += path.stat().st_size
 

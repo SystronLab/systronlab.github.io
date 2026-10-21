@@ -484,3 +484,29 @@ blockquote {
     }
   }
 }
+
+// Inline icons replace the external Font Awesome runtime.
+.site-icon { display: inline-block; vertical-align: -0.125em; }
+
+// Video previews are local; the player is created only after activation.
+.video-preview { background: #011321; }
+.video-play {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  img { position: absolute; width: 100%; height: 100% !important; object-fit: cover; }
+  &:focus-visible { outline: 3px solid #277453; outline-offset: -3px; }
+}
+.video-play-label {
+  position: relative;
+  padding: 12px 20px;
+  border-radius: 6px;
+  background: #011321;
+  color: white;
+  font-weight: 700;
+  span { margin-right: 8px; }
+}
+.video-play:hover .video-play-label, .video-play:focus-visible .video-play-label { background: #277453; }

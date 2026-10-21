@@ -32,11 +32,11 @@ This reveals a gap for robotic systems that require strict, predictable performa
 
 <b>UE 2 (Non-critical):</b> Pixel 8 pro + SysmoISIM
 
-<img src="/img/xappdesign.png" alt="xApp system design" >
+<img src="{{ '/img/xappdesign.png' | relative_url }}" alt="xApp system design" loading="lazy" {% include image-srcset.html src='/img/xappdesign.png' sizes="(max-width: 767px) calc(100vw - 30px), 820px" %}>
 
 <b>UDP Interface:</b> Server on Robot + Client on Workstation
 
-<img src="/img/xappudp.png" alt="xApp system design" >
+<img src="{{ '/img/xappudp.png' | relative_url }}" alt="xApp system design" loading="lazy" {% include image-srcset.html src='/img/xappudp.png' sizes="(max-width: 767px) calc(100vw - 30px), 820px" %}>
 <br>
 <br>
 ## Implementation
@@ -57,15 +57,7 @@ UDP server on the Jetson received JSON-encoded motion files over the
 5G link. These commands, sent by the UDP client on the server, were
 decoded and the robot executed the corresponding motion, demonstrating low-latency, real-time control over 5G using only open-source components and off-the-shelf hardware.
 
-<div class="video-container">
-<iframe
-  src="https://www.youtube.com/embed/iogV3BOLQLQ"
-  title="YouTube video player"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-  allowfullscreen>
-</iframe>
-</div>
+{% include youtube.html id='iogV3BOLQLQ' title='xApp-driven RAN optimisation for robotic control' poster='/img/videos/iogV3BOLQLQ.jpg' %}
 <br>
 
 ## Results
@@ -90,17 +82,3 @@ UE-2 (Non-critical)
 <li>Connection remained fully stable</li>
 </ul>
 These observations confirm that PRB reallocation was applied correctly.
-
-## Further Work
-
-<b>Intent-based operation:</b><br>
-Automating PRB adjustments using high-level intents (e.g. “prioritise
-robot movements”) instead of manually triggering the xApp.
-
-<b>Multi-robot coordination:</b><br>
-Scaling the setup to multiple critical UEs and evaluating how RAN control
-behaves when several UEs require priority at the same time.
-
-<b>PRB control + network slicing:</b><br>
-Combining fine-grained PRB allocation with slice-level QoS to achieve
-fully deterministic end-to-end behaviour.

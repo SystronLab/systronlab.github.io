@@ -100,7 +100,7 @@ You can optionally add:
 
 ### Optimizing images
 
-Keep full-resolution originals outside this repository. After adding photos to `img/`, run `python3 scripts/optimize-images.py` (requires Pillow: `python3 -m pip install Pillow`). The script compresses JPEGs to a maximum of 1920 pixels per side, optimizes PNGs losslessly, and creates smaller variants in `img/responsive/`. Commit those files together with `_data/image_variants.json`.
+Keep full-resolution originals outside this repository. After adding photos to `img/`, run `python3 scripts/optimize-images.py` (requires Pillow with WebP support: `python3 -m pip install Pillow`). The script compresses JPEGs to a maximum of 1920 pixels per side, optimizes PNG originals losslessly, and creates 160, 480 and 960 pixel variants in `img/responsive/` where the source is large enough. PNGs also get WebP variants, including one at their original width when smaller than the PNG. Commit those files together with `_data/image_variants.json`. To process only specific images, pass their paths, for example `python3 scripts/optimize-images.py img/minirobot.png`.
 
 The homepage, team, project and post templates, and Facilities use `_includes/image-srcset.html` to select smaller images on narrow screens. New images still display before running the script; responsive variants become available after it runs. Inline images added to Markdown can use the same include, for example:
 
@@ -148,6 +148,8 @@ bundle exec jekyll serve
 ```
 
 This should run a local copy of the site, accessible from `localhost:4000`.
+
+Fonts and core scripts are served locally to avoid third-party network delays. `assets/fonts/` contains DM Sans and Outfit from Google Fonts and their OFL licenses. `assets/vendor/` contains jQuery 3.5.1, Bootstrap 4.6.0 and license files. The six Font Awesome 5.15.3 icons used by the site are inline SVG includes in `_includes/icons/`, with their license in `assets/vendor/`. Keep the corresponding licenses when updating these assets. Use `_includes/youtube.html` with an `id`, `title` and optional local `poster` image for videos. It displays a lightweight preview and creates the YouTube player only when clicked; without JavaScript the preview links to YouTube. Video previews use local thumbnails in `img/videos/` or existing lab photos.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

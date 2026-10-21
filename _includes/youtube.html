@@ -1,3 +1,6 @@
-<div class="youtube-wrapper">
-    <iframe src="https://www.youtube.com/embed/{{ include.id }}" allowfullscreen></iframe>
+<div class="video-container video-preview" data-youtube-id="{{ include.id | escape }}">
+  <a class="video-play" href="https://www.youtube.com/watch?v={{ include.id | escape }}" target="_blank" rel="noopener noreferrer" data-video-title="{{ include.title | default: 'YouTube video player' | escape }}" aria-label="Play video: {{ include.title | default: 'YouTube video' | escape }}">
+    {% if include.poster %}<img src="{{ include.poster | relative_url }}" alt="" loading="lazy" width="480" height="360">{% endif %}
+    <span class="video-play-label"><span aria-hidden="true">▶</span> Play video</span>
+  </a>
 </div>
