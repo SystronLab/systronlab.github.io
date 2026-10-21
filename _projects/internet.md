@@ -26,7 +26,7 @@ There are a small number of nation states that do not follow this trend, for whi
 >
 > iNetVisor, a tool for exposing real-world connectivity between networks, can interactively explore the Internet network connectivity graph, both domestically and internationally. We can use our enhanced view of the world's Internet topology to assess the vulnerability of countries and regions to geopolitical threats, analyse the consequences of provider consolidation, and identify early signs of risks to domestic resilience.
 >
-> ![iNetVisor: UK Domestic Networking](/img/projects/inetvisor.png)
+> <img src="{{ '/img/projects/inetvisor.png' | relative_url }}" alt="iNetVisor: UK Domestic Networking" loading="lazy" {% include image-srcset.html src='/img/projects/inetvisor.png' sizes="(max-width: 767px) calc(100vw - 30px), 820px" %}>
 >
 > Acquiring data from a wide range of sources, iNetVisor also exposes information about where networks are peering and theoretical link speeds, meaning we can also analyse the importance of different Internet Exchange Points (IXPs).
 > You can read more about this [in our research preprint](https://systronlab.github.io/publications/2024-unveiling-internet-censorship).

@@ -44,7 +44,7 @@ Some of the recent work we've published around 5G and 6G are:
 
 ## 3. iNetVisor
 
-![iNetVisor](/img/projects/inetvisor.png)
+<img src="{{ '/img/projects/inetvisor.png' | relative_url }}" alt="iNetVisor" loading="lazy" {% include image-srcset.html src='/img/projects/inetvisor.png' sizes="(max-width: 767px) calc(100vw - 30px), 820px" %}>
 
 Understanding the physical and geopolitical realities of the internet backbone is crucial for national security. Joshua will be demonstrating iNetVisor, a powerful tool designed to expose real-world connectivity between networks. Through an interactive exploration of the Internet network connectivity graph—both domestically and internationally—this demo highlights geopolitical risks on the network backbone, threats to UK network resiliency, and the broader implications for telecom security.
 

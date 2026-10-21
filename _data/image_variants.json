@@ -375,15 +375,19 @@
   ],
   "/img/minirobot.png": [
     {
-      "src": "/img/responsive/minirobot-png-480.png",
+      "src": "/img/responsive/minirobot-png-160.webp",
+      "width": 160
+    },
+    {
+      "src": "/img/responsive/minirobot-png-480.webp",
       "width": 480
     },
     {
-      "src": "/img/responsive/minirobot-png-960.png",
+      "src": "/img/responsive/minirobot-png-960.webp",
       "width": 960
     },
     {
-      "src": "/img/minirobot.png",
+      "src": "/img/responsive/minirobot-png-1024.webp",
       "width": 1024
     }
   ],
@@ -417,29 +421,37 @@
   ],
   "/img/people/brad.png": [
     {
-      "src": "/img/responsive/people/brad-png-480.png",
+      "src": "/img/responsive/people/brad-png-160.webp",
+      "width": 160
+    },
+    {
+      "src": "/img/responsive/people/brad-png-480.webp",
       "width": 480
     },
     {
-      "src": "/img/responsive/people/brad-png-960.png",
+      "src": "/img/responsive/people/brad-png-960.webp",
       "width": 960
     },
     {
-      "src": "/img/people/brad.png",
+      "src": "/img/responsive/people/brad-png-2205.webp",
       "width": 2205
     }
   ],
   "/img/people/dema.png": [
     {
-      "src": "/img/responsive/people/dema-png-480.png",
+      "src": "/img/responsive/people/dema-png-160.webp",
+      "width": 160
+    },
+    {
+      "src": "/img/responsive/people/dema-png-480.webp",
       "width": 480
     },
     {
-      "src": "/img/responsive/people/dema-png-960.png",
+      "src": "/img/responsive/people/dema-png-960.webp",
       "width": 960
     },
     {
-      "src": "/img/people/dema.png",
+      "src": "/img/responsive/people/dema-png-1080.webp",
       "width": 1080
     }
   ],
@@ -503,29 +515,37 @@
   ],
   "/img/people/panos.png": [
     {
-      "src": "/img/responsive/people/panos-png-480.png",
+      "src": "/img/responsive/people/panos-png-160.webp",
+      "width": 160
+    },
+    {
+      "src": "/img/responsive/people/panos-png-480.webp",
       "width": 480
     },
     {
-      "src": "/img/responsive/people/panos-png-960.png",
+      "src": "/img/responsive/people/panos-png-960.webp",
       "width": 960
     },
     {
-      "src": "/img/people/panos.png",
+      "src": "/img/responsive/people/panos-png-1645.webp",
       "width": 1645
     }
   ],
   "/img/people/peter.png": [
     {
-      "src": "/img/responsive/people/peter-png-480.png",
+      "src": "/img/responsive/people/peter-png-160.webp",
+      "width": 160
+    },
+    {
+      "src": "/img/responsive/people/peter-png-480.webp",
       "width": 480
     },
     {
-      "src": "/img/responsive/people/peter-png-960.png",
+      "src": "/img/responsive/people/peter-png-960.webp",
       "width": 960
     },
     {
-      "src": "/img/people/peter.png",
+      "src": "/img/responsive/people/peter-png-1920.webp",
       "width": 1920
     }
   ],
@@ -621,15 +641,19 @@
   ],
   "/img/posts/2024-rehab-alawadh-poster-presentation.png": [
     {
-      "src": "/img/responsive/posts/2024-rehab-alawadh-poster-presentation-png-480.png",
+      "src": "/img/responsive/posts/2024-rehab-alawadh-poster-presentation-png-160.webp",
+      "width": 160
+    },
+    {
+      "src": "/img/responsive/posts/2024-rehab-alawadh-poster-presentation-png-480.webp",
       "width": 480
     },
     {
-      "src": "/img/responsive/posts/2024-rehab-alawadh-poster-presentation-png-960.png",
+      "src": "/img/responsive/posts/2024-rehab-alawadh-poster-presentation-png-960.webp",
       "width": 960
     },
     {
-      "src": "/img/posts/2024-rehab-alawadh-poster-presentation.png",
+      "src": "/img/responsive/posts/2024-rehab-alawadh-poster-presentation-png-1170.webp",
       "width": 1170
     }
   ],
@@ -1573,29 +1597,37 @@
   ],
   "/img/projects/inetvisor.png": [
     {
-      "src": "/img/responsive/projects/inetvisor-png-480.png",
+      "src": "/img/responsive/projects/inetvisor-png-160.webp",
+      "width": 160
+    },
+    {
+      "src": "/img/responsive/projects/inetvisor-png-480.webp",
       "width": 480
     },
     {
-      "src": "/img/responsive/projects/inetvisor-png-960.png",
+      "src": "/img/responsive/projects/inetvisor-png-960.webp",
       "width": 960
     },
     {
-      "src": "/img/projects/inetvisor.png",
+      "src": "/img/responsive/projects/inetvisor-png-1615.webp",
       "width": 1615
     }
   ],
   "/img/projects/internet-topology-mapping.png": [
     {
-      "src": "/img/responsive/projects/internet-topology-mapping-png-480.png",
+      "src": "/img/responsive/projects/internet-topology-mapping-png-160.webp",
+      "width": 160
+    },
+    {
+      "src": "/img/responsive/projects/internet-topology-mapping-png-480.webp",
       "width": 480
     },
     {
-      "src": "/img/responsive/projects/internet-topology-mapping-png-960.png",
+      "src": "/img/responsive/projects/internet-topology-mapping-png-960.webp",
       "width": 960
     },
     {
-      "src": "/img/projects/internet-topology-mapping.png",
+      "src": "/img/responsive/projects/internet-topology-mapping-png-3236.webp",
       "width": 3236
     }
   ],
@@ -1621,6 +1653,24 @@
     {
       "src": "/img/projects/network-optimisation.jpg",
       "width": 1920
+    }
+  ],
+  "/img/projects/redcap.jpg": [
+    {
+      "src": "/img/responsive/projects/redcap-jpg-160.jpg",
+      "width": 160
+    },
+    {
+      "src": "/img/responsive/projects/redcap-jpg-480.jpg",
+      "width": 480
+    },
+    {
+      "src": "/img/responsive/projects/redcap-jpg-960.jpg",
+      "width": 960
+    },
+    {
+      "src": "/img/projects/redcap.jpg",
+      "width": 1440
     }
   ],
   "/img/projects/thread-jamming-2.jpg": [
@@ -1807,11 +1857,15 @@
   ],
   "/img/usrp.png": [
     {
-      "src": "/img/responsive/usrp-png-480.png",
+      "src": "/img/responsive/usrp-png-160.webp",
+      "width": 160
+    },
+    {
+      "src": "/img/responsive/usrp-png-480.webp",
       "width": 480
     },
     {
-      "src": "/img/responsive/usrp-png-960.png",
+      "src": "/img/responsive/usrp-png-960.webp",
       "width": 960
     },
     {
@@ -1863,29 +1917,37 @@
   ],
   "/img/xappdesign.png": [
     {
-      "src": "/img/responsive/xappdesign-png-480.png",
+      "src": "/img/responsive/xappdesign-png-160.webp",
+      "width": 160
+    },
+    {
+      "src": "/img/responsive/xappdesign-png-480.webp",
       "width": 480
     },
     {
-      "src": "/img/responsive/xappdesign-png-960.png",
+      "src": "/img/responsive/xappdesign-png-960.webp",
       "width": 960
     },
     {
-      "src": "/img/xappdesign.png",
+      "src": "/img/responsive/xappdesign-png-2386.webp",
       "width": 2386
     }
   ],
   "/img/xappudp.png": [
     {
-      "src": "/img/responsive/xappudp-png-480.png",
+      "src": "/img/responsive/xappudp-png-160.webp",
+      "width": 160
+    },
+    {
+      "src": "/img/responsive/xappudp-png-480.webp",
       "width": 480
     },
     {
-      "src": "/img/responsive/xappudp-png-960.png",
+      "src": "/img/responsive/xappudp-png-960.webp",
       "width": 960
     },
     {
-      "src": "/img/xappudp.png",
+      "src": "/img/responsive/xappudp-png-1536.webp",
       "width": 1536
     }
   ]

@@ -22,10 +22,10 @@
 }
 @media (prefers-reduced-motion: no-preference) {
   html { scroll-behavior: smooth; }
-  .motion-enter { animation: systron-reveal 800ms cubic-bezier(.2, .7, .2, 1) var(--motion-delay, 0ms) both; }
+  .motion-enter { animation: systron-reveal 300ms cubic-bezier(.2, .7, .2, 1) var(--motion-delay, 0ms) both; }
   .research-hero .eyebrow, .research-hero h1, .research-hero .hero-description, .research-hero .hero-actions,
   .interior-header h1, .publications-header h1 {
-    animation: systron-heading 900ms cubic-bezier(.2, .7, .2, 1) both;
+    animation: systron-heading 300ms cubic-bezier(.2, .7, .2, 1) both;
   }
   .research-hero h1 { animation-delay: 60ms; }
   .research-hero .hero-description { animation-delay: 120ms; }

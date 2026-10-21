@@ -1,10 +1,10 @@
 <footer class="site-footer">
   <div class="container">
     <div class="footer-logos">
-      <img src="/img/logos/cheddar.png" alt="Cheddar Logo" />
-      <img src="/img/logos/ukri.png" alt="UKRI Logo" />
-      <img src="/img/logos/dsit.png" alt="DSIT Logo" />
-      <img src="/img/logos/uoy.png" alt="University of York Logo" />
+      <img src="{{ '/img/logos/cheddar.png' | relative_url }}" alt="Cheddar Logo" loading="lazy" />
+      <img src="{{ '/img/logos/ukri.png' | relative_url }}" alt="UKRI Logo" loading="lazy" />
+      <img src="{{ '/img/logos/dsit.png' | relative_url }}" alt="DSIT Logo" loading="lazy" />
+      <img src="{{ '/img/logos/uoy.png' | relative_url }}" alt="University of York Logo" loading="lazy" />
     </div>
 
     <p class="footer-copyright">
@@ -25,11 +25,11 @@
         rel="noopener noreferrer"
         aria-label="SYSTRON Lab on GitHub"
       >
-        <i class="fab fa-github" aria-hidden="true"></i>
+        {% include icons/github.svg %}
       </a>
 
       <a href="mailto:systronlab@gmail.com" aria-label="Email SYSTRON Lab">
-        <i class="fas fa-envelope" aria-hidden="true"></i>
+        {% include icons/envelope.svg %}
       </a>
 
       <a
@@ -38,7 +38,7 @@
         rel="noopener noreferrer"
         aria-label="Department of Computer Science, University of York"
       >
-        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+        {% include icons/map-marker-alt.svg %}
       </a>
 
       <a
@@ -47,7 +47,7 @@
         rel="noopener noreferrer"
         aria-label="Youtube SYSTRON Lab"
       >
-        <i class="fab fa-youtube" aria-hidden="true"></i>
+        {% include icons/youtube.svg %}
       </a>
 
       <a
@@ -56,7 +56,7 @@
         rel="noopener noreferrer"
         aria-label="LinkedIn SYSTRON Lab"
       >
-        <i class="fab fa-linkedin" aria-hidden="true"></i>
+        {% include icons/linkedin.svg %}
       </a>
     </div>
   </div>

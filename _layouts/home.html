@@ -52,7 +52,7 @@ layout: default
         {% assign projects = site.projects | sort: 'date' | reverse %}
         {% for project in projects limit: 2 %}
         <article class="refresh-card">
-          {% if project.image %}<img class="project-preview-image" src="{{ project.image | relative_url }}" alt="" loading="lazy" width="600" height="360" {% include image-srcset.html src=project.image sizes="(max-width: 767px) calc(100vw - 30px), 535px" %}>{% endif %}
+          {% if project.image %}{% include project-image.html project=project class='project-preview-image' sizes="(max-width: 767px) calc(100vw - 30px), 535px" %}{% endif %}
           <div class="refresh-card-body">
             <div class="refresh-tags">{% for tag in project.tags limit: 3 %}<span>{{ tag }}</span>{% endfor %}</div>
             <h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>

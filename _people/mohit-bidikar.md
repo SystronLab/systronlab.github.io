@@ -8,4 +8,4 @@ order: 90
 
 <!-- PUT THE PERSON'S DESCRIPTION OR RESEARCH OVERVIEW HERE -->
 
-Building 5G and 6G research testbeds with a focus on Open RAN and cloud native telecom systems.
+Building 5G and 6G research testbeds with a focus on AI RAN, Open RAN and cloud native telecom systems.

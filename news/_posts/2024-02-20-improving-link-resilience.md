@@ -10,4 +10,4 @@ Rehab Alawadh has presented a research poster about her research at the Saudi Co
 
 Rehab also presented to the Saudi culture Attaché:
 
-![Rehab with Saudi culture Attaché](/img/posts/2024-rehab-alawadh-poster-presentation.png)
+<img src="{{ '/img/posts/2024-rehab-alawadh-poster-presentation.png' | relative_url }}" alt="Rehab with Saudi culture Attaché" loading="lazy" {% include image-srcset.html src='/img/posts/2024-rehab-alawadh-poster-presentation.png' sizes="(max-width: 767px) calc(100vw - 30px), 820px" %}>
