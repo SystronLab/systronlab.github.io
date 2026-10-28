@@ -18,7 +18,7 @@ To support experimental research on low-power mesh networking and distributed ed
 
 - **Live Topology and Hardware Discovery**: Aggregates near real-time connection status across the host Intel NUC and distributed Raspberry Pi edge nodes.
 - **Embedded Interactive Terminals**: Integrates ttyd and picocom console sessions directly inside web iframes, allowing researchers to interact directly with embedded devices.
-- **Synchronised Command Broadcasting**: Features a multi-node command dispatch engine with persistent device grouping. Researchers can target specific network roles (e.g., all Thread Children, Routers, or specific subnets) and execute single or multi-line commands concurrently across all selected nodes.
+- **Synchronised Command Broadcasting**: Features a multi-node command broadcast system, with the ability to create persistent device grouping and commands. Researchers can target specific network roles (e.g., all Thread Children, Routers, or all Raspberry Pis) and execute single or multi-line commands across all selected nodes.
 
 ## UI in Detail
 
@@ -54,8 +54,8 @@ The dashboard relies on custom SVG images to showcase the USB devices. Below are
 
 **Nordic Semiconductor nRF52840 Dongle (Runtime & Bootloader States):**
 
-<img src="/img/projects/testbed-visualiser/1915-0000.svg" alt="Flashed Nordic Semiconductor nRF52840 Dongle" style="max-height: 90px; margin-right: 16px;" />
-<img src="/img/projects/testbed-visualiser/1915-521f.svg" alt="Unflashed Nordic Semiconductor nRF52840 Dongle" style="max-height: 90px;" />
+<img src="/img/projects/testbed-visualiser/1915-0000.svg" alt="Flashed Nordic Semiconductor nRF52840 Dongle" style="max-height: 150px; margin-right: 16px;" />
+<img src="/img/projects/testbed-visualiser/1915-521f.svg" alt="Unflashed Nordic Semiconductor nRF52840 Dongle" style="max-height: 150px;" />
 
 **Nordic Semiconductor nRF52840 DK Board:**
 
@@ -63,7 +63,7 @@ The dashboard relies on custom SVG images to showcase the USB devices. Below are
 
 **Semtech EM8695 RedCap Device:**
 
-<img src="/img/projects/testbed-visualiser/1199-90e5.svg" alt="Semtech EM8695 RedCap Device" style="max-height: 90px;" />
+<img src="/img/projects/testbed-visualiser/1199-90e5.svg" alt="Semtech EM8695 RedCap Device" style="max-height: 150px;" />
 
 ## Research Impact
 
