@@ -18,7 +18,7 @@ To support experimental research on low-power mesh networking and distributed ed
 
 - **Live Topology and Hardware Discovery**: Aggregates near real-time connection status across the host Intel NUC and distributed Raspberry Pi edge nodes.
 - **Embedded Interactive Terminals**: Integrates ttyd and picocom console sessions directly inside web iframes, allowing researchers to interact directly with embedded devices.
-- **Synchronised Command Broadcasting**: Features a multi-node command dispatch engine with persistent device grouping. Researchers can target specific network roles (e.g., all Thread Children, Routers, or specific subnets) and execute single or multi-line commands concurrently across all selected nodes.
+- **Synchronised Command Broadcasting**: Features a multi-node command broadcast system, with the ability to create persistent device grouping and commands. Researchers can target specific network roles (e.g., all Thread Children, Routers, or all Raspberry Pis) and execute single or multi-line commands across all selected nodes.
 
 ## UI in Detail
 
