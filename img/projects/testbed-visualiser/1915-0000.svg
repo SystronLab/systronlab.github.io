@@ -1,0 +1,54 @@
+<!-- Nordic Semiconductor ASA Thread CLI -->
+
+<svg viewBox="0 0 200 500" xmlns="http://www.w3.org/2000/svg">
+  <path d="M 60 40 L 140 40 L 140 140 L 170 150 L 170 470 L 30 470 L 30 150 L 60 140 Z" fill="#005A9C" />
+
+  <rect x="68" y="50" width="10" height="40" fill="#E6C200" rx="1" />
+  <rect x="88" y="50" width="10" height="40" fill="#E6C200" rx="1" />
+  <rect x="108" y="50" width="10" height="40" fill="#E6C200" rx="1" />
+  <rect x="128" y="50" width="10" height="40" fill="#E6C200" rx="1" />
+
+  <g fill="#E6C200">
+    <rect x="28" y="160" width="8" height="13" rx="2" />
+    <rect x="28" y="180" width="8" height="13" rx="2" />
+    <rect x="28" y="200" width="8" height="13" rx="2" />
+    <rect x="28" y="220" width="8" height="13" rx="2" />
+    <rect x="28" y="240" width="8" height="13" rx="2" />
+    <rect x="28" y="260" width="8" height="13" rx="2" />
+    <rect x="28" y="280" width="8" height="13" rx="2" />
+    <rect x="28" y="300" width="8" height="13" rx="2" />
+    <rect x="28" y="320" width="8" height="13" rx="2" />
+    <rect x="28" y="340" width="8" height="13" rx="2" />
+    <rect x="28" y="360" width="8" height="13" rx="2" />
+    <rect x="28" y="380" width="8" height="13" rx="2" />
+    <rect x="28" y="400" width="8" height="13" rx="2" />
+  </g>
+
+  <g fill="#E6C200">
+    <rect x="168" y="160" width="8" height="13" rx="2" />
+    <rect x="168" y="180" width="8" height="13" rx="2" />
+    <rect x="168" y="200" width="8" height="13" rx="2" />
+    <rect x="168" y="220" width="8" height="13" rx="2" />
+    <rect x="168" y="240" width="8" height="13" rx="2" />
+    <rect x="168" y="260" width="8" height="13" rx="2" />
+    <rect x="168" y="280" width="8" height="13" rx="2" />
+    <rect x="168" y="300" width="8" height="13" rx="2" />
+    <rect x="168" y="320" width="8" height="13" rx="2" />
+    <rect x="168" y="340" width="8" height="13" rx="2" />
+    <rect x="168" y="360" width="8" height="13" rx="2" />
+    <rect x="168" y="380" width="8" height="13" rx="2" />
+    <rect x="168" y="400" width="8" height="13" rx="2" />
+  </g>
+
+    <circle cx="75" cy="165" r="10" fill="#0adceb" />
+  <circle cx="75" cy="165" r="20" fill="rgba(12, 217, 235, 0.42)" />
+
+
+  <rect x="65" y="250" width="70" height="70" fill="#2A2A2A" rx="2" />
+
+
+ 
+  
+
+
+</svg>
