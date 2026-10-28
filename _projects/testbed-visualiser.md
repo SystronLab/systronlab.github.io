@@ -5,7 +5,7 @@ date: 2026-10-27 19:30:15 +0000
 authors:
   - Dema Williams
   - Anthony Moulds
-image: "/img/projects/DashboardCoverPic.jpg"
+image: "/img/projects/testbed-visualiser/DashboardCoverPic.jpg"
 desc: An interactive, near real-time monitoring and visualisation dashboard for the SYSTRON Lab's physical IoT testbed."
 tags: [Thread, Testbed, Dashboard]
 ---
@@ -52,17 +52,18 @@ And finally is the wireshark page (also as a VNC page):
 
 The dashboard relies on custom SVG images to showcase the USB devices. Below are some examples of what devices are supported by the dashboard:
 
-A Nordic Semiconductor nRF52840 Dongle in its flashed and unflashed bootloader state:
+**Nordic Semiconductor nRF52840 Dongle (Runtime & Bootloader States):**
 
-![Flashed Nordic Semiconductor nRF52840 Dongle](/img/projects/testbed-visualiser/1915-0000.svg)
-![Unflashed Nordic Semiconductor nRF52840 Dongle](/img/projects/testbed-visualiser/1915-521f.svg)
+<img src="/img/projects/testbed-visualiser/1915-0000.svg" alt="Flashed Nordic Semiconductor nRF52840 Dongle" style="max-height: 90px; margin-right: 16px;" />
+<img src="/img/projects/testbed-visualiser/1915-521f.svg" alt="Unflashed Nordic Semiconductor nRF52840 Dongle" style="max-height: 90px;" />
 
-A Nordic Semiconductor nRF52840 DK Board:
-![Nordic Semiconductor nRF52840 DK Board](/img/projects/testbed-visualiser/1366-1051.svg)
+**Nordic Semiconductor nRF52840 DK Board:**
 
-And also a Semtech EM8695 RedCap device:
+<img src="/img/projects/testbed-visualiser/1366-1051.svg" alt="Nordic Semiconductor nRF52840 DK Board" style="max-height: 120px;" />
 
-![Semtech EM8695 RedCap ](/img/projects/testbed-visualiser/1199-90e5.svg)
+**Semtech EM8695 RedCap Device:**
+
+<img src="/img/projects/testbed-visualiser/1199-90e5.svg" alt="Semtech EM8695 RedCap Device" style="max-height: 90px;" />
 
 ## Research Impact
 
