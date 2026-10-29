@@ -1,5 +1,6 @@
 ---
 layout: page
+people_directory: true
 title: About SYSTRON Lab
 eyebrow: People behind the research
 description: A multidisciplinary community advancing secure, resilient and intelligent distributed systems.
@@ -19,7 +20,7 @@ wide: true
     {% assign active_people = people | where_exp: 'person', 'person.former != true' %}
     {% assign directory_people = active_people | sort: 'order' %}
     {% for person in directory_people %}
-    <article class="person-card">
+    <article class="person-card" id="person-{{ person.slug }}">
       {% if person.site %}<a class="person-profile" href="{{ person.site }}" aria-label="Profile of {{ person.name | escape }}" title="Profile of {{ person.name | escape }}"><span aria-hidden="true">↗</span></a>{% endif %}
       <img src="{{ person.photo | default: '/img/people/placeholder.png' | relative_url }}" alt="{{ person.name | escape }}" width="160" height="160" loading="lazy" {% include image-srcset.html src=person.photo fallback='/img/people/placeholder.png' sizes="132px" %}>
       <h3>{{ person.name }}</h3><p class="person-role">{{ person.role }}</p>
