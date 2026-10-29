@@ -1,0 +1,18 @@
+---
+layout: null
+permalink: /people-images.xml
+sitemap: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+{% assign directory_page = site.pages | where: 'people_directory', true | first %}
+{% assign image_people = site.people | where_exp: 'person', 'person.former != true' %}
+  <url>
+    <loc>{{ directory_page.url | absolute_url | xml_escape }}</loc>
+{% for person in image_people %}{% if person.photo and person.photo != '' and person.photo != '/img/people/placeholder.png' %}
+    <image:image>
+      <image:loc>{{ person.photo | absolute_url | xml_escape }}</image:loc>
+    </image:image>
+{% endif %}{% endfor %}
+  </url>
+</urlset>

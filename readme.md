@@ -98,6 +98,10 @@ You can optionally add:
 - `site`, the person's personal website
 - `order`, the card's position on About Us: smaller numbers appear first. Current values increase by 10, so use an intermediate number to insert a person between two others. Every three consecutive people share a row on desktop. Homepage selection still uses `priority`.
 
+People appear on the existing About Us page; no individual profile pages are generated. Use the person's full name and a short factual bio. Each current member's card has a stable `#person-<filename-without-extension>` anchor, and the page includes `Person` metadata connecting names, roles, photos and existing external profiles. Placeholder images are not identified as portraits in this metadata.
+
+The portraits displayed on About Us are listed under that page in `/people-images.xml`, which is advertised in `/robots.txt` alongside the regular sitemap. Former members' photos are not listed because their photos are not displayed on this page. After deployment, submit both sitemaps in Google Search Console and inspect the About Us URL to request indexing. Use the Search Console Performance report with search type **Image** to track name queries. Discovery and ranking are controlled by Google; these changes do not guarantee inclusion or first position. Links to members' card anchors from their university or personal pages can help people and crawlers find them.
+
 ### Optimizing images
 
 Keep full-resolution originals outside this repository. After adding photos to `img/`, run `python3 scripts/optimize-images.py` (requires Pillow with WebP support: `python3 -m pip install Pillow`). The script compresses JPEGs to a maximum of 1920 pixels per side, optimizes PNG originals losslessly, and creates 160, 480 and 960 pixel variants in `img/responsive/` where the source is large enough. PNGs also get WebP variants, including one at their original width when smaller than the PNG. Commit those files together with `_data/image_variants.json`. To process only specific images, pass their paths, for example `python3 scripts/optimize-images.py img/minirobot.png`.
