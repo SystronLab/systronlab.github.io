@@ -5,6 +5,7 @@ date: 2026-09-23 19:30:15 +0000
 authors:
   - Dema Williams
   - Anthony Moulds
+  - Poonam Yadav
 image: "/img/projects/redcap.jpg"
 image_rotate: right
 desc: Building 5G RedCap support in OCUDU through open-source code contributions, in close collaboration with the OCUDU team.
