@@ -6,9 +6,8 @@ authors:
   - Dema Williams
   - Anthony Moulds
   - Poonam Yadav
-image: "/img/projects/redcap.jpg"
-image_rotate: right
-desc: Building 5G RedCap support in OCUDU through open-source code contributions, in close collaboration with the OCUDU team.
+image: "/img/projects/testbed-visualiser/DashboardCoverPic.jpg"
+desc: An interactive, near real-time monitoring and visualisation dashboard for the SYSTRON Lab's physical IoT testbed."
 tags: [Thread, Testbed, Dashboard]
 ---
 
