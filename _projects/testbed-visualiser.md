@@ -1,7 +1,7 @@
 ---
 layout: projects
-title: "Building 5G RedCap Support in Collaboration with OCUDU"
-date: 2026-09-23 19:30:15 +0000
+title: "IoT Device Testbed Dashboard: Real-Time Monitoring and Visualisation"
+date: 2026-10-27 19:30:15 +0000
 authors:
   - Dema Williams
   - Anthony Moulds
@@ -19,7 +19,7 @@ To support experimental research on low-power mesh networking and distributed ed
 
 - **Live Topology and Hardware Discovery**: Aggregates near real-time connection status across the host Intel NUC and distributed Raspberry Pi edge nodes.
 - **Embedded Interactive Terminals**: Integrates ttyd and picocom console sessions directly inside web iframes, allowing researchers to interact directly with embedded devices.
-- **Synchronised Command Broadcasting**: Features a multi-node command dispatch engine with persistent device grouping. Researchers can target specific network roles (e.g., all Thread Children, Routers, or specific subnets) and execute single or multi-line commands concurrently across all selected nodes.
+- **Synchronised Command Broadcasting**: Features a multi-node command broadcast system, with the ability to create persistent device grouping and commands. Researchers can target specific network roles (e.g., all Thread Children, Routers, or all Raspberry Pis) and execute single or multi-line commands across all selected nodes.
 
 ## UI in Detail
 
@@ -35,7 +35,6 @@ The dashboard is fully dynamic, where devices will be shown or hidden depending 
 
 In what we call the NUC-Node viewport, we have a page to view the info about USB devices plugged into the NUC:
 
-
 ![Image of the NUC's USB devices page](/img/projects/testbed-visualiser/USBdevices.png)
 
 A page to broadcast commands to a number of devices at the same time:
@@ -46,28 +45,27 @@ This 'Broadcast Commands' page also allows for the user to save commands and gro
 
 The next page is the Thread Topology Monitor application, embedded as a VNC session (so it can be full screened too):
 
-image.png
+![Image of the NUC's TTM VNC session](/img/projects/testbed-visualiser/TTM.png)
 
 And finally is the wireshark page (also as a VNC page):
 
-image.png
+![Image of the NUC's Wireshark VNC session](/img/projects/testbed-visualiser/Wireshark.png)
 
 The dashboard relies on custom SVG images to showcase the USB devices. Below are some examples of what devices are supported by the dashboard:
 
-A Nordic Semiconductor nRF52840 Dongle in it's flashed and unflashed bootloader state:
+**Nordic Semiconductor nRF52840 Dongle (Runtime & Bootloader States):**
 
-![Flashed Nordic Semiconductor nRF52840 Dongle](/img/projects/testbed-visualiser/1915-0000.svg)
-![Unflashed Nordic Semiconductor nRF52840 Dongle](/img/projects/testbed-visualiser/1915-521f.svg)
+<img src="/img/projects/testbed-visualiser/1915-0000.svg" alt="Flashed Nordic Semiconductor nRF52840 Dongle" style="max-height: 150px; margin-right: 16px;" />
+<img src="/img/projects/testbed-visualiser/1915-521f.svg" alt="Unflashed Nordic Semiconductor nRF52840 Dongle" style="max-height: 150px;" />
 
-A Nordic Semicondctor nRF52840 DK Board:
-![Nordic Semicondctor nRF52840 DK Board](/img/projects/testbed-visualiser/1366-1051.svg)
+**Nordic Semiconductor nRF52840 DK Board:**
 
-And also a Semtec EM8695 RedCap device:
+<img src="/img/projects/testbed-visualiser/1366-1051.svg" alt="Nordic Semiconductor nRF52840 DK Board" style="max-height: 120px;" />
 
-![Nordic Semicondctor nRF52840 DK Board](/img/projects/testbed-visualiser/1199-90e5.svg)
+**Semtech EM8695 RedCap Device:**
 
-
+<img src="/img/projects/testbed-visualiser/1199-90e5.svg" alt="Semtech EM8695 RedCap Device" style="max-height: 150px;" />
 
 ## Research Impact
 
-By eliminating the 
+By eliminating the overhead of manual UART terminal management and multi-window SSH sessions, the dashboard streamlines experiment setup for the testbed. It serves as an instant visual debugging environment, enabling researchers to immediately detect node dropouts, verify link states, and monitor network reconfigurations during active experiments related to Thread.
