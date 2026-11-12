@@ -5,6 +5,7 @@ date: 2026-10-27 19:30:15 +0000
 authors:
   - Dema Williams
   - Anthony Moulds
+  - Poonam Yadav
 image: "/img/projects/testbed-visualiser/DashboardCoverPic.jpg"
 desc: An interactive, near real-time monitoring and visualisation dashboard for the SYSTRON Lab's physical IoT testbed."
 tags: [Thread, Testbed, Dashboard]

@@ -1,5 +1,5 @@
 ---
-name: "Dema Williams"
+name: "Dmitry (Dema) Williams"
 role: "Research Software Engineer"
 photo: '/img/people/dema.png'
 order: 120
