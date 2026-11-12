@@ -1,21 +1,28 @@
 <head>
+  {% assign seo_title = page.title | default: site.title %}
+  {% assign seo_description = page.description | default: page.excerpt | default: site.description %}
+  {% assign seo_image = page.card | default: '/img/systron-card.png' %}
+  {% assign seo_description = seo_description | strip_html | normalize_whitespace | truncate: 160 %}
+  {% assign seo_url = page.url | replace: 'index.html', '' | absolute_url %}
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title>
-    {% if page.title %}{{ page.title | escape }} - {{ site.title | escape }}
-    {% else %}{{ site.title | escape }}{% endif %}
+    {{ seo_title | escape }}{% if seo_title != site.title %} - {{ site.title | escape }}{% endif %}
   </title>
 
-  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+  <meta name="description" content="{{ seo_description | escape }}">
 
   <link rel="stylesheet" href="{{"/assets/main.css" | relative_url }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+  <link rel="canonical" href="{{ seo_url | escape }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
   <link rel="shortcut icon" type="image/png" href="{{"/img/favicon.png" | relative_url }}">
-  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-  <meta property="og:image" content="{%if page.card %}{{ page.card | prepend: site.url }}{% else %}/img/systron-card.png{% endif %}">
-  <meta property="og:description" content="{% if page.subtitle %}{{ page.subtitle }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:title" content="{{ seo_title | escape }}">
+  <meta property="og:image" content="{{ seo_image | absolute_url | escape }}">
+  <meta property="og:description" content="{{ seo_description | escape }}">
+  <meta property="og:url" content="{{ seo_url | escape }}">
+  <meta property="og:type" content="website">
   <meta property="og:site_name" content="SYSTRON Lab">
+  {% if page.people_directory %}{% include people-schema.html %}{% endif %}
 </head>
