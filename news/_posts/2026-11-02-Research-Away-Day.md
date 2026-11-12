@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Template" # The main article title
-date: 2023-01-01 12:00:00 +0000 # Article date, in the form YYYY-MM-DD HH-MM-SS +0000
-subtitle: "" # OPTIONAL: A subtitle. If not used, the first 15 words of the content will be used instead.
+title: "Systron Lab: Research Away Day" # The main article title
+date: 2026-11-01 12:00:00 +0000 # Article date, in the form YYYY-MM-DD HH-MM-SS +0000
+subtitle: "Members of the SYSTRON Lab took part in a Research Away Day at Wetherby Hotel & Spa" # OPTIONAL: A subtitle. If not used, the first 15 words of the content will be used instead.
 background: '/img/posts/research-away-day/RAD-Cover.jpg' # OPTIONAL: Defaults to site colour background if not used.
 ---
 
