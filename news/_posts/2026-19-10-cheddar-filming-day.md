@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "CHEDDAR HUB: Filming Day at the Systron Lab"
-date: 2026-19-10 08:00:00 +0000
+date: 2026-10-19 08:00:00 +0000
 subtitle: "Researchers at the SYSTRON Lab participated in 1 on 1 interviews for CHEDDAR HUB's filming day"
 background: '/img/posts/Dema-interview.jpg'
 ---
