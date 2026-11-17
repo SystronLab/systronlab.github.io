@@ -10,7 +10,6 @@ background: '/img/posts/research-away-day/RAD-Cover.jpg' # OPTIONAL: Defaults to
 
 Members of the SYSTRON Lab took part in a Research Away Day at Wetherby Hotel & Spa. 
 
-![Systron Lab at the Research Away Day](/img/posts/research-away-day/RAD-Cover.jpg)
 
 Here, researchers were able to collaborate and contribute to working ideas on the future direction of the lab. 
 
